@@ -16,10 +16,16 @@
       --black: #111111;
       --muted: #666666;
       --light: #888888;
+
       --white: #ffffff;
-      --off-white: #f7f7f5;
+
+      --brown-bg: #d8d0c2;
+      --brown-light: #ddd6c9;
+      --brown-dark: #d5ccbd;
+
+      --green: #536754;
+
       --border: #e5e5e2;
-      --card: #ffffff;
     }
 
     * {
@@ -38,6 +44,7 @@
       background: var(--white);
       line-height: 1.6;
     }
+
 
     /* =========================
        HEADER
@@ -61,6 +68,7 @@
 
       font-size: 0.85rem;
       font-weight: 600;
+
       letter-spacing: 0.07em;
       text-transform: uppercase;
     }
@@ -74,6 +82,7 @@
     nav a {
       color: var(--muted);
       text-decoration: none;
+
       font-size: 0.84rem;
 
       transition: color 0.2s ease;
@@ -83,6 +92,7 @@
     nav a.active {
       color: var(--black);
     }
+
 
     /* =========================
        HERO
@@ -110,6 +120,7 @@
       letter-spacing: -0.055em;
     }
 
+
     /* =========================
        INTRO DESCRIPTION
     ========================= */
@@ -133,17 +144,42 @@
       line-height: 1.75;
     }
 
+
     /* =========================
-       MAIN GRID
+       THREE CARD AREA
     ========================= */
 
     .features-wrapper {
       padding: 75px 6% 85px;
 
-      background: var(--off-white);
+      background-color: var(--brown-bg);
 
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
+      /*
+        Subtle matte paper texture
+      */
+      background-image:
+        radial-gradient(
+          rgba(255, 255, 255, 0.18) 0.8px,
+          transparent 0.8px
+        ),
+        radial-gradient(
+          rgba(80, 65, 45, 0.06) 0.8px,
+          transparent 0.8px
+        ),
+        linear-gradient(
+          135deg,
+          var(--brown-light) 0%,
+          var(--brown-dark) 50%,
+          #d9d1c4 100%
+        );
+
+      background-size:
+        13px 13px,
+        19px 19px,
+        100% 100%;
+
+      border-top: 1px solid #cec5b7;
+      border-bottom: 1px solid #cec5b7;
     }
 
     .features {
@@ -153,11 +189,12 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
 
-      gap: 18px;
+      gap: 20px;
     }
 
+
     /* =========================
-       CARDS
+       WHITE CARDS
     ========================= */
 
     .feature-card {
@@ -169,13 +206,27 @@
       flex-direction: column;
       justify-content: flex-end;
 
-      background: var(--card);
+      background: var(--white);
 
-      border: 1px solid var(--border);
+      /*
+        Green piping
+      */
+      border: 2px solid var(--green);
+
+      /*
+        Fine inner highlight
+      */
+      outline: 1px solid rgba(255, 255, 255, 0.75);
+      outline-offset: -5px;
+
+      box-shadow:
+        0 8px 20px rgba(55, 45, 30, 0.10);
     }
 
     .feature-card h2 {
       margin-bottom: 14px;
+
+      color: var(--black);
 
       font-size: 1.35rem;
       line-height: 1.15;
@@ -190,6 +241,7 @@
       font-size: 0.84rem;
       line-height: 1.7;
     }
+
 
     /* =========================
        FINAL STATEMENT
@@ -212,6 +264,7 @@
       letter-spacing: -0.04em;
     }
 
+
     /* =========================
        FOOTER
     ========================= */
@@ -230,6 +283,7 @@
       font-size: 0.72rem;
     }
 
+
     /* =========================
        TABLET
     ========================= */
@@ -246,6 +300,7 @@
 
       .features {
         grid-template-columns: 1fr;
+
         max-width: 620px;
       }
 
@@ -253,6 +308,7 @@
         min-height: 225px;
       }
     }
+
 
     /* =========================
        MOBILE
@@ -273,6 +329,7 @@
         font-size: 0.78rem;
       }
 
+
       .intro {
         padding: 60px 5% 50px;
       }
@@ -280,6 +337,7 @@
       .intro h1 {
         font-size: clamp(2.6rem, 13vw, 4rem);
       }
+
 
       .intro-description {
         padding: 0 5% 55px;
@@ -289,17 +347,21 @@
         font-size: 0.86rem;
       }
 
+
       .features-wrapper {
         padding: 55px 5% 60px;
       }
 
       .features {
-        gap: 14px;
+        gap: 16px;
       }
 
       .feature-card {
         min-height: 220px;
+
         padding: 26px 24px;
+
+        border-width: 2px;
       }
 
       .feature-card h2 {
@@ -310,9 +372,11 @@
         font-size: 0.82rem;
       }
 
+
       .statement {
         padding: 65px 5% 75px;
       }
+
 
       footer {
         padding: 20px 5%;
@@ -323,10 +387,17 @@
         gap: 7px;
       }
     }
+
   </style>
 </head>
 
+
 <body>
+
+
+  <!-- =========================
+       HEADER
+  ========================= -->
 
   <header>
 
@@ -345,6 +416,11 @@
 
   <main>
 
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
     <section class="intro">
 
       <h1>
@@ -354,6 +430,10 @@
 
     </section>
 
+
+    <!-- =========================
+         INTRO DESCRIPTION
+    ========================= -->
 
     <section class="intro-description">
 
@@ -366,13 +446,19 @@
     </section>
 
 
+    <!-- =========================
+         THREE MAIN CARDS
+    ========================= -->
+
     <section class="features-wrapper">
 
       <div class="features">
 
+
         <article class="feature-card">
 
           <div>
+
             <h2>
               Native species
             </h2>
@@ -381,6 +467,7 @@
               Supporting the protection of plants that belong
               naturally to Mauritius and its ecosystems.
             </p>
+
           </div>
 
         </article>
@@ -389,6 +476,7 @@
         <article class="feature-card">
 
           <div>
+
             <h2>
               Endemic flora
             </h2>
@@ -397,6 +485,7 @@
               Helping safeguard species found nowhere else
               in the world.
             </p>
+
           </div>
 
         </article>
@@ -405,6 +494,7 @@
         <article class="feature-card">
 
           <div>
+
             <h2>
               A living heritage
             </h2>
@@ -413,14 +503,20 @@
               Working towards a future where Mauritius’
               botanical heritage continues to thrive.
             </p>
+
           </div>
 
         </article>
+
 
       </div>
 
     </section>
 
+
+    <!-- =========================
+         FINAL STATEMENT
+    ========================= -->
 
     <section class="statement">
 
@@ -430,8 +526,13 @@
 
     </section>
 
+
   </main>
 
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
 
   <footer>
 
@@ -444,6 +545,7 @@
     </span>
 
   </footer>
+
 
 </body>
 </html>
