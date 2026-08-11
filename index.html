@@ -38,6 +38,7 @@
       line-height: 1.6;
     }
 
+
     /* =========================
        HEADER
     ========================= */
@@ -83,32 +84,27 @@
       color: var(--black);
     }
 
+
     /* =========================
-       MAIN INTRO
+       HERO
     ========================= */
 
     .intro {
-      width: 100%;
       max-width: 1120px;
-
       margin: 0 auto;
 
       padding: 90px 6% 85px;
 
-      text-align: left;
+      text-align: center;
     }
 
-    .intro-content {
-      width: 100%;
-      max-width: 800px;
+    .hero-copy {
+      margin: 0 auto;
 
-      margin: 0;
-      padding: 0;
-
-      text-align: left;
+      text-align: center;
     }
 
-    .intro h1 {
+    .hero-copy h1 {
       margin: 0;
 
       font-size: clamp(2.8rem, 5.5vw, 5rem);
@@ -116,22 +112,17 @@
 
       font-weight: 500;
       letter-spacing: -0.055em;
-
-      text-align: left;
     }
 
-    .intro-content p {
-      max-width: 500px;
-
-      margin: 30px 0 0;
+    .hero-copy p {
+      margin: 24px auto 0;
 
       color: var(--muted);
 
       font-size: 0.92rem;
-      line-height: 1.7;
-
-      text-align: left;
+      line-height: 1.6;
     }
+
 
     /* =========================
        THREE CARDS
@@ -155,6 +146,7 @@
 
       gap: 18px;
     }
+
 
     /* =========================
        CARDS
@@ -198,6 +190,7 @@
       line-height: 1.6;
     }
 
+
     /* =========================
        FOOTER
     ========================= */
@@ -215,6 +208,7 @@
 
       font-size: 0.72rem;
     }
+
 
     /* =========================
        TABLET
@@ -236,6 +230,7 @@
         min-height: 180px;
       }
     }
+
 
     /* =========================
        MOBILE
@@ -260,13 +255,15 @@
         padding: 60px 5% 60px;
       }
 
-      .intro h1 {
+      .hero-copy h1 {
         font-size: clamp(2.6rem, 13vw, 4rem);
         line-height: 1;
       }
 
-      .intro-content p {
-        margin-top: 26px;
+      .hero-copy p {
+        max-width: 340px;
+        margin-top: 22px;
+
         font-size: 0.85rem;
       }
 
@@ -325,11 +322,11 @@
 
   <main>
 
-    <!-- MAIN INTRO -->
+    <!-- HERO -->
 
     <section class="intro">
 
-      <div class="intro-content">
+      <div class="hero-copy">
 
         <h1>
           Mauritius unique flora
@@ -408,3 +405,5 @@
 
 </body>
 </html>
+
+
