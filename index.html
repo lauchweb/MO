@@ -21,15 +21,18 @@
       --border: #e5e5e2;
     }
 
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
+
     html {
       scroll-behavior: smooth;
     }
+
 
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -55,15 +58,18 @@
       border-bottom: 1px solid var(--border);
     }
 
+
     .logo a {
       color: var(--green);
       text-decoration: none;
 
       font-size: 0.9rem;
       font-weight: 600;
+
       letter-spacing: 0.07em;
       text-transform: uppercase;
     }
+
 
     nav {
       display: flex;
@@ -71,13 +77,16 @@
       gap: 30px;
     }
 
+
     nav a {
       color: var(--muted);
       text-decoration: none;
+
       font-size: 0.84rem;
 
       transition: color 0.2s ease;
     }
+
 
     nav a:hover,
     nav a.active {
@@ -98,21 +107,24 @@
       text-align: center;
     }
 
+
     .hero-copy {
       margin: 0 auto;
 
       text-align: center;
     }
 
+
     .hero-copy h1 {
       margin: 0;
 
-      font-size: clamp(2.8rem, 5.5vw, 5rem);
+      font-size: clamp(2.3rem, 4.2vw, 3.8rem);
       line-height: 1;
 
       font-weight: 500;
-      letter-spacing: -0.055em;
+      letter-spacing: -0.045em;
     }
+
 
     .hero-copy p {
       margin: 24px auto 0;
@@ -136,6 +148,7 @@
 
       background: var(--white);
     }
+
 
     .features {
       max-width: 1120px;
@@ -171,6 +184,7 @@
         0 6px 14px rgba(20, 30, 22, 0.07);
     }
 
+
     .feature-card h2 {
       margin-bottom: 10px;
 
@@ -182,6 +196,7 @@
       font-weight: 500;
       letter-spacing: -0.025em;
     }
+
 
     .feature-card p {
       color: var(--muted);
@@ -221,10 +236,13 @@
         padding-bottom: 70px;
       }
 
+
       .features {
         grid-template-columns: 1fr;
+
         max-width: 620px;
       }
+
 
       .feature-card {
         min-height: 180px;
@@ -243,51 +261,65 @@
         padding: 0 5%;
       }
 
+
       nav {
         gap: 17px;
       }
+
 
       nav a {
         font-size: 0.78rem;
       }
 
+
       .intro {
         padding: 60px 5% 60px;
       }
 
+
       .hero-copy h1 {
-        font-size: clamp(2.6rem, 13vw, 4rem);
+        font-size: clamp(2.2rem, 10vw, 3.2rem);
         line-height: 1;
       }
 
+
       .hero-copy p {
         max-width: 340px;
+
         margin-top: 22px;
 
         font-size: 0.85rem;
       }
 
+
       .features-wrapper {
         padding: 0 5% 80px;
       }
+
 
       .features {
         gap: 14px;
       }
 
+
       .feature-card {
         min-height: 165px;
+
         padding: 21px;
+
         border-width: 4px;
       }
+
 
       .feature-card h2 {
         font-size: 1.1rem;
       }
 
+
       .feature-card p {
         font-size: 0.78rem;
       }
+
 
       footer {
         padding: 20px 5%;
@@ -298,18 +330,24 @@
         gap: 7px;
       }
     }
+
   </style>
 </head>
 
+
 <body>
 
-  <!-- HEADER -->
+
+  <!-- =========================
+       HEADER
+  ========================= -->
 
   <header>
 
     <div class="logo">
       <a href="index.html">[NGO NAME]</a>
     </div>
+
 
     <nav>
       <a href="index.html" class="active">Home</a>
@@ -322,7 +360,10 @@
 
   <main>
 
-    <!-- HERO -->
+
+    <!-- =========================
+         HERO
+    ========================= -->
 
     <section class="intro">
 
@@ -341,55 +382,80 @@
     </section>
 
 
-    <!-- THREE MAIN CARDS -->
+    <!-- =========================
+         THREE MAIN CARDS
+    ========================= -->
 
     <section class="features-wrapper">
 
       <div class="features">
 
+
         <article class="feature-card">
+
           <div>
-            <h2>Native species</h2>
+
+            <h2>
+              Native species
+            </h2>
 
             <p>
               Supporting the protection of plants that belong
               naturally to Mauritius and its ecosystems.
             </p>
+
           </div>
+
         </article>
 
 
         <article class="feature-card">
+
           <div>
-            <h2>Endemic flora</h2>
+
+            <h2>
+              Endemic flora
+            </h2>
 
             <p>
               Helping safeguard species found nowhere else
               in the world.
             </p>
+
           </div>
+
         </article>
 
 
         <article class="feature-card">
+
           <div>
-            <h2>A living heritage</h2>
+
+            <h2>
+              A living heritage
+            </h2>
 
             <p>
               Working towards a future where Mauritius’
               botanical heritage continues to thrive.
             </p>
+
           </div>
+
         </article>
+
 
       </div>
 
     </section>
 
+
   </main>
 
 
-  <!-- FOOTER -->
+  <!-- =========================
+       FOOTER
+  ========================= -->
 
   <footer>
 
@@ -403,7 +469,6 @@
 
   </footer>
 
+
 </body>
 </html>
-
-
