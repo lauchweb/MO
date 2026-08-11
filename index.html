@@ -18,9 +18,13 @@
       --light: #888888;
       --background: #ffffff;
 
+      /* Botanical palette */
       --green: #4f6b52;
-      --green-light: #b8cbb9;
-      --green-pale: #f3f6f3;
+      --green-matte: #7b8567;
+      --green-light: #b8c4ae;
+
+      /* Matte sage for the bottom section */
+      --green-pale: #e7eade;
 
       --border: #e8e8e8;
     }
@@ -54,13 +58,16 @@
       align-items: center;
       justify-content: space-between;
 
+      background: var(--background);
       border-bottom: 1px solid var(--border);
     }
 
     .logo {
       color: var(--black);
+
       font-size: 0.9rem;
       font-weight: 600;
+
       letter-spacing: 0.06em;
       text-transform: uppercase;
     }
@@ -91,6 +98,7 @@
       content: "";
 
       position: absolute;
+
       left: 0;
       right: 0;
       bottom: -7px;
@@ -105,62 +113,33 @@
     ========================= */
 
     .hero {
-      padding: 7% 6% 9%;
+      max-width: 1380px;
+      margin: 0 auto;
+
+      padding: 65px 6% 80px;
 
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
+      grid-template-columns: 1fr 0.85fr;
 
-      gap: 9%;
+      gap: 8%;
 
       align-items: center;
     }
 
-    .hero-image {
-      position: relative;
-    }
-
-    .hero-image::after {
-      content: "";
-
-      position: absolute;
-
-      left: -18px;
-      bottom: -18px;
-
-      width: 100%;
-      height: 100%;
-
-      border: 2px solid var(--green);
-
-      z-index: 0;
-    }
-
-    .hero-image img {
-      position: relative;
-      z-index: 1;
-
-      display: block;
-
-      width: 100%;
-      height: min(68vh, 650px);
-
-      object-fit: cover;
-    }
-
     .hero-content {
-      max-width: 620px;
+      max-width: 540px;
     }
 
     .eyebrow {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
 
-      margin-bottom: 22px;
+      margin-bottom: 18px;
 
       color: var(--light);
 
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       letter-spacing: 0.14em;
       text-transform: uppercase;
     }
@@ -168,29 +147,95 @@
     .eyebrow::before {
       content: "";
 
-      width: 28px;
+      width: 22px;
       height: 1px;
 
       background: var(--green);
     }
 
     .hero h1 {
-      margin-bottom: 28px;
+      max-width: 600px;
 
-      font-size: clamp(3.2rem, 5.5vw, 6rem);
-      line-height: 0.98;
+      margin-bottom: 20px;
+
+      font-size: clamp(2.8rem, 4.5vw, 4.8rem);
+      line-height: 1;
 
       font-weight: 500;
-      letter-spacing: -0.055em;
+
+      letter-spacing: -0.05em;
     }
 
     .hero p {
-      max-width: 510px;
+      max-width: 470px;
 
       color: var(--muted);
 
-      font-size: 1.05rem;
-      line-height: 1.8;
+      font-size: 0.98rem;
+      line-height: 1.75;
+    }
+
+    /* =========================
+       HERO IMAGE
+    ========================= */
+
+    .hero-image {
+      position: relative;
+
+      max-width: 510px;
+      margin-left: auto;
+
+      z-index: 1;
+    }
+
+    /*
+      Matte olive-green block
+      behind the image.
+    */
+
+    .hero-image::before {
+      content: "";
+
+      position: absolute;
+
+      top: -24px;
+      right: -24px;
+
+      width: 145px;
+      height: 145px;
+
+      background: var(--green-matte);
+
+      z-index: -2;
+    }
+
+    /*
+      Thin botanical green frame.
+    */
+
+    .hero-image::after {
+      content: "";
+
+      position: absolute;
+
+      left: -13px;
+      bottom: -13px;
+
+      width: 100%;
+      height: 100%;
+
+      border: 2px solid var(--green);
+
+      z-index: -1;
+    }
+
+    .hero-image img {
+      display: block;
+
+      width: 100%;
+      height: 470px;
+
+      object-fit: cover;
     }
 
     /* =========================
@@ -198,64 +243,68 @@
     ========================= */
 
     .who-we-are {
-      padding: 120px 6%;
-
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
+      padding: 85px 6%;
 
       display: grid;
       grid-template-columns: 0.65fr 1.35fr;
 
-      gap: 10%;
+      gap: 8%;
+
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+
+      background: var(--background);
     }
 
     .section-label {
       color: var(--light);
 
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       letter-spacing: 0.14em;
+
       text-transform: uppercase;
     }
 
     .who-content {
-      max-width: 760px;
+      max-width: 680px;
     }
 
     .who-content h2 {
-      max-width: 700px;
+      max-width: 650px;
 
-      margin-bottom: 26px;
+      margin-bottom: 18px;
 
-      font-size: clamp(2rem, 4vw, 3.5rem);
-      line-height: 1.08;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      line-height: 1.12;
 
       font-weight: 500;
-      letter-spacing: -0.04em;
+
+      letter-spacing: -0.035em;
     }
 
     .who-content p {
-      max-width: 650px;
+      max-width: 600px;
 
       color: var(--muted);
 
-      font-size: 1.05rem;
-      line-height: 1.85;
+      font-size: 0.98rem;
+      line-height: 1.8;
     }
 
     .about-link {
       display: inline-block;
 
-      margin-top: 28px;
+      margin-top: 23px;
+
+      padding-bottom: 3px;
 
       color: var(--black);
 
-      text-decoration: none;
-
-      font-size: 0.9rem;
-
       border-bottom: 1px solid var(--black);
 
-      padding-bottom: 4px;
+      text-decoration: none;
+
+      font-size: 0.85rem;
 
       transition:
         color 0.2s ease,
@@ -272,7 +321,7 @@
     ========================= */
 
     .mission {
-      padding: 120px 6%;
+      padding: 85px 6%;
 
       background: var(--green-pale);
 
@@ -280,26 +329,27 @@
     }
 
     .mission-mark {
-      width: 9px;
-      height: 9px;
+      width: 8px;
+      height: 8px;
 
-      margin: 0 auto 28px;
+      margin: 0 auto 22px;
 
-      background: var(--green);
+      background: #5f7055;
 
       transform: rotate(45deg);
     }
 
     .mission h2 {
-      max-width: 850px;
+      max-width: 700px;
 
       margin: 0 auto;
 
-      font-size: clamp(2rem, 4vw, 3.7rem);
-      line-height: 1.08;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      line-height: 1.12;
 
       font-weight: 500;
-      letter-spacing: -0.04em;
+
+      letter-spacing: -0.035em;
     }
 
     /* =========================
@@ -307,7 +357,7 @@
     ========================= */
 
     footer {
-      padding: 28px 6%;
+      padding: 25px 6%;
 
       display: flex;
       justify-content: space-between;
@@ -315,7 +365,9 @@
 
       color: var(--light);
 
-      font-size: 0.78rem;
+      font-size: 0.75rem;
+
+      background: var(--background);
     }
 
     /* =========================
@@ -327,27 +379,21 @@
       .hero {
         grid-template-columns: 1fr;
 
-        gap: 70px;
-      }
-
-      .hero-content {
-        order: 1;
+        gap: 50px;
       }
 
       .hero-image {
-        order: 2;
-
-        max-width: 650px;
+        margin-left: 0;
       }
 
       .hero-image img {
-        height: 550px;
+        height: 450px;
       }
 
       .who-we-are {
         grid-template-columns: 1fr;
 
-        gap: 35px;
+        gap: 25px;
       }
     }
 
@@ -372,41 +418,51 @@
       }
 
       .hero {
-        padding: 65px 5% 85px;
+        padding: 50px 5% 65px;
 
-        gap: 55px;
+        gap: 45px;
       }
 
       .hero h1 {
-        font-size: clamp(3rem, 15vw, 4.5rem);
+        font-size: clamp(2.7rem, 14vw, 4rem);
       }
 
       .hero p {
-        font-size: 0.98rem;
+        font-size: 0.94rem;
       }
 
       .hero-image img {
-        height: 430px;
+        height: 360px;
+      }
+
+      .hero-image::before {
+        top: -14px;
+        right: -14px;
+
+        width: 90px;
+        height: 90px;
       }
 
       .hero-image::after {
-        left: -10px;
-        bottom: -10px;
+        left: -9px;
+        bottom: -9px;
       }
 
       .who-we-are {
-        padding: 85px 5%;
+        padding: 65px 5%;
       }
 
       .mission {
-        padding: 85px 5%;
+        padding: 65px 5%;
       }
 
       footer {
-        padding: 25px 5%;
+        padding: 22px 5%;
 
         flex-direction: column;
         align-items: flex-start;
+
+        gap: 8px;
       }
     }
   </style>
@@ -414,7 +470,9 @@
 
 <body>
 
-  <!-- HEADER -->
+  <!-- =========================
+       HEADER
+  ========================= -->
 
   <header>
 
@@ -433,7 +491,9 @@
 
   <main>
 
-    <!-- HERO -->
+    <!-- =========================
+         HERO
+    ========================= -->
 
     <section class="hero">
 
@@ -462,7 +522,7 @@
 
         <img
           src="mauritius-flora.jpg"
-          alt="Mauritian indigenous flora"
+          alt=""
         >
 
       </div>
@@ -470,7 +530,9 @@
     </section>
 
 
-    <!-- WHO WE ARE -->
+    <!-- =========================
+         WHO WE ARE
+    ========================= -->
 
     <section class="who-we-are">
 
@@ -499,7 +561,9 @@
     </section>
 
 
-    <!-- MISSION -->
+    <!-- =========================
+         MISSION
+    ========================= -->
 
     <section class="mission">
 
@@ -514,7 +578,9 @@
   </main>
 
 
-  <!-- FOOTER -->
+  <!-- =========================
+       FOOTER
+  ========================= -->
 
   <footer>
 
