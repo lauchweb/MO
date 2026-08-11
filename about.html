@@ -1,1 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Mo Endemik | About</title>
+
+  <meta
+    name="description"
+    content="Learn about Mo Endemik and our commitment to preserving Mauritius' native botanical heritage."
+  >
+
+  <style>
+    :root {
+      --black: #111111;
+      --muted: #666666;
+      --light: #888888;
+      --white: #ffffff;
+
+      --background-brown: #A8957D;
+      --card-green: #455B49;
+
+      --border: #e5e5e2;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--black);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+
+    /* =========================
+       ABOUT MAIN
+    ========================= */
+
+    main {
+      min-height: calc(100vh - 70px);
+
+      background-color: var(--background-brown);
+
+      background-image:
+        radial-gradient(
+          rgba(255, 255, 255, 0.12) 0.7px,
+          transparent 0.8px
+        ),
+
+        radial-gradient(
+          rgba(70, 55, 40, 0.07) 0.7px,
+          transparent 0.8px
+        ),
+
+        radial-gradient(
+          circle at 20% 15%,
+          rgba(255, 255, 255, 0.08),
+          transparent 35%
+        ),
+
+        radial-gradient(
+          circle at 80% 75%,
+          rgba(60, 45, 30, 0.06),
+          transparent 40%
+        );
+
+      background-size:
+        5px 5px,
+        7px 7px,
+        100% 100%,
+        100% 100%;
+
+      background-position:
+        0 0,
+        3px 2px,
+        0 0,
+        0 0;
+    }
+
+
+    /* =========================
+       ABOUT CONTENT
+    ========================= */
+
+    .about {
+      max-width: 1000px;
+      margin: 0 auto;
+
+      padding: 95px 6% 105px;
+    }
+
+    .about-inner {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .about-label {
+      margin-bottom: 18px;
+
+      color: var(--card-green);
+
+      font-size: 0.75rem;
+      font-weight: 600;
+
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .about h1 {
+      margin-bottom: 30px;
+
+      color: var(--white);
+
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      line-height: 1.02;
+
+      font-weight: 500;
+      letter-spacing: -0.045em;
+    }
+
+    .about-intro {
+      margin-bottom: 45px;
+
+      color: var(--white);
+
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+
+    /* =========================
+       ABOUT CARDS
+    ========================= */
+
+    .about-content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 20px;
+    }
+
+    .about-card {
+      padding: 30px;
+
+      background: var(--white);
+
+      border: 6px solid var(--card-green);
+      border-radius: 32px;
+
+      box-shadow:
+        0 8px 18px rgba(20, 30, 22, 0.12);
+    }
+
+    .about-card h2 {
+      margin-bottom: 14px;
+
+      color: var(--black);
+
+      font-size: 1.1rem;
+      line-height: 1.2;
+
+      font-weight: 500;
+    }
+
+    .about-card p {
+      color: var(--muted);
+
+      font-size: 0.84rem;
+      line-height: 1.7;
+    }
+
+
+    /* =========================
+       HOME BUTTON
+    ========================= */
+
+    .home-link {
+      display: inline-flex;
+      align-items: center;
+
+      margin-top: 42px;
+
+      padding: 11px 22px;
+
+      color: var(--white);
+      background: var(--card-green);
+
+      border-radius: 30px;
+
+      text-decoration: none;
+
+      font-size: 0.8rem;
+      font-weight: 600;
+
+      transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .home-link:hover {
+      background: #35483a;
+      transform: translateY(-1px);
+    }
+
+
+    /* =========================
+       FOOTER
+       IDENTICAL TO HOME PAGE
+    ========================= */
+
+    footer {
+      padding: 24px 6%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      background: var(--white);
+
+      border-top: 1px solid var(--border);
+
+      color: var(--light);
+
+      font-size: 0.72rem;
+    }
+
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 800px) {
+
+      .about {
+        padding-top: 75px;
+        padding-bottom: 85px;
+      }
+
+      .about-content {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 600px) {
+
+      main {
+        min-height: calc(100vh - 90px);
+      }
+
+      .about {
+        padding: 60px 5% 70px;
+      }
+
+      .about h1 {
+        font-size: clamp(2.3rem, 11vw, 3.3rem);
+      }
+
+      .about-intro {
+        font-size: 0.95rem;
+      }
+
+      .about-content {
+        gap: 14px;
+      }
+
+      .about-card {
+        padding: 25px 22px 27px;
+
+        border-width: 6px;
+        border-radius: 28px;
+      }
+
+      .about-card p {
+        font-size: 0.8rem;
+      }
+
+      footer {
+        padding: 20px 5%;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 7px;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+
+  <main>
+
+    <section class="about">
+
+      <div class="about-inner">
+
+        <div class="about-label">
+          About us
+        </div>
+
+        <h1>
+          Committed to our native heritage.
+        </h1>
+
+        <p class="about-intro">
+          Our work focuses on safeguarding the species that make
+          Mauritius botanically unique and ensuring their place
+          in the landscapes of future generations.
+        </p>
+
+
+        <div class="about-content">
+
+          <article class="about-card">
+
+            <h2>
+              Our commitment
+            </h2>
+
+            <p>
+              We are committed to the conservation of the species
+              that are part of Mauritius’ natural heritage, with a
+              particular focus on its indigenous and endemic flora.
+            </p>
+
+          </article>
+
+
+          <article class="about-card">
+
+            <h2>
+              Our purpose
+            </h2>
+
+            <p>
+              We seek to support the long-term preservation of
+              Mauritius’ botanical heritage and encourage greater
+              appreciation of the plants that form an important
+              part of the island’s natural identity.
+            </p>
+
+          </article>
+
+        </div>
+
+
+        <a class="home-link" href="index.html">
+          ← Back to Home
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+       SAME AS HOME PAGE
+  ========================= -->
+
+  <footer>
+
+    <span>
+      © 2025 - 2026 Mo Endemik
+    </span>
+
+    <span>
+      Mauritius · Indigenous & Endemic Flora
+    </span>
+
+  </footer>
+
+
+</body>
+</html>
