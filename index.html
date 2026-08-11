@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="[NGO NAME] works to conserve Mauritius’ indigenous and endemic flora and preserve Mauritius’ botanical heritage for future generations."
+    content="[NGO NAME] works to conserve Mauritius’ indigenous and endemic flora and preserve botanical heritage for future generations."
   >
 
   <style>
@@ -18,10 +18,6 @@
       --light: #888888;
 
       --white: #ffffff;
-
-      --brown-bg: #c9c0b1;
-      --brown-light: #cec6b8;
-      --brown-dark: #c4bbac;
 
       --green: #536754;
 
@@ -102,33 +98,35 @@
 
 
     /* =========================
-       MAIN HERO
+       MAIN INTRO
     ========================= */
 
     .intro {
       max-width: 1120px;
       margin: 0 auto;
 
-      padding: 90px 6% 75px;
+      padding: 90px 6% 85px;
+
+      text-align: left;
     }
 
 
     .intro h1 {
-      max-width: 900px;
+      max-width: 800px;
 
       font-size: clamp(2.8rem, 5.5vw, 5rem);
-      line-height: 0.98;
+      line-height: 1;
 
       font-weight: 500;
       letter-spacing: -0.055em;
+      text-transform: none;
     }
 
 
     .intro-statement {
-      max-width: 520px;
+      margin-top: 30px;
 
-      margin-top: 38px;
-      margin-left: auto;
+      max-width: 500px;
     }
 
 
@@ -141,45 +139,16 @@
 
 
     /* =========================
-       THREE CARD AREA
+       THREE CARDS
     ========================= */
 
     .features-wrapper {
       max-width: 1180px;
       margin: 0 auto;
 
-      padding: 60px 30px 65px;
+      padding: 0 30px 105px;
 
-      background-color: var(--brown-bg);
-
-      /*
-        Subtle matte texture
-      */
-
-      background-image:
-        radial-gradient(
-          rgba(255, 255, 255, 0.16) 0.8px,
-          transparent 0.8px
-        ),
-        radial-gradient(
-          rgba(70, 55, 40, 0.07) 0.8px,
-          transparent 0.8px
-        ),
-        linear-gradient(
-          135deg,
-          var(--brown-light) 0%,
-          var(--brown-dark) 50%,
-          #c7beaf 100%
-        );
-
-      background-size:
-        13px 13px,
-        19px 19px,
-        100% 100%;
-
-      border: 1px solid #bdb3a4;
-
-      border-radius: 4px;
+      background: var(--white);
     }
 
 
@@ -195,40 +164,35 @@
 
 
     /* =========================
-       WHITE CARDS
+       CARDS
     ========================= */
 
     .feature-card {
-      min-height: 220px;
+      min-height: 185px;
 
       padding: 24px;
 
       display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
+      align-items: flex-end;
 
       background: var(--white);
 
-      /*
-        Pronounced green piping
-      */
-
       border: 3px solid var(--green);
 
-      outline: 1px solid rgba(255, 255, 255, 0.75);
+      outline: 1px solid rgba(255, 255, 255, 0.8);
       outline-offset: -6px;
 
       box-shadow:
-        0 7px 16px rgba(55, 45, 30, 0.09);
+        0 6px 14px rgba(20, 30, 22, 0.07);
     }
 
 
     .feature-card h2 {
-      margin-bottom: 11px;
+      margin-bottom: 10px;
 
       color: var(--black);
 
-      font-size: 1.2rem;
+      font-size: 1.18rem;
       line-height: 1.15;
 
       font-weight: 500;
@@ -239,7 +203,7 @@
     .feature-card p {
       color: var(--muted);
 
-      font-size: 0.8rem;
+      font-size: 0.79rem;
       line-height: 1.6;
     }
 
@@ -271,11 +235,7 @@
 
       .intro {
         padding-top: 70px;
-      }
-
-
-      .intro-statement {
-        margin-left: 0;
+        padding-bottom: 70px;
       }
 
 
@@ -287,7 +247,7 @@
 
 
       .feature-card {
-        min-height: 205px;
+        min-height: 180px;
       }
     }
 
@@ -315,31 +275,28 @@
 
 
       .intro {
-        padding: 60px 5% 50px;
+        padding: 60px 5% 60px;
       }
 
 
       .intro h1 {
         font-size: clamp(2.6rem, 13vw, 4rem);
+        line-height: 1;
       }
 
 
       .intro-statement {
-        margin-top: 30px;
+        margin-top: 26px;
       }
 
 
       .intro-statement p {
-        font-size: 0.86rem;
+        font-size: 0.85rem;
       }
 
 
       .features-wrapper {
-        margin: 0 12px;
-
-        padding: 48px 18px 52px;
-
-        border-radius: 4px;
+        padding: 0 5% 80px;
       }
 
 
@@ -349,21 +306,21 @@
 
 
       .feature-card {
-        min-height: 190px;
+        min-height: 165px;
 
-        padding: 22px;
+        padding: 21px;
 
         border-width: 3px;
       }
 
 
       .feature-card h2 {
-        font-size: 1.15rem;
+        font-size: 1.1rem;
       }
 
 
       .feature-card p {
-        font-size: 0.79rem;
+        font-size: 0.78rem;
       }
 
 
@@ -384,9 +341,7 @@
 <body>
 
 
-  <!-- =========================
-       HEADER
-  ========================= -->
+  <!-- HEADER -->
 
   <header>
 
@@ -407,22 +362,19 @@
   <main>
 
 
-    <!-- =========================
-         HERO
-    ========================= -->
+    <!-- MAIN INTRO -->
 
     <section class="intro">
 
       <h1>
-        Mauritius<br>
-        Unique Flora
+        Mauritius unique flora
       </h1>
 
 
       <div class="intro-statement">
 
         <p>
-          Preserving Mauritius botanical heritage for future generations.
+          Preserving botanical heritage for future generations.
         </p>
 
       </div>
@@ -430,9 +382,7 @@
     </section>
 
 
-    <!-- =========================
-         THREE MAIN CARDS
-    ========================= -->
+    <!-- THREE MAIN CARDS -->
 
     <section class="features-wrapper">
 
@@ -501,9 +451,7 @@
   </main>
 
 
-  <!-- =========================
-       FOOTER
-  ========================= -->
+  <!-- FOOTER -->
 
   <footer>
 
