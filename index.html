@@ -18,12 +18,8 @@
       --light: #888888;
       --background: #ffffff;
 
-      /* Botanical palette */
       --green: #4f6b52;
       --green-matte: #7b8567;
-      --green-light: #b8c4ae;
-
-      /* Matte sage */
       --green-pale: #e7eade;
 
       --border: #e8e8e8;
@@ -64,10 +60,8 @@
 
     .logo {
       color: var(--black);
-
       font-size: 0.9rem;
       font-weight: 600;
-
       letter-spacing: 0.06em;
       text-transform: uppercase;
     }
@@ -98,13 +92,11 @@
       content: "";
 
       position: absolute;
-
       left: 0;
       right: 0;
       bottom: -7px;
 
       height: 1px;
-
       background: var(--green);
     }
 
@@ -122,15 +114,61 @@
       grid-template-columns: 1fr 0.85fr;
 
       gap: 8%;
-
       align-items: center;
     }
 
+    /* =========================
+       HERO TITLE AREA
+    ========================= */
+
     .hero-content {
+      position: relative;
+
       max-width: 540px;
+
+      padding: 34px 30px 34px 0;
+    }
+
+    /* Upper-right matte square */
+
+    .hero-content::before {
+      content: "";
+
+      position: absolute;
+
+      top: 0;
+      right: 15px;
+
+      width: 82px;
+      height: 82px;
+
+      background: var(--green-matte);
+
+      z-index: 0;
+    }
+
+    /* Lower-left matte square */
+
+    .hero-content::after {
+      content: "";
+
+      position: absolute;
+
+      left: -18px;
+      bottom: 0;
+
+      width: 58px;
+      height: 58px;
+
+      background: var(--green-matte);
+
+      z-index: 0;
     }
 
     .hero h1 {
+      position: relative;
+      z-index: 1;
+
       max-width: 600px;
 
       margin-bottom: 20px;
@@ -143,6 +181,9 @@
     }
 
     .hero p {
+      position: relative;
+      z-index: 1;
+
       max-width: 470px;
 
       color: var(--muted);
@@ -160,63 +201,55 @@
 
       max-width: 510px;
       margin-left: auto;
-
-      z-index: 1;
-    }
-
-    /*
-      Matte green square
-      — upper right
-    */
-
-    .hero-image::before {
-      content: "";
-
-      position: absolute;
-
-      top: -22px;
-      right: -22px;
-
-      width: 100px;
-      height: 100px;
-
-      background: var(--green-matte);
-
-      z-index: -2;
-    }
-
-    /*
-      Matte green square
-      — lower left
-    */
-
-    .hero-image::after {
-      content: "";
-
-      position: absolute;
-
-      left: -22px;
-      bottom: -22px;
-
-      width: 75px;
-      height: 75px;
-
-      background: var(--green-matte);
-
-      z-index: -2;
     }
 
     .hero-image img {
-      position: relative;
-
-      z-index: 1;
-
       display: block;
 
       width: 100%;
       height: 470px;
 
       object-fit: cover;
+    }
+
+    /* Upper-left arrow */
+
+    .photo-arrow.top-left {
+      position: absolute;
+
+      top: 18px;
+      left: 18px;
+
+      color: #ffffff;
+
+      font-size: 1.3rem;
+      font-weight: 300;
+
+      line-height: 1;
+
+      z-index: 2;
+
+      opacity: 0.9;
+    }
+
+    /* Lower-right arrow */
+
+    .photo-arrow.bottom-right {
+      position: absolute;
+
+      right: 18px;
+      bottom: 18px;
+
+      color: #ffffff;
+
+      font-size: 1.3rem;
+      font-weight: 300;
+
+      line-height: 1;
+
+      z-index: 2;
+
+      opacity: 0.9;
     }
 
     /* =========================
@@ -313,7 +346,7 @@
 
       margin: 0 auto 22px;
 
-      background: #5f7055;
+      background: var(--green);
 
       transform: rotate(45deg);
     }
@@ -356,7 +389,6 @@
 
       .hero {
         grid-template-columns: 1fr;
-
         gap: 50px;
       }
 
@@ -370,7 +402,6 @@
 
       .who-we-are {
         grid-template-columns: 1fr;
-
         gap: 25px;
       }
     }
@@ -383,7 +414,6 @@
 
       header {
         height: 74px;
-
         padding: 0 5%;
       }
 
@@ -397,8 +427,27 @@
 
       .hero {
         padding: 50px 5% 65px;
-
         gap: 45px;
+      }
+
+      .hero-content {
+        padding: 25px 18px 25px 10px;
+      }
+
+      .hero-content::before {
+        top: 0;
+        right: 0;
+
+        width: 60px;
+        height: 60px;
+      }
+
+      .hero-content::after {
+        left: -5px;
+        bottom: 0;
+
+        width: 45px;
+        height: 45px;
       }
 
       .hero h1 {
@@ -413,22 +462,14 @@
         height: 360px;
       }
 
-      /* Smaller matte squares on mobile */
-
-      .hero-image::before {
-        top: -14px;
-        right: -14px;
-
-        width: 70px;
-        height: 70px;
+      .photo-arrow.top-left {
+        top: 12px;
+        left: 12px;
       }
 
-      .hero-image::after {
-        left: -14px;
-        bottom: -14px;
-
-        width: 55px;
-        height: 55px;
+      .photo-arrow.bottom-right {
+        right: 12px;
+        bottom: 12px;
       }
 
       .who-we-are {
@@ -453,9 +494,7 @@
 
 <body>
 
-  <!-- =========================
-       HEADER
-  ========================= -->
+  <!-- HEADER -->
 
   <header>
 
@@ -474,16 +513,14 @@
 
   <main>
 
-    <!-- =========================
-         HERO
-    ========================= -->
+    <!-- HERO -->
 
     <section class="hero">
 
       <div class="hero-content">
 
         <h1>
-          Mauritius’<br>
+          Mauritius<br>
           Unique Flora
         </h1>
 
@@ -500,17 +537,18 @@
 
         <img
           src="mauritius-flora.jpg"
-          alt="Mauritian indigenous and endemic flora"
+          alt=""
         >
+
+        <span class="photo-arrow top-left">↗</span>
+        <span class="photo-arrow bottom-right">↙</span>
 
       </div>
 
     </section>
 
 
-    <!-- =========================
-         WHO WE ARE
-    ========================= -->
+    <!-- WHO WE ARE -->
 
     <section class="who-we-are">
 
@@ -521,13 +559,13 @@
       <div class="who-content">
 
         <h2>
-          A commitment to Mauritius’ native heritage.
+          Committed to our native heritage.
         </h2>
 
         <p>
-          We are committed to the conservation of the species
-          that are part of Mauritius’ natural heritage, with a
-          particular focus on its indigenous and endemic flora.
+          Our work focuses on safeguarding the species that make
+          Mauritius botanically unique and ensuring their place
+          in the landscapes of future generations.
         </p>
 
         <a href="about.html" class="about-link">
@@ -539,16 +577,14 @@
     </section>
 
 
-    <!-- =========================
-         MISSION
-    ========================= -->
+    <!-- MISSION -->
 
     <section class="mission">
 
       <div class="mission-mark"></div>
 
       <h2>
-        Preserving Mauritius’ botanical heritage for future generations.
+        Preserving Mauritius botanical heritage for future generations.
       </h2>
 
     </section>
@@ -556,9 +592,7 @@
   </main>
 
 
-  <!-- =========================
-       FOOTER
-  ========================= -->
+  <!-- FOOTER -->
 
   <footer>
 
