@@ -16,8 +16,15 @@
       --black: #111111;
       --muted: #666666;
       --light: #888888;
+
       --white: #ffffff;
-      --green: #536754;
+
+      /* Main matte green */
+      --background-green: #667564;
+
+      /* Stronger green for card edging and logo */
+      --card-green: #455b49;
+
       --border: #e5e5e2;
     }
 
@@ -38,6 +45,7 @@
       line-height: 1.6;
     }
 
+
     /* =========================
        HEADER
     ========================= */
@@ -55,7 +63,8 @@
     }
 
     .logo a {
-      color: var(--green);
+      color: var(--card-green);
+
       text-decoration: none;
 
       font-size: 0.9rem;
@@ -72,7 +81,9 @@
 
     nav a {
       color: var(--muted);
+
       text-decoration: none;
+
       font-size: 0.84rem;
 
       transition: color 0.2s ease;
@@ -82,6 +93,32 @@
     nav a.active {
       color: var(--black);
     }
+
+
+    /* =========================
+       MAIN GREEN FIELD
+    ========================= */
+
+    main {
+      background:
+        radial-gradient(
+          circle at 12% 18%,
+          rgba(255, 255, 255, 0.055) 0,
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 86% 72%,
+          rgba(0, 0, 0, 0.035) 0,
+          transparent 32%
+        ),
+        radial-gradient(
+          circle at 55% 45%,
+          rgba(255, 255, 255, 0.025) 0,
+          transparent 38%
+        ),
+        var(--background-green);
+    }
+
 
     /* =========================
        HERO
@@ -98,11 +135,14 @@
 
     .hero-copy {
       margin: 0 auto;
+
       text-align: center;
     }
 
     .hero-copy h1 {
       margin: 0;
+
+      color: var(--white);
 
       font-size: clamp(2.3rem, 4.2vw, 3.8rem);
       line-height: 1;
@@ -114,14 +154,15 @@
     .hero-copy p {
       margin: 24px auto 0;
 
-      color: var(--muted);
+      color: rgba(255, 255, 255, 0.8);
 
       font-size: 0.92rem;
       line-height: 1.6;
     }
 
+
     /* =========================
-       THREE INFORMATION CARDS
+       CARDS AREA
     ========================= */
 
     .features-wrapper {
@@ -130,7 +171,7 @@
 
       padding: 0 30px 105px;
 
-      background: var(--white);
+      background: transparent;
     }
 
     .features {
@@ -143,8 +184,9 @@
       gap: 18px;
     }
 
+
     /* =========================
-       ROUNDED / ORGANIC CARDS
+       ROUNDED CARDS
     ========================= */
 
     .feature-card {
@@ -158,14 +200,15 @@
 
       background: var(--white);
 
-      border: 6px solid var(--green);
+      border: 6px solid var(--card-green);
+
       border-radius: 32px;
 
-      outline: 1px solid rgba(255, 255, 255, 0.8);
+      outline: 1px solid rgba(255, 255, 255, 0.85);
       outline-offset: -9px;
 
       box-shadow:
-        0 7px 16px rgba(20, 30, 22, 0.08);
+        0 8px 18px rgba(20, 30, 22, 0.12);
 
       transition:
         transform 0.2s ease,
@@ -176,7 +219,7 @@
       transform: translateY(-2px);
 
       box-shadow:
-        0 10px 20px rgba(20, 30, 22, 0.10);
+        0 11px 22px rgba(20, 30, 22, 0.16);
     }
 
     .feature-card h2 {
@@ -202,6 +245,7 @@
       text-align: left;
     }
 
+
     /* =========================
        FOOTER
     ========================= */
@@ -213,12 +257,15 @@
       align-items: center;
       justify-content: space-between;
 
+      background: var(--white);
+
       border-top: 1px solid var(--border);
 
       color: var(--light);
 
       font-size: 0.72rem;
     }
+
 
     /* =========================
        TABLET
@@ -233,6 +280,7 @@
 
       .features {
         grid-template-columns: 1fr;
+
         max-width: 620px;
       }
 
@@ -240,6 +288,7 @@
         min-height: 155px;
       }
     }
+
 
     /* =========================
        MOBILE
@@ -271,6 +320,7 @@
 
       .hero-copy p {
         max-width: 340px;
+
         margin-top: 22px;
 
         font-size: 0.85rem;
@@ -286,6 +336,7 @@
 
       .feature-card {
         min-height: 145px;
+
         padding: 19px 21px;
 
         border-width: 6px;
@@ -294,11 +345,13 @@
 
       .feature-card h2 {
         font-size: 1.05rem;
+
         text-align: center;
       }
 
       .feature-card p {
         font-size: 0.76rem;
+
         line-height: 1.55;
       }
 
@@ -314,7 +367,9 @@
   </style>
 </head>
 
+
 <body>
+
 
   <!-- =========================
        HEADER
@@ -326,6 +381,7 @@
       <a href="index.html">[NGO NAME]</a>
     </div>
 
+
     <nav>
       <a href="index.html" class="active">Home</a>
       <a href="about.html">About</a>
@@ -335,11 +391,14 @@
   </header>
 
 
+  <!-- =========================
+       MAIN
+  ========================= -->
+
   <main>
 
-    <!-- =========================
-         HERO
-    ========================= -->
+
+    <!-- HERO -->
 
     <section class="intro">
 
@@ -358,13 +417,12 @@
     </section>
 
 
-    <!-- =========================
-         THREE INFORMATION CARDS
-    ========================= -->
+    <!-- THREE INFORMATION CARDS -->
 
     <section class="features-wrapper">
 
       <div class="features">
+
 
         <article class="feature-card">
 
@@ -420,6 +478,7 @@
 
         </article>
 
+
       </div>
 
     </section>
@@ -429,7 +488,7 @@
 
   <!-- =========================
        FOOTER
-    ========================= -->
+  ========================= -->
 
   <footer>
 
@@ -442,6 +501,7 @@
     </span>
 
   </footer>
+
 
 </body>
 </html>
