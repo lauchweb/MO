@@ -144,13 +144,13 @@
     }
 
     /* =========================
-       CARDS
+       ROUNDED / ORGANIC CARDS
     ========================= */
 
     .feature-card {
       min-height: 155px;
 
-      padding: 21px;
+      padding: 21px 25px;
 
       display: flex;
       align-items: flex-start;
@@ -158,14 +158,25 @@
 
       background: var(--white);
 
-      /* Stronger green frame */
       border: 6px solid var(--green);
+      border-radius: 32px;
 
       outline: 1px solid rgba(255, 255, 255, 0.8);
       outline-offset: -9px;
 
       box-shadow:
         0 7px 16px rgba(20, 30, 22, 0.08);
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-2px);
+
+      box-shadow:
+        0 10px 20px rgba(20, 30, 22, 0.10);
     }
 
     .feature-card h2 {
@@ -275,9 +286,10 @@
 
       .feature-card {
         min-height: 145px;
-        padding: 19px;
+        padding: 19px 21px;
 
         border-width: 6px;
+        border-radius: 28px;
       }
 
       .feature-card h2 {
