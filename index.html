@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>[NGO NAME] — Conservation of Mauritius’ Indigenous & Endemic Flora</title>
+  <title>[NGO NAME] — Mauritian Indigenous & Endemic Flora</title>
 
   <meta
     name="description"
@@ -18,12 +18,11 @@
       --light: #888888;
       --background: #ffffff;
 
-      /* Botanical accents */
-      --green: #5f735f;
-      --green-light: #dfe7df;
-      --green-pale: #f2f5f1;
+      --green: #4f6b52;
+      --green-light: #b8cbb9;
+      --green-pale: #f3f6f3;
 
-      --border: #e9e9e9;
+      --border: #e8e8e8;
     }
 
     * {
@@ -48,17 +47,19 @@
     ========================= */
 
     header {
-      height: 88px;
+      height: 86px;
       padding: 0 6%;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: var(--background);
+
+      border-bottom: 1px solid var(--border);
     }
 
     .logo {
       color: var(--black);
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       font-weight: 600;
       letter-spacing: 0.06em;
       text-transform: uppercase;
@@ -67,14 +68,17 @@
     nav {
       display: flex;
       align-items: center;
-      gap: 34px;
+      gap: 32px;
     }
 
     nav a {
       position: relative;
+
       color: var(--muted);
       text-decoration: none;
+
       font-size: 0.88rem;
+
       transition: color 0.2s ease;
     }
 
@@ -85,11 +89,14 @@
 
     nav a.active::after {
       content: "";
+
       position: absolute;
       left: 0;
       right: 0;
       bottom: -7px;
+
       height: 1px;
+
       background: var(--green);
     }
 
@@ -98,150 +105,161 @@
     ========================= */
 
     .hero {
-      position: relative;
-      min-height: calc(100vh - 88px);
-      padding: 7% 6%;
-      display: flex;
-      align-items: flex-end;
-      overflow: hidden;
+      padding: 7% 6% 9%;
 
-      background:
-        linear-gradient(
-          to top,
-          rgba(17, 17, 17, 0.72),
-          rgba(17, 17, 17, 0.08)
-        ),
-        url("mauritius-flora.jpg") center / cover no-repeat;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
 
-      color: var(--background);
+      gap: 9%;
+
+      align-items: center;
     }
 
-    /*
-      Small botanical accent
-      positioned in the hero corner.
-    */
+    .hero-image {
+      position: relative;
+    }
 
-    .hero-accent {
+    .hero-image::after {
+      content: "";
+
       position: absolute;
-      top: 0;
-      right: 6%;
-      width: 90px;
-      height: 90px;
-      border-right: 2px solid var(--green-light);
-      border-bottom: 2px solid var(--green-light);
-      opacity: 0.8;
+
+      left: -18px;
+      bottom: -18px;
+
+      width: 100%;
+      height: 100%;
+
+      border: 2px solid var(--green);
+
+      z-index: 0;
+    }
+
+    .hero-image img {
+      position: relative;
+      z-index: 1;
+
+      display: block;
+
+      width: 100%;
+      height: min(68vh, 650px);
+
+      object-fit: cover;
     }
 
     .hero-content {
-      position: relative;
-      z-index: 2;
-      width: 100%;
-      max-width: 900px;
+      max-width: 620px;
     }
 
     .eyebrow {
       display: flex;
       align-items: center;
-      gap: 10px;
-      margin-bottom: 18px;
+      gap: 12px;
 
-      color: #dddddd;
-      font-size: 0.75rem;
+      margin-bottom: 22px;
+
+      color: var(--light);
+
+      font-size: 0.72rem;
       letter-spacing: 0.14em;
       text-transform: uppercase;
     }
 
     .eyebrow::before {
       content: "";
-      width: 24px;
+
+      width: 28px;
       height: 1px;
-      background: var(--green-light);
+
+      background: var(--green);
     }
 
     .hero h1 {
-      max-width: 850px;
-      margin-bottom: 24px;
+      margin-bottom: 28px;
 
-      font-size: clamp(3.2rem, 7vw, 6.5rem);
+      font-size: clamp(3.2rem, 5.5vw, 6rem);
       line-height: 0.98;
+
       font-weight: 500;
       letter-spacing: -0.055em;
     }
 
     .hero p {
-      max-width: 620px;
+      max-width: 510px;
 
-      color: #eeeeee;
-      font-size: 1rem;
-      line-height: 1.7;
+      color: var(--muted);
+
+      font-size: 1.05rem;
+      line-height: 1.8;
     }
 
     /* =========================
        WHO WE ARE
     ========================= */
 
-    .intro {
-      position: relative;
+    .who-we-are {
+      padding: 120px 6%;
 
-      padding: 140px 6%;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
 
       display: grid;
-      grid-template-columns: 0.7fr 1.3fr;
-      gap: 10%;
+      grid-template-columns: 0.65fr 1.35fr;
 
-      border-bottom: 1px solid var(--border);
+      gap: 10%;
     }
 
-    .intro-label {
+    .section-label {
       color: var(--light);
-      font-size: 0.75rem;
-      letter-spacing: 0.13em;
+
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
     }
 
-    .intro-content {
-      max-width: 1000px;
+    .who-content {
+      max-width: 760px;
     }
 
-    .intro-layout {
-      display: grid;
-      grid-template-columns: 1fr 360px;
-      gap: 70px;
-      align-items: center;
-    }
+    .who-content h2 {
+      max-width: 700px;
 
-    .intro-text h2 {
-      max-width: 650px;
-      margin-bottom: 24px;
+      margin-bottom: 26px;
 
       font-size: clamp(2rem, 4vw, 3.5rem);
       line-height: 1.08;
+
       font-weight: 500;
       letter-spacing: -0.04em;
     }
 
-    .intro-text p {
-      max-width: 600px;
+    .who-content p {
+      max-width: 650px;
 
       color: var(--muted);
+
       font-size: 1.05rem;
-      line-height: 1.8;
+      line-height: 1.85;
     }
 
     .about-link {
       display: inline-block;
 
-      margin-top: 30px;
-      padding-bottom: 5px;
+      margin-top: 28px;
+
+      color: var(--black);
+
+      text-decoration: none;
+
+      font-size: 0.9rem;
 
       border-bottom: 1px solid var(--black);
 
-      color: var(--black);
-      text-decoration: none;
-      font-size: 0.9rem;
+      padding-bottom: 4px;
 
-      transition: color 0.2s ease,
-                  border-color 0.2s ease;
+      transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
     }
 
     .about-link:hover {
@@ -250,59 +268,20 @@
     }
 
     /* =========================
-       IMAGE FRAME
-    ========================= */
-
-    .intro-image {
-      position: relative;
-      width: 100%;
-    }
-
-    .intro-image::before {
-      content: "";
-
-      position: absolute;
-
-      top: 18px;
-      left: -18px;
-
-      width: 100%;
-      height: 100%;
-
-      border: 2px solid var(--green-light);
-
-      z-index: 0;
-    }
-
-    .intro-image img {
-      position: relative;
-      z-index: 1;
-
-      display: block;
-
-      width: 100%;
-      height: 440px;
-
-      object-fit: cover;
-    }
-
-    /* =========================
        MISSION
     ========================= */
 
     .mission {
-      position: relative;
-
-      padding: 130px 6%;
-
-      text-align: center;
+      padding: 120px 6%;
 
       background: var(--green-pale);
+
+      text-align: center;
     }
 
     .mission-mark {
-      width: 10px;
-      height: 10px;
+      width: 9px;
+      height: 9px;
 
       margin: 0 auto 28px;
 
@@ -311,33 +290,16 @@
       transform: rotate(45deg);
     }
 
-    .mission-label {
-      margin-bottom: 20px;
-
-      color: var(--light);
-      font-size: 0.75rem;
-      letter-spacing: 0.13em;
-      text-transform: uppercase;
-    }
-
     .mission h2 {
-      max-width: 800px;
+      max-width: 850px;
 
       margin: 0 auto;
 
-      font-size: clamp(2rem, 4vw, 3.5rem);
-      line-height: 1.1;
+      font-size: clamp(2rem, 4vw, 3.7rem);
+      line-height: 1.08;
+
       font-weight: 500;
       letter-spacing: -0.04em;
-    }
-
-    .mission p {
-      max-width: 620px;
-
-      margin: 25px auto 0;
-
-      color: var(--muted);
-      font-size: 1rem;
     }
 
     /* =========================
@@ -345,112 +307,106 @@
     ========================= */
 
     footer {
-      padding: 30px 6%;
+      padding: 28px 6%;
 
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 20px;
 
       color: var(--light);
+
       font-size: 0.78rem;
+    }
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 850px) {
+
+      .hero {
+        grid-template-columns: 1fr;
+
+        gap: 70px;
+      }
+
+      .hero-content {
+        order: 1;
+      }
+
+      .hero-image {
+        order: 2;
+
+        max-width: 650px;
+      }
+
+      .hero-image img {
+        height: 550px;
+      }
+
+      .who-we-are {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+      }
     }
 
     /* =========================
        MOBILE
     ========================= */
 
-    @media (max-width: 850px) {
-
-      .intro {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-
-      .intro-layout {
-        grid-template-columns: 1fr;
-        gap: 60px;
-      }
-
-      .intro-image {
-        max-width: 500px;
-      }
-    }
-
-    @media (max-width: 700px) {
+    @media (max-width: 600px) {
 
       header {
-        height: 76px;
+        height: 74px;
+
         padding: 0 5%;
       }
 
       nav {
-        gap: 18px;
+        gap: 17px;
       }
 
       nav a {
-        font-size: 0.82rem;
+        font-size: 0.8rem;
       }
 
       .hero {
-        min-height: calc(100vh - 76px);
-        padding: 12% 5%;
-      }
+        padding: 65px 5% 85px;
 
-      .hero-accent {
-        right: 5%;
-        width: 55px;
-        height: 55px;
+        gap: 55px;
       }
 
       .hero h1 {
-        font-size: clamp(3rem, 14vw, 5rem);
+        font-size: clamp(3rem, 15vw, 4.5rem);
       }
 
-      .intro {
-        padding: 90px 5%;
+      .hero p {
+        font-size: 0.98rem;
       }
 
-      .intro-image img {
-        height: 380px;
+      .hero-image img {
+        height: 430px;
       }
 
-      .intro-image::before {
-        top: 12px;
-        left: -12px;
+      .hero-image::after {
+        left: -10px;
+        bottom: -10px;
+      }
+
+      .who-we-are {
+        padding: 85px 5%;
       }
 
       .mission {
-        padding: 90px 5%;
+        padding: 85px 5%;
       }
 
       footer {
         padding: 25px 5%;
+
         flex-direction: column;
         align-items: flex-start;
-      }
-    }
-
-    @media (max-width: 480px) {
-
-      .logo {
-        font-size: 0.8rem;
-      }
-
-      nav {
-        gap: 13px;
-      }
-
-      .hero h1 {
-        font-size: 3rem;
-      }
-
-      .hero p {
-        font-size: 0.95rem;
-      }
-
-      .intro-image img {
-        height: 320px;
       }
     }
   </style>
@@ -458,9 +414,7 @@
 
 <body>
 
-  <!-- =========================
-       HEADER
-  ========================== -->
+  <!-- HEADER -->
 
   <header>
 
@@ -479,13 +433,9 @@
 
   <main>
 
-    <!-- =========================
-         HERO
-    ========================== -->
+    <!-- HERO -->
 
     <section class="hero">
-
-      <div class="hero-accent"></div>
 
       <div class="hero-content">
 
@@ -500,95 +450,71 @@
         </h1>
 
         <p>
-          Conserving the indigenous and endemic flora of Mauritius and
-          preserving our island’s natural heritage.
+          [NGO NAME] is dedicated to the conservation of Mauritius’
+          indigenous and endemic flora and the preservation of our
+          botanical heritage.
         </p>
 
       </div>
 
+
+      <div class="hero-image">
+
+        <img
+          src="mauritius-flora.jpg"
+          alt="Mauritian indigenous flora"
+        >
+
+      </div>
+
     </section>
 
 
-    <!-- =========================
-         WHO WE ARE
-    ========================== -->
+    <!-- WHO WE ARE -->
 
-    <section class="intro">
+    <section class="who-we-are">
 
-      <div class="intro-label">
+      <div class="section-label">
         Who we are
       </div>
 
-      <div class="intro-content">
+      <div class="who-content">
 
-        <div class="intro-layout">
+        <h2>
+          A commitment to Mauritius’ native plant heritage.
+        </h2>
 
-          <div class="intro-text">
+        <p>
+          We are committed to the conservation of the plant species
+          that are part of Mauritius’ natural heritage, with a particular
+          focus on its indigenous and endemic flora.
+        </p>
 
-            <h2>
-              Conserving the plants that make Mauritius unique.
-            </h2>
-
-            <p>
-              [NGO NAME] is dedicated to the conservation of Mauritius’
-              indigenous and endemic flora. Through our work, we seek to
-              protect our unique plant heritage and promote its preservation
-              for future generations.
-            </p>
-
-            <a href="about.html" class="about-link">
-              Discover who we are →
-            </a>
-
-          </div>
-
-
-          <div class="intro-image">
-
-            <img
-              src="mauritius-flora-detail.jpg"
-              alt="Indigenous flora of Mauritius"
-            >
-
-          </div>
-
-        </div>
+        <a href="about.html" class="about-link">
+          About us →
+        </a>
 
       </div>
 
     </section>
 
 
-    <!-- =========================
-         MISSION
-    ========================== -->
+    <!-- MISSION -->
 
     <section class="mission">
 
       <div class="mission-mark"></div>
 
-      <div class="mission-label">
-        Our mission
-      </div>
-
       <h2>
-        To conserve Mauritius’ indigenous and endemic flora
-        for generations to come.
+        Preserving Mauritius’ botanical heritage for future generations.
       </h2>
-
-      <p>
-        Protecting a unique botanical heritage that is part of
-        Mauritius’ natural identity.
-      </p>
 
     </section>
 
   </main>
 
 
-  <!-- =========================
-       FOOTER
-  ========================== -->
+  <!-- FOOTER -->
 
   <footer>
 
