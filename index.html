@@ -16,8 +16,15 @@
       --black: #111111;
       --muted: #666666;
       --light: #888888;
-      --background: #ffffff;
-      --border: #e8e8e8;
+
+      --white: #ffffff;
+      --off-white: #f8f8f6;
+
+      --green: #526653;
+      --green-dark: #405143;
+      --green-soft: #697a69;
+
+      --border: #e7e7e4;
     }
 
     * {
@@ -33,23 +40,23 @@
     body {
       font-family: Arial, Helvetica, sans-serif;
       color: var(--black);
-      background: var(--background);
+      background: var(--white);
       line-height: 1.6;
     }
 
-    /* =========================
+    /* =================================
        HEADER
-    ========================= */
+    ================================= */
 
     header {
-      height: 86px;
+      height: 82px;
       padding: 0 6%;
 
       display: flex;
       align-items: center;
       justify-content: space-between;
 
-      background: var(--background);
+      background: var(--white);
       border-bottom: 1px solid var(--border);
     }
 
@@ -57,24 +64,24 @@
       color: var(--black);
       text-decoration: none;
 
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       font-weight: 600;
 
-      letter-spacing: 0.06em;
+      letter-spacing: 0.07em;
       text-transform: uppercase;
     }
 
     nav {
       display: flex;
       align-items: center;
-      gap: 32px;
+      gap: 30px;
     }
 
     nav a {
       color: var(--muted);
       text-decoration: none;
 
-      font-size: 0.88rem;
+      font-size: 0.84rem;
 
       transition: color 0.2s ease;
     }
@@ -84,93 +91,218 @@
       color: var(--black);
     }
 
-    /* =========================
-       HERO
-    ========================= */
+    /* =================================
+       INTRO
+    ================================= */
 
-    .hero {
-      max-width: 1050px;
+    .intro {
+      max-width: 1100px;
       margin: 0 auto;
 
-      padding: 110px 6% 125px;
+      padding: 85px 6% 70px;
 
-      text-align: center;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 70px;
+
+      align-items: end;
     }
 
-    .hero-content {
-      max-width: 800px;
-      margin: 0 auto;
+    .intro-label {
+      color: var(--light);
+
+      font-size: 0.68rem;
+      font-weight: 500;
+
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
     }
 
-    .hero h1 {
-      margin-bottom: 28px;
+    .intro h1 {
+      max-width: 620px;
 
-      font-size: clamp(3rem, 7vw, 6.2rem);
+      font-size: clamp(2.6rem, 5vw, 4.7rem);
       line-height: 0.98;
 
       font-weight: 500;
       letter-spacing: -0.055em;
     }
 
-    .hero p {
-      max-width: 600px;
-      margin: 0 auto;
+    .intro-description {
+      max-width: 480px;
 
       color: var(--muted);
 
-      font-size: 1rem;
-      line-height: 1.8;
+      font-size: 0.92rem;
+      line-height: 1.75;
     }
 
-    /* =========================
-       INTRODUCTION
-    ========================= */
+    /* =================================
+       GREEN FEATURE AREA
+    ================================= */
 
-    .introduction {
-      max-width: 850px;
+    .features-wrapper {
+      position: relative;
+
+      padding: 80px 6% 90px;
+
+      background:
+        radial-gradient(
+          circle at 15% 20%,
+          rgba(255, 255, 255, 0.055) 0 1px,
+          transparent 1px
+        ),
+        radial-gradient(
+          circle at 75% 65%,
+          rgba(255, 255, 255, 0.035) 0 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          135deg,
+          #526653 0%,
+          #4b5e4d 48%,
+          #425545 100%
+        );
+
+      background-size:
+        13px 13px,
+        19px 19px,
+        100% 100%;
+    }
+
+    /*
+      Very subtle organic texture.
+      This avoids the green looking like a flat
+      digital rectangle.
+    */
+
+    .features-wrapper::before {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      opacity: 0.18;
+      pointer-events: none;
+
+      background:
+        linear-gradient(
+          115deg,
+          transparent 0%,
+          rgba(255,255,255,0.08) 45%,
+          transparent 70%
+        );
+    }
+
+    .features {
+      position: relative;
+      z-index: 1;
+
+      max-width: 1120px;
       margin: 0 auto;
 
-      padding: 90px 6% 100px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
 
-      border-top: 1px solid var(--border);
+      gap: 18px;
     }
 
-    .intro-content {
-      max-width: 680px;
+    /* =================================
+       WHITE CARDS
+    ================================= */
+
+    .feature-card {
+      min-height: 310px;
+
+      padding: 34px 32px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      background: var(--white);
+
+      border: 1px solid rgba(0, 0, 0, 0.04);
+
+      box-shadow:
+        0 8px 28px rgba(20, 35, 24, 0.10);
+    }
+
+    .card-number {
+      color: #999999;
+
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+    }
+
+    .feature-card h2 {
+      margin-top: auto;
+      margin-bottom: 15px;
+
+      font-size: 1.45rem;
+      line-height: 1.12;
+
+      font-weight: 500;
+      letter-spacing: -0.025em;
+    }
+
+    .feature-card p {
+      color: var(--muted);
+
+      font-size: 0.86rem;
+      line-height: 1.7;
+    }
+
+    /* =================================
+       ABOUT LINK
+    ================================= */
+
+    .about-section {
+      max-width: 1120px;
       margin: 0 auto;
+
+      padding: 85px 6% 90px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 50px;
     }
 
-    .intro-content h2 {
-      margin-bottom: 22px;
+    .about-section h2 {
+      max-width: 600px;
 
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      line-height: 1.1;
+      font-size: clamp(1.8rem, 3vw, 2.7rem);
+      line-height: 1.12;
 
       font-weight: 500;
       letter-spacing: -0.04em;
     }
 
-    .intro-content p {
-      max-width: 620px;
+    .about-section p {
+      max-width: 430px;
 
       color: var(--muted);
 
-      font-size: 1rem;
-      line-height: 1.85;
+      font-size: 0.88rem;
+      line-height: 1.75;
     }
 
     .about-link {
       display: inline-block;
 
-      margin-top: 28px;
-      padding-bottom: 4px;
+      margin-top: 22px;
 
       color: var(--black);
-      border-bottom: 1px solid var(--black);
 
       text-decoration: none;
 
-      font-size: 0.85rem;
+      font-size: 0.82rem;
+
+      border-bottom: 1px solid var(--black);
+
+      padding-bottom: 4px;
 
       transition:
         color 0.2s ease,
@@ -182,55 +314,60 @@
       border-color: var(--muted);
     }
 
-    /* =========================
-       MISSION
-    ========================= */
-
-    .mission {
-      padding: 90px 6% 100px;
-
-      background: #f5f5f5;
-
-      text-align: center;
-    }
-
-    .mission h2 {
-      max-width: 760px;
-      margin: 0 auto;
-
-      font-size: clamp(1.9rem, 3.5vw, 3rem);
-      line-height: 1.15;
-
-      font-weight: 500;
-      letter-spacing: -0.04em;
-    }
-
-    /* =========================
+    /* =================================
        FOOTER
-    ========================= */
+    ================================= */
 
     footer {
-      padding: 25px 6%;
+      padding: 24px 6%;
 
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+
+      border-top: 1px solid var(--border);
 
       color: var(--light);
 
-      font-size: 0.75rem;
-
-      background: var(--background);
+      font-size: 0.72rem;
     }
 
-    /* =========================
+    /* =================================
+       TABLET
+    ================================= */
+
+    @media (max-width: 850px) {
+
+      .intro {
+        grid-template-columns: 1fr;
+        gap: 25px;
+
+        padding-top: 70px;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+        max-width: 620px;
+      }
+
+      .feature-card {
+        min-height: 240px;
+      }
+
+      .about-section {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    /* =================================
        MOBILE
-    ========================= */
+    ================================= */
 
     @media (max-width: 600px) {
 
       header {
-        height: 74px;
+        height: 72px;
         padding: 0 5%;
       }
 
@@ -239,36 +376,57 @@
       }
 
       nav a {
-        font-size: 0.8rem;
+        font-size: 0.78rem;
       }
 
-      .hero {
-        padding: 75px 5% 85px;
+      .intro {
+        padding: 60px 5% 55px;
+
+        gap: 20px;
       }
 
-      .hero h1 {
-        font-size: clamp(2.8rem, 15vw, 4.5rem);
+      .intro h1 {
+        font-size: clamp(2.5rem, 13vw, 4rem);
       }
 
-      .hero p {
-        font-size: 0.94rem;
+      .intro-description {
+        font-size: 0.88rem;
       }
 
-      .introduction {
-        padding: 65px 5% 75px;
+      .features-wrapper {
+        padding: 55px 5% 60px;
       }
 
-      .mission {
-        padding: 65px 5% 75px;
+      .features {
+        gap: 14px;
+      }
+
+      .feature-card {
+        min-height: 230px;
+        padding: 27px 25px;
+      }
+
+      .feature-card h2 {
+        font-size: 1.3rem;
+      }
+
+      .feature-card p {
+        font-size: 0.84rem;
+      }
+
+      .about-section {
+        padding: 60px 5% 65px;
+
+        gap: 25px;
       }
 
       footer {
-        padding: 22px 5%;
+        padding: 20px 5%;
 
         flex-direction: column;
         align-items: flex-start;
 
-        gap: 8px;
+        gap: 7px;
       }
     }
   </style>
@@ -298,19 +456,51 @@
   <main>
 
     <!-- =========================
-         HERO
+         INTRO
     ========================= -->
 
-    <section class="hero">
+    <section class="intro">
 
-      <div class="hero-content">
+      <div>
+        <div class="intro-label">
+          Our work
+        </div>
+      </div>
 
+      <div>
         <h1>
           Mauritius<br>
           Unique Flora
         </h1>
+      </div>
 
-        <p>
+    </section>
+
+
+    <!-- =========================
+         INTRO DESCRIPTION
+    ========================= -->
+
+    <section class="intro-description-section">
+
+      <div
+        style="
+          max-width: 1120px;
+          margin: 0 auto;
+          padding: 0 6% 70px;
+          display: flex;
+          justify-content: flex-end;
+        "
+      >
+
+        <p
+          style="
+            max-width: 480px;
+            color: #666666;
+            font-size: 0.92rem;
+            line-height: 1.75;
+          "
+        >
           [NGO NAME] is dedicated to the conservation of Mauritius’
           indigenous and endemic flora and the preservation of our
           botanical heritage.
@@ -322,26 +512,77 @@
 
 
     <!-- =========================
-         INTRODUCTION
+         THREE FEATURE CARDS
     ========================= -->
 
-    <section class="introduction">
+    <section class="features-wrapper">
 
-      <div class="intro-content">
+      <div class="features">
 
-        <h2>
-          Committed to our native heritage.
-        </h2>
+        <article class="feature-card">
 
-        <p>
-          Our work focuses on safeguarding the species that make
-          Mauritius botanically unique and ensuring their place
-          in the landscapes of future generations.
-        </p>
+          <span class="card-number">
+            01
+          </span>
 
-        <a href="about.html" class="about-link">
-          About us →
-        </a>
+          <div>
+
+            <h2>
+              Native species
+            </h2>
+
+            <p>
+              Supporting the protection of plants that belong
+              naturally to Mauritius and its ecosystems.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="feature-card">
+
+          <span class="card-number">
+            02
+          </span>
+
+          <div>
+
+            <h2>
+              Endemic flora
+            </h2>
+
+            <p>
+              Helping safeguard species found nowhere else
+              in the world.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="feature-card">
+
+          <span class="card-number">
+            03
+          </span>
+
+          <div>
+
+            <h2>
+              A living heritage
+            </h2>
+
+            <p>
+              Working towards a future where Mauritius’
+              botanical heritage continues to thrive.
+            </p>
+
+          </div>
+
+        </article>
 
       </div>
 
@@ -349,14 +590,31 @@
 
 
     <!-- =========================
-         MISSION
+         ABOUT
     ========================= -->
 
-    <section class="mission">
+    <section class="about-section">
 
-      <h2>
-        Preserving Mauritius botanical heritage for future generations.
-      </h2>
+      <div>
+
+        <h2>
+          Our commitment starts with understanding what we protect.
+        </h2>
+
+      </div>
+
+      <div>
+
+        <p>
+          Discover more about our organisation, our work and
+          our commitment to Mauritius’ native flora.
+        </p>
+
+        <a href="about.html" class="about-link">
+          About us →
+        </a>
+
+      </div>
 
     </section>
 
