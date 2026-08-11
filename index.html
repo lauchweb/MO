@@ -23,7 +23,7 @@
       --green-matte: #7b8567;
       --green-light: #b8c4ae;
 
-      /* Matte sage for the bottom section */
+      /* Matte sage */
       --green-pale: #e7eade;
 
       --border: #e8e8e8;
@@ -130,29 +130,6 @@
       max-width: 540px;
     }
 
-    .eyebrow {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-
-      margin-bottom: 18px;
-
-      color: var(--light);
-
-      font-size: 0.7rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-    }
-
-    .eyebrow::before {
-      content: "";
-
-      width: 22px;
-      height: 1px;
-
-      background: var(--green);
-    }
-
     .hero h1 {
       max-width: 600px;
 
@@ -162,7 +139,6 @@
       line-height: 1;
 
       font-weight: 500;
-
       letter-spacing: -0.05em;
     }
 
@@ -189,8 +165,8 @@
     }
 
     /*
-      Matte olive-green block
-      behind the image.
+      Matte green square
+      — upper right
     */
 
     .hero-image::before {
@@ -198,11 +174,11 @@
 
       position: absolute;
 
-      top: -24px;
-      right: -24px;
+      top: -22px;
+      right: -22px;
 
-      width: 145px;
-      height: 145px;
+      width: 100px;
+      height: 100px;
 
       background: var(--green-matte);
 
@@ -210,7 +186,8 @@
     }
 
     /*
-      Thin botanical green frame.
+      Matte green square
+      — lower left
     */
 
     .hero-image::after {
@@ -218,18 +195,22 @@
 
       position: absolute;
 
-      left: -13px;
-      bottom: -13px;
+      left: -22px;
+      bottom: -22px;
 
-      width: 100%;
-      height: 100%;
+      width: 75px;
+      height: 75px;
 
-      border: 2px solid var(--green);
+      background: var(--green-matte);
 
-      z-index: -1;
+      z-index: -2;
     }
 
     .hero-image img {
+      position: relative;
+
+      z-index: 1;
+
       display: block;
 
       width: 100%;
@@ -278,7 +259,6 @@
       line-height: 1.12;
 
       font-weight: 500;
-
       letter-spacing: -0.035em;
     }
 
@@ -295,7 +275,6 @@
       display: inline-block;
 
       margin-top: 23px;
-
       padding-bottom: 3px;
 
       color: var(--black);
@@ -348,7 +327,6 @@
       line-height: 1.12;
 
       font-weight: 500;
-
       letter-spacing: -0.035em;
     }
 
@@ -435,17 +413,22 @@
         height: 360px;
       }
 
+      /* Smaller matte squares on mobile */
+
       .hero-image::before {
         top: -14px;
         right: -14px;
 
-        width: 90px;
-        height: 90px;
+        width: 70px;
+        height: 70px;
       }
 
       .hero-image::after {
-        left: -9px;
-        bottom: -9px;
+        left: -14px;
+        bottom: -14px;
+
+        width: 55px;
+        height: 55px;
       }
 
       .who-we-are {
@@ -499,12 +482,7 @@
 
       <div class="hero-content">
 
-        <div class="eyebrow">
-          Conservation · Mauritius
-        </div>
-
         <h1>
-          Protecting<br>
           Mauritius’<br>
           Unique Flora
         </h1>
@@ -522,7 +500,7 @@
 
         <img
           src="mauritius-flora.jpg"
-          alt=""
+          alt="Mauritian indigenous and endemic flora"
         >
 
       </div>
@@ -543,13 +521,13 @@
       <div class="who-content">
 
         <h2>
-          A commitment to Mauritius’ native plant heritage.
+          A commitment to Mauritius’ native heritage.
         </h2>
 
         <p>
-          We are committed to the conservation of the plant species
-          that are part of Mauritius’ natural heritage, with a particular
-          focus on its indigenous and endemic flora.
+          We are committed to the conservation of the species
+          that are part of Mauritius’ natural heritage, with a
+          particular focus on its indigenous and endemic flora.
         </p>
 
         <a href="about.html" class="about-link">
