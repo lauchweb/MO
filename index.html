@@ -20,10 +20,8 @@
       --white: #ffffff;
       --off-white: #f7f7f5;
 
-      --green: #526653;
-      --green-dark: #465848;
-
       --border: #e5e5e2;
+      --card: #ffffff;
     }
 
     * {
@@ -151,42 +149,16 @@
     }
 
     /* =========================
-       GREEN FEATURE AREA
+       MAIN GRID
     ========================= */
 
     .features-wrapper {
-      position: relative;
+      padding: 75px 6% 85px;
 
-      padding: 80px 6% 90px;
+      background: var(--off-white);
 
-      background-color: var(--green);
-
-      /*
-        Very subtle matte texture.
-        No image required.
-      */
-      background-image:
-        radial-gradient(
-          rgba(255, 255, 255, 0.055) 0.7px,
-          transparent 0.7px
-        ),
-        radial-gradient(
-          rgba(0, 0, 0, 0.035) 0.7px,
-          transparent 0.7px
-        ),
-        linear-gradient(
-          135deg,
-          var(--green),
-          var(--green-dark)
-        );
-
-      background-size:
-        13px 13px,
-        17px 17px,
-        100% 100%;
-
-      border-top: 1px solid rgba(0, 0, 0, 0.08);
-      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
 
     .features {
@@ -200,7 +172,7 @@
     }
 
     /* =========================
-       WHITE CARDS
+       CARDS
     ========================= */
 
     .feature-card {
@@ -212,12 +184,9 @@
       flex-direction: column;
       justify-content: space-between;
 
-      background: var(--white);
+      background: var(--card);
 
-      border: 1px solid rgba(0, 0, 0, 0.04);
-
-      box-shadow:
-        0 10px 30px rgba(20, 35, 24, 0.12);
+      border: 1px solid var(--border);
     }
 
     .card-number {
@@ -229,8 +198,6 @@
 
     .feature-card h2 {
       margin-bottom: 14px;
-
-      color: var(--black);
 
       font-size: 1.35rem;
       line-height: 1.15;
@@ -331,6 +298,7 @@
 
       .intro {
         padding: 60px 5% 50px;
+
         gap: 18px;
       }
 
@@ -385,10 +353,6 @@
 
 <body>
 
-  <!-- =========================
-       HEADER
-  ========================= -->
-
   <header>
 
     <div class="logo">
@@ -406,10 +370,6 @@
 
   <main>
 
-    <!-- =========================
-         HERO
-    ========================= -->
-
     <section class="intro">
 
       <div class="intro-label">
@@ -426,10 +386,6 @@
     </section>
 
 
-    <!-- =========================
-         INTRODUCTION
-    ========================= -->
-
     <section class="intro-description">
 
       <p>
@@ -440,10 +396,6 @@
 
     </section>
 
-
-    <!-- =========================
-         THREE MAIN CARDS
-    ========================= -->
 
     <section class="features-wrapper">
 
@@ -519,10 +471,6 @@
     </section>
 
 
-    <!-- =========================
-         FINAL STATEMENT
-    ========================= -->
-
     <section class="statement">
 
       <h2>
@@ -533,10 +481,6 @@
 
   </main>
 
-
-  <!-- =========================
-       FOOTER
-  ========================= -->
 
   <footer>
 
