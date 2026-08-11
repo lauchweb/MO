@@ -18,13 +18,12 @@
       --light: #888888;
 
       --white: #ffffff;
-      --off-white: #f8f8f6;
+      --off-white: #f7f7f5;
 
       --green: #526653;
-      --green-dark: #405143;
-      --green-soft: #697a69;
+      --green-dark: #465848;
 
-      --border: #e7e7e4;
+      --border: #e5e5e2;
     }
 
     * {
@@ -44,9 +43,9 @@
       line-height: 1.6;
     }
 
-    /* =================================
+    /* =========================
        HEADER
-    ================================= */
+    ========================= */
 
     header {
       height: 82px;
@@ -91,19 +90,19 @@
       color: var(--black);
     }
 
-    /* =================================
-       INTRO
-    ================================= */
+    /* =========================
+       HERO
+    ========================= */
 
     .intro {
-      max-width: 1100px;
+      max-width: 1120px;
       margin: 0 auto;
 
-      padding: 85px 6% 70px;
+      padding: 90px 6% 70px;
 
       display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 70px;
+      grid-template-columns: 0.55fr 1.45fr;
+      gap: 60px;
 
       align-items: end;
     }
@@ -119,85 +118,78 @@
     }
 
     .intro h1 {
-      max-width: 620px;
+      max-width: 700px;
 
-      font-size: clamp(2.6rem, 5vw, 4.7rem);
+      font-size: clamp(2.8rem, 5.5vw, 5rem);
       line-height: 0.98;
 
       font-weight: 500;
       letter-spacing: -0.055em;
     }
 
+    /* =========================
+       INTRO DESCRIPTION
+    ========================= */
+
     .intro-description {
-      max-width: 480px;
+      max-width: 1120px;
+      margin: 0 auto;
+
+      padding: 0 6% 75px;
+
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .intro-description p {
+      max-width: 470px;
 
       color: var(--muted);
 
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       line-height: 1.75;
     }
 
-    /* =================================
+    /* =========================
        GREEN FEATURE AREA
-    ================================= */
+    ========================= */
 
     .features-wrapper {
       position: relative;
 
       padding: 80px 6% 90px;
 
-      background:
+      background-color: var(--green);
+
+      /*
+        Very subtle matte texture.
+        No image required.
+      */
+      background-image:
         radial-gradient(
-          circle at 15% 20%,
-          rgba(255, 255, 255, 0.055) 0 1px,
-          transparent 1px
+          rgba(255, 255, 255, 0.055) 0.7px,
+          transparent 0.7px
         ),
         radial-gradient(
-          circle at 75% 65%,
-          rgba(255, 255, 255, 0.035) 0 1px,
-          transparent 1px
+          rgba(0, 0, 0, 0.035) 0.7px,
+          transparent 0.7px
         ),
         linear-gradient(
           135deg,
-          #526653 0%,
-          #4b5e4d 48%,
-          #425545 100%
+          var(--green),
+          var(--green-dark)
         );
 
       background-size:
         13px 13px,
-        19px 19px,
+        17px 17px,
         100% 100%;
-    }
 
-    /*
-      Very subtle organic texture.
-      This avoids the green looking like a flat
-      digital rectangle.
-    */
-
-    .features-wrapper::before {
-      content: "";
-
-      position: absolute;
-      inset: 0;
-
-      opacity: 0.18;
-      pointer-events: none;
-
-      background:
-        linear-gradient(
-          115deg,
-          transparent 0%,
-          rgba(255,255,255,0.08) 45%,
-          transparent 70%
-        );
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     }
 
     .features {
-      position: relative;
-      z-index: 1;
-
       max-width: 1120px;
       margin: 0 auto;
 
@@ -207,14 +199,14 @@
       gap: 18px;
     }
 
-    /* =================================
+    /* =========================
        WHITE CARDS
-    ================================= */
+    ========================= */
 
     .feature-card {
-      min-height: 310px;
+      min-height: 285px;
 
-      padding: 34px 32px;
+      padding: 30px;
 
       display: flex;
       flex-direction: column;
@@ -225,22 +217,23 @@
       border: 1px solid rgba(0, 0, 0, 0.04);
 
       box-shadow:
-        0 8px 28px rgba(20, 35, 24, 0.10);
+        0 10px 30px rgba(20, 35, 24, 0.12);
     }
 
     .card-number {
-      color: #999999;
+      color: var(--light);
 
-      font-size: 0.68rem;
+      font-size: 0.66rem;
       letter-spacing: 0.12em;
     }
 
     .feature-card h2 {
-      margin-top: auto;
-      margin-bottom: 15px;
+      margin-bottom: 14px;
 
-      font-size: 1.45rem;
-      line-height: 1.12;
+      color: var(--black);
+
+      font-size: 1.35rem;
+      line-height: 1.15;
 
       font-weight: 500;
       letter-spacing: -0.025em;
@@ -249,74 +242,34 @@
     .feature-card p {
       color: var(--muted);
 
-      font-size: 0.86rem;
+      font-size: 0.84rem;
       line-height: 1.7;
     }
 
-    /* =================================
-       ABOUT LINK
-    ================================= */
+    /* =========================
+       FINAL STATEMENT
+    ========================= */
 
-    .about-section {
+    .statement {
       max-width: 1120px;
       margin: 0 auto;
 
-      padding: 85px 6% 90px;
-
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      gap: 50px;
+      padding: 90px 6% 100px;
     }
 
-    .about-section h2 {
-      max-width: 600px;
+    .statement h2 {
+      max-width: 760px;
 
-      font-size: clamp(1.8rem, 3vw, 2.7rem);
+      font-size: clamp(1.8rem, 3.4vw, 3rem);
       line-height: 1.12;
 
       font-weight: 500;
       letter-spacing: -0.04em;
     }
 
-    .about-section p {
-      max-width: 430px;
-
-      color: var(--muted);
-
-      font-size: 0.88rem;
-      line-height: 1.75;
-    }
-
-    .about-link {
-      display: inline-block;
-
-      margin-top: 22px;
-
-      color: var(--black);
-
-      text-decoration: none;
-
-      font-size: 0.82rem;
-
-      border-bottom: 1px solid var(--black);
-
-      padding-bottom: 4px;
-
-      transition:
-        color 0.2s ease,
-        border-color 0.2s ease;
-    }
-
-    .about-link:hover {
-      color: var(--muted);
-      border-color: var(--muted);
-    }
-
-    /* =================================
+    /* =========================
        FOOTER
-    ================================= */
+    ========================= */
 
     footer {
       padding: 24px 6%;
@@ -332,17 +285,19 @@
       font-size: 0.72rem;
     }
 
-    /* =================================
+    /* =========================
        TABLET
-    ================================= */
+    ========================= */
 
     @media (max-width: 850px) {
 
       .intro {
         grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 22px;
+      }
 
-        padding-top: 70px;
+      .intro-description {
+        justify-content: flex-start;
       }
 
       .features {
@@ -351,18 +306,13 @@
       }
 
       .feature-card {
-        min-height: 240px;
-      }
-
-      .about-section {
-        flex-direction: column;
-        align-items: flex-start;
+        min-height: 225px;
       }
     }
 
-    /* =================================
+    /* =========================
        MOBILE
-    ================================= */
+    ========================= */
 
     @media (max-width: 600px) {
 
@@ -380,17 +330,20 @@
       }
 
       .intro {
-        padding: 60px 5% 55px;
-
-        gap: 20px;
+        padding: 60px 5% 50px;
+        gap: 18px;
       }
 
       .intro h1 {
-        font-size: clamp(2.5rem, 13vw, 4rem);
+        font-size: clamp(2.6rem, 13vw, 4rem);
       }
 
       .intro-description {
-        font-size: 0.88rem;
+        padding: 0 5% 55px;
+      }
+
+      .intro-description p {
+        font-size: 0.86rem;
       }
 
       .features-wrapper {
@@ -402,22 +355,20 @@
       }
 
       .feature-card {
-        min-height: 230px;
-        padding: 27px 25px;
+        min-height: 220px;
+        padding: 26px 24px;
       }
 
       .feature-card h2 {
-        font-size: 1.3rem;
+        font-size: 1.25rem;
       }
 
       .feature-card p {
-        font-size: 0.84rem;
+        font-size: 0.82rem;
       }
 
-      .about-section {
-        padding: 60px 5% 65px;
-
-        gap: 25px;
+      .statement {
+        padding: 65px 5% 75px;
       }
 
       footer {
@@ -456,15 +407,13 @@
   <main>
 
     <!-- =========================
-         INTRO
+         HERO
     ========================= -->
 
     <section class="intro">
 
-      <div>
-        <div class="intro-label">
-          Our work
-        </div>
+      <div class="intro-label">
+        Our work
       </div>
 
       <div>
@@ -478,41 +427,22 @@
 
 
     <!-- =========================
-         INTRO DESCRIPTION
+         INTRODUCTION
     ========================= -->
 
-    <section class="intro-description-section">
+    <section class="intro-description">
 
-      <div
-        style="
-          max-width: 1120px;
-          margin: 0 auto;
-          padding: 0 6% 70px;
-          display: flex;
-          justify-content: flex-end;
-        "
-      >
-
-        <p
-          style="
-            max-width: 480px;
-            color: #666666;
-            font-size: 0.92rem;
-            line-height: 1.75;
-          "
-        >
-          [NGO NAME] is dedicated to the conservation of Mauritius’
-          indigenous and endemic flora and the preservation of our
-          botanical heritage.
-        </p>
-
-      </div>
+      <p>
+        [NGO NAME] is dedicated to the conservation of Mauritius’
+        indigenous and endemic flora and the preservation of our
+        botanical heritage.
+      </p>
 
     </section>
 
 
     <!-- =========================
-         THREE FEATURE CARDS
+         THREE MAIN CARDS
     ========================= -->
 
     <section class="features-wrapper">
@@ -590,31 +520,14 @@
 
 
     <!-- =========================
-         ABOUT
+         FINAL STATEMENT
     ========================= -->
 
-    <section class="about-section">
+    <section class="statement">
 
-      <div>
-
-        <h2>
-          Our commitment starts with understanding what we protect.
-        </h2>
-
-      </div>
-
-      <div>
-
-        <p>
-          Discover more about our organisation, our work and
-          our commitment to Mauritius’ native flora.
-        </p>
-
-        <a href="about.html" class="about-link">
-          About us →
-        </a>
-
-      </div>
+      <h2>
+        Preserving Mauritius botanical heritage for future generations.
+      </h2>
 
     </section>
 
