@@ -1,1 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>[NGO NAME] | Donate</title>
+
+  <meta
+    name="description"
+    content="Support the conservation of Mauritius' native and endemic flora."
+  >
+
+  <style>
+    :root {
+      --black: #111111;
+      --muted: #666666;
+      --light: #888888;
+
+      --white: #ffffff;
+
+      --background-brown: #A8957D;
+      --card-green: #455B49;
+      --green-dark: #35483A;
+
+      --border: #e5e5e2;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--black);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+
+    /* =========================
+       MAIN
+    ========================= */
+
+    main {
+      min-height: calc(100vh - 70px);
+
+      background-color: var(--background-brown);
+
+      background-image:
+
+        radial-gradient(
+          rgba(255, 255, 255, 0.12) 0.7px,
+          transparent 0.8px
+        ),
+
+        radial-gradient(
+          rgba(70, 55, 40, 0.07) 0.7px,
+          transparent 0.8px
+        ),
+
+        radial-gradient(
+          circle at 20% 15%,
+          rgba(255, 255, 255, 0.08),
+          transparent 35%
+        ),
+
+        radial-gradient(
+          circle at 80% 75%,
+          rgba(60, 45, 30, 0.06),
+          transparent 40%
+        );
+
+      background-size:
+        5px 5px,
+        7px 7px,
+        100% 100%,
+        100% 100%;
+
+      background-position:
+        0 0,
+        3px 2px,
+        0 0,
+        0 0;
+    }
+
+
+    /* =========================
+       DONATE INTRO
+    ========================= */
+
+    .donate-section {
+      max-width: 1080px;
+      margin: 0 auto;
+
+      padding: 80px 6% 100px;
+    }
+
+    .donate-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .donate-label {
+      margin-bottom: 16px;
+
+      color: var(--card-green);
+
+      font-size: 0.75rem;
+      font-weight: 600;
+
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .donate-title {
+      max-width: 720px;
+
+      margin-bottom: 22px;
+
+      color: var(--white);
+
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      line-height: 1.02;
+
+      font-weight: 500;
+      letter-spacing: -0.045em;
+    }
+
+    .donate-intro {
+      max-width: 650px;
+
+      margin-bottom: 45px;
+
+      color: var(--white);
+
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+
+    /* =========================
+       DONATION PANEL
+    ========================= */
+
+    .donation-panel {
+      max-width: 720px;
+
+      padding: 36px;
+
+      background: var(--white);
+
+      border: 7px solid var(--card-green);
+      border-radius: 36px;
+
+      outline: 1px solid rgba(255, 255, 255, 0.85);
+      outline-offset: -11px;
+
+      box-shadow:
+        0 10px 25px rgba(20, 30, 22, 0.14);
+    }
+
+    .donation-panel h2 {
+      margin-bottom: 8px;
+
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+
+    .panel-intro {
+      margin-bottom: 27px;
+
+      color: var(--muted);
+
+      font-size: 0.82rem;
+    }
+
+
+    /* =========================
+       PAYMENT OPTIONS
+    ========================= */
+
+    .payment-options {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 10px;
+
+      margin-bottom: 25px;
+    }
+
+    .payment-option {
+      padding: 16px 12px;
+
+      background: #f7f7f5;
+
+      border: 1px solid #deded9;
+      border-radius: 14px;
+
+      color: var(--black);
+
+      font-size: 0.78rem;
+      font-weight: 600;
+
+      text-align: center;
+
+      cursor: pointer;
+
+      transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+    }
+
+    .payment-option:hover,
+    .payment-option.active {
+      color: var(--white);
+      background: var(--card-green);
+      border-color: var(--card-green);
+    }
+
+
+    /* =========================
+       PAYMENT CONTENT
+    ========================= */
+
+    .payment-content {
+      padding-top: 4px;
+    }
+
+    .payment-method {
+      display: none;
+
+      padding: 24px;
+
+      background: #fafaf8;
+
+      border-radius: 18px;
+    }
+
+    .payment-method.active {
+      display: block;
+    }
+
+    .payment-method h3 {
+      margin-bottom: 10px;
+
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .payment-method p {
+      color: var(--muted);
+
+      font-size: 0.8rem;
+      line-height: 1.65;
+    }
+
+
+    /* =========================
+       AMOUNT BUTTONS
+    ========================= */
+
+    .amount-title {
+      margin-bottom: 12px;
+
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .amounts {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 9px;
+
+      margin-bottom: 22px;
+    }
+
+    .amount {
+      padding: 12px 8px;
+
+      background: var(--white);
+
+      border: 1px solid #d8d8d3;
+      border-radius: 12px;
+
+      color: var(--black);
+
+      font-size: 0.78rem;
+      font-weight: 600;
+
+      cursor: pointer;
+    }
+
+    .amount:hover,
+    .amount.selected {
+      color: var(--white);
+
+      background: var(--card-green);
+
+      border-color: var(--card-green);
+    }
+
+
+    /* =========================
+       DONATE BUTTON
+    ========================= */
+
+    .donate-button {
+      width: 100%;
+
+      padding: 15px 20px;
+
+      border: 0;
+      border-radius: 28px;
+
+      background: var(--card-green);
+      color: var(--white);
+
+      font-family: inherit;
+
+      font-size: 0.84rem;
+      font-weight: 600;
+
+      cursor: pointer;
+
+      transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .donate-button:hover {
+      background: var(--green-dark);
+      transform: translateY(-1px);
+    }
+
+
+    /* =========================
+       SUPPORT AREAS
+    ========================= */
+
+    .support-areas {
+      max-width: 900px;
+
+      margin-top: 45px;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 16px;
+    }
+
+    .support-item {
+      color: var(--white);
+    }
+
+    .support-item h3 {
+      margin-bottom: 7px;
+
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .support-item p {
+      color: rgba(255, 255, 255, 0.8);
+
+      font-size: 0.76rem;
+      line-height: 1.55;
+    }
+
+
+    /* =========================
+       HOME LINK
+    ========================= */
+
+    .home-link {
+      display: inline-flex;
+      align-items: center;
+
+      margin-top: 42px;
+
+      padding: 11px 22px;
+
+      color: var(--white);
+      background: var(--card-green);
+
+      border-radius: 30px;
+
+      text-decoration: none;
+
+      font-size: 0.8rem;
+      font-weight: 600;
+
+      transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .home-link:hover {
+      background: var(--green-dark);
+      transform: translateY(-1px);
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      padding: 24px 6%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      background: var(--white);
+
+      border-top: 1px solid var(--border);
+
+      color: var(--light);
+
+      font-size: 0.72rem;
+    }
+
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 800px) {
+
+      .donate-section {
+        padding-top: 70px;
+        padding-bottom: 80px;
+      }
+
+      .payment-options {
+        grid-template-columns: 1fr;
+      }
+
+      .support-areas {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+      }
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 600px) {
+
+      .donate-section {
+        padding: 55px 5% 70px;
+      }
+
+      .donate-title {
+        font-size: clamp(2.3rem, 11vw, 3.3rem);
+      }
+
+      .donate-intro {
+        font-size: 0.9rem;
+      }
+
+      .donation-panel {
+        padding: 27px 22px;
+
+        border-width: 6px;
+        border-radius: 30px;
+      }
+
+      .amounts {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .payment-method {
+        padding: 20px;
+      }
+
+      footer {
+        padding: 20px 5%;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 7px;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <main>
+
+    <section class="donate-section">
+
+      <div class="donate-inner">
+
+        <div class="donate-label">
+          Donate
+        </div>
+
+        <h1 class="donate-title">
+          Support our native heritage.
+        </h1>
+
+        <p class="donate-intro">
+          Your support helps us contribute to the conservation
+          and appreciation of Mauritius’ indigenous and endemic
+          flora, and to the preservation of its botanical heritage.
+        </p>
+
+
+        <!-- =========================
+             DONATION PANEL
+        ========================= -->
+
+        <div class="donation-panel">
+
+          <h2>
+            How would you like to contribute?
+          </h2>
+
+          <p class="panel-intro">
+            Choose a payment method below.
+          </p>
+
+
+          <!-- PAYMENT OPTIONS -->
+
+          <div class="payment-options">
+
+            <button
+              class="payment-option active"
+              type="button"
+              data-method="card"
+            >
+              Debit / Credit Card
+            </button>
+
+            <button
+              class="payment-option"
+              type="button"
+              data-method="bank"
+            >
+              Bank Transfer
+            </button>
+
+            <button
+              class="payment-option"
+              type="button"
+              data-method="mobile"
+            >
+              Mobile Payment
+            </button>
+
+          </div>
+
+
+          <div class="payment-content">
+
+
+            <!-- CARD -->
+
+            <div
+              class="payment-method active"
+              id="card"
+            >
+
+              <div class="amount-title">
+                Choose your contribution
+              </div>
+
+              <div class="amounts">
+
+                <button class="amount" type="button">
+                  Rs 500
+                </button>
+
+                <button class="amount" type="button">
+                  Rs 1,000
+                </button>
+
+                <button class="amount" type="button">
+                  Rs 2,500
+                </button>
+
+                <button class="amount" type="button">
+                  Other
+                </button>
+
+              </div>
+
+              <!-- Connect this button to the real payment provider -->
+              <button
+                class="donate-button"
+                type="button"
+                onclick="alert('Online card payment will be connected here.')"
+              >
+                Donate
+              </button>
+
+            </div>
+
+
+            <!-- BANK TRANSFER -->
+
+            <div
+              class="payment-method"
+              id="bank"
+            >
+
+              <h3>
+                Bank Transfer
+              </h3>
+
+              <p>
+                Bank transfer details will be provided here once
+                the organisation's official donation account is
+                confirmed.
+              </p>
+
+            </div>
+
+
+            <!-- MOBILE PAYMENT -->
+
+            <div
+              class="payment-method"
+              id="mobile"
+            >
+
+              <h3>
+                Mobile Payment
+              </h3>
+
+              <p>
+                Our official MauCAS QR code will be displayed here
+                once the organisation has completed its merchant
+                registration.
+              </p>
+
+              <!--
+                Add the real QR code here later:
+
+                <img
+                  src="images/maucas-qr.png"
+                  alt="MauCAS QR code for donations"
+                >
+              -->
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+
+        <!-- =========================
+             WHERE SUPPORT GOES
+        ========================= -->
+
+        <div class="support-areas">
+
+          <div class="support-item">
+
+            <h3>
+              Conservation
+            </h3>
+
+            <p>
+              Supporting efforts that help protect
+              Mauritius’ native flora.
+            </p>
+
+          </div>
+
+
+          <div class="support-item">
+
+            <h3>
+              Awareness
+            </h3>
+
+            <p>
+              Helping people understand and appreciate
+              our botanical heritage.
+            </p>
+
+          </div>
+
+
+          <div class="support-item">
+
+            <h3>
+              Future
+            </h3>
+
+            <p>
+              Contributing to the preservation of this
+              heritage for generations to come.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- HOME -->
+
+        <a
+          class="home-link"
+          href="index.html"
+        >
+          ← Back to Home
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+       SAME AS HOME PAGE
+  ========================= -->
+
+  <footer>
+
+    <span>
+      © 2026 [NGO NAME]
+    </span>
+
+    <span>
+      Mauritius · Indigenous & Endemic Flora
+    </span>
+
+  </footer>
+
+
+  <script>
+
+    /* =========================
+       PAYMENT METHOD SWITCHER
+    ========================= */
+
+    const paymentOptions =
+      document.querySelectorAll(".payment-option");
+
+    const paymentMethods =
+      document.querySelectorAll(".payment-method");
+
+
+    paymentOptions.forEach(option => {
+
+      option.addEventListener("click", () => {
+
+        const method =
+          option.getAttribute("data-method");
+
+
+        paymentOptions.forEach(item => {
+          item.classList.remove("active");
+        });
+
+
+        paymentMethods.forEach(item => {
+          item.classList.remove("active");
+        });
+
+
+        option.classList.add("active");
+
+
+        const selectedMethod =
+          document.getElementById(method);
+
+
+        if (selectedMethod) {
+          selectedMethod.classList.add("active");
+        }
+
+      });
+
+    });
+
+
+    /* =========================
+       DONATION AMOUNT
+    ========================= */
+
+    const amountButtons =
+      document.querySelectorAll(".amount");
+
+
+    amountButtons.forEach(button => {
+
+      button.addEventListener("click", () => {
+
+        amountButtons.forEach(item => {
+          item.classList.remove("selected");
+        });
+
+        button.classList.add("selected");
+
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>
