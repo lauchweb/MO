@@ -1,1 +1,466 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Mo Endemik | Explore</title>
+
+  <meta
+    name="description"
+    content="Explore the native and endemic flora of Mauritius and learn about the plants that form part of the island's botanical heritage."
+  >
+
+  <style>
+    :root {
+      --black: #111111;
+      --muted: #666666;
+      --light: #888888;
+      --white: #ffffff;
+
+      --background-brown: #A8957D;
+      --card-green: #455B49;
+
+      --border: #e5e5e2;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      min-height: 100%;
+    }
+
+    body {
+      min-height: 100vh;
+
+      display: flex;
+      flex-direction: column;
+
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--black);
+      line-height: 1.6;
+
+      background-color: var(--background-brown);
+
+      background-image:
+        radial-gradient(
+          rgba(255, 255, 255, 0.12) 0.7px,
+          transparent 0.8px
+        ),
+        radial-gradient(
+          rgba(70, 55, 40, 0.07) 0.7px,
+          transparent 0.8px
+        ),
+        radial-gradient(
+          circle at 20% 15%,
+          rgba(255, 255, 255, 0.08),
+          transparent 35%
+        ),
+        radial-gradient(
+          circle at 80% 75%,
+          rgba(60, 45, 30, 0.06),
+          transparent 40%
+        );
+
+      background-size:
+        5px 5px,
+        7px 7px,
+        100% 100%,
+        100% 100%;
+
+      background-position:
+        0 0,
+        3px 2px,
+        0 0,
+        0 0;
+    }
+
+
+    /* =========================
+       MAIN
+    ========================= */
+
+    main {
+      flex: 1;
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+
+    /* =========================
+       INTRO
+    ========================= */
+
+    .explore-intro {
+      max-width: 900px;
+      margin: 0 auto;
+
+      padding: 70px 6% 40px;
+
+      text-align: center;
+    }
+
+    .explore-intro h1 {
+      color: var(--white);
+
+      font-size: clamp(2.3rem, 4.2vw, 3.8rem);
+      line-height: 1;
+
+      font-weight: 500;
+      letter-spacing: -0.045em;
+    }
+
+    .explore-intro > p {
+      max-width: 680px;
+
+      margin: 23px auto 0;
+
+      color: rgba(255, 255, 255, 0.82);
+
+      font-size: 0.92rem;
+      line-height: 1.65;
+    }
+
+
+    /* =========================
+       CONTENT
+    ========================= */
+
+    .explore-content {
+      width: 100%;
+      max-width: 1120px;
+
+      margin: 0 auto;
+
+      padding: 10px 30px 45px;
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 18px;
+    }
+
+    .explore-card {
+      padding: 27px 30px;
+
+      background: var(--white);
+
+      border: 6px solid var(--card-green);
+      border-radius: 30px;
+
+      outline: 1px solid rgba(255, 255, 255, 0.85);
+      outline-offset: -9px;
+
+      box-shadow:
+        0 8px 18px rgba(20, 30, 22, 0.12);
+    }
+
+    .explore-card h2 {
+      margin-bottom: 12px;
+
+      color: var(--black);
+
+      font-size: 1.15rem;
+      line-height: 1.2;
+
+      font-weight: 500;
+      letter-spacing: -0.02em;
+
+      text-align: center;
+    }
+
+    .explore-card p {
+      color: var(--muted);
+
+      font-size: 0.79rem;
+      line-height: 1.65;
+
+      text-align: left;
+    }
+
+
+    /* =========================
+       BACK HOME
+    ========================= */
+
+    .back-home-wrapper {
+      margin-top: auto;
+
+      padding: 10px 6% 35px;
+
+      display: flex;
+      justify-content: center;
+    }
+
+    .back-home {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 9px 18px;
+
+      color: var(--white);
+      background: var(--card-green);
+
+      border: none;
+      border-radius: 9px;
+
+      text-decoration: none;
+
+      font-size: 0.78rem;
+      font-weight: 600;
+
+      box-shadow:
+        0 4px 10px rgba(20, 30, 22, 0.12);
+
+      transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .back-home:hover {
+      background: #35483A;
+      transform: translateY(-1px);
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      width: 100%;
+
+      flex-shrink: 0;
+
+      padding: 25px 6%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      background: var(--white);
+
+      border-top: 1px solid var(--border);
+
+      color: var(--light);
+
+      font-size: 0.72rem;
+    }
+
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 850px) {
+
+      .explore-intro {
+        padding-top: 55px;
+      }
+
+      .explore-content {
+        grid-template-columns: 1fr;
+
+        max-width: 680px;
+      }
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 600px) {
+
+      .explore-intro {
+        padding: 50px 5% 32px;
+      }
+
+      .explore-intro h1 {
+        font-size: clamp(2.2rem, 10vw, 3.2rem);
+      }
+
+      .explore-intro > p {
+        max-width: 340px;
+
+        margin-top: 19px;
+
+        font-size: 0.85rem;
+      }
+
+      .explore-content {
+        padding: 5px 5% 32px;
+
+        gap: 14px;
+      }
+
+      .explore-card {
+        padding: 24px 21px;
+
+        border-width: 6px;
+        border-radius: 28px;
+      }
+
+      .explore-card h2 {
+        font-size: 1.08rem;
+      }
+
+      .explore-card p {
+        font-size: 0.76rem;
+        line-height: 1.6;
+      }
+
+      .back-home-wrapper {
+        padding: 8px 5% 28px;
+      }
+
+      footer {
+        padding: 22px 5%;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 7px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+
+    <!-- =========================
+         INTRO
+    ========================= -->
+
+    <section class="explore-intro">
+
+      <h1>
+        Explore
+      </h1>
+
+      <p>
+        Discover the plants that make Mauritius unique, from
+        native species found across the island to endemic plants
+        found nowhere else in the world.
+      </p>
+
+    </section>
+
+
+    <!-- =========================
+         CONTENT
+    ========================= -->
+
+    <section class="explore-content">
+
+      <article class="explore-card">
+
+        <h2>
+          Our Flora
+        </h2>
+
+        <p>
+          Mauritius is home to a remarkable diversity of plant life.
+          Its forests, wetlands, mountains and coastal areas support
+          plants that have adapted to the island’s different
+          environments over generations.
+        </p>
+
+      </article>
+
+
+      <article class="explore-card">
+
+        <h2>
+          Native &amp; Endemic
+        </h2>
+
+        <p>
+          Native plants occur naturally in Mauritius, while endemic
+          plants are found naturally only in Mauritius and nowhere
+          else. These species form an important part of the island’s
+          natural heritage and deserve particular care and protection.
+        </p>
+
+      </article>
+
+
+      <article class="explore-card">
+
+        <h2>
+          Discover the Species
+        </h2>
+
+        <p>
+          Explore the plants that make up our botanical heritage and
+          learn about their characteristics, habitats and importance.
+          Each species tells part of the story of Mauritius and its
+          natural environment.
+        </p>
+
+      </article>
+
+
+      <article class="explore-card">
+
+        <h2>
+          Why They Matter
+        </h2>
+
+        <p>
+          Plants support the ecosystems around them, provide food
+          and shelter for wildlife, and contribute to the health of
+          our natural landscapes. Protecting them means protecting
+          the living environment that connects them all.
+        </p>
+
+      </article>
+
+    </section>
+
+
+    <!-- =========================
+         BACK HOME
+    ========================= -->
+
+    <div class="back-home-wrapper">
+
+      <a href="index.html" class="back-home">
+        Back home
+      </a>
+
+    </div>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <span>
+      © 2025 - 2026 Mo Endemik
+    </span>
+
+    <span>
+      Mauritius · Indigenous &amp; Endemic Flora
+    </span>
+
+  </footer>
+
+</body>
+</html>
+```
