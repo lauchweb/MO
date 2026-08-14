@@ -13,14 +13,13 @@
 
   <style>
     :root {
-      --black: #111111;
-      --muted: #666666;
-      --light: #888888;
-      --white: #ffffff;
+      --green: #455B49;
+      --green-dark: #35483A;
+      --green-light: #6B7F6F;
+      --red: #B83A3A;
+      --red-dark: #9E3030;
 
-      --background-brown: #fafafa;
-      --card-green: #455B49;
-
+      --background: #fafafa;
       --border: #e5e5e2;
     }
 
@@ -42,11 +41,11 @@
       flex-direction: column;
 
       font-family: Arial, Helvetica, sans-serif;
-      color: var(--black);
+      color: var(--green);
       line-height: 1.6;
 
-      /* Clean, solid background */
-      background-color: var(--background-brown);
+      /* Single background across the entire website */
+      background-color: var(--background);
     }
 
 
@@ -82,13 +81,12 @@
       display: inline-flex;
       align-items: center;
 
-      padding: 9px 14px;
+      color: var(--green);
 
-      color: var(--card-green);
-      background: var(--white);
+      background: transparent;
 
       border: none;
-      border-radius: 9px;
+      border-radius: 0;
 
       text-decoration: none;
 
@@ -97,9 +95,6 @@
 
       letter-spacing: 0.07em;
       text-transform: uppercase;
-
-      box-shadow:
-        0 3px 8px rgba(20, 30, 22, 0.10);
     }
 
 
@@ -120,7 +115,7 @@
 
       padding: 7px 13px;
 
-      color: var(--card-green);
+      color: var(--green);
       background: transparent;
 
       border: none;
@@ -137,7 +132,7 @@
     }
 
     nav a:hover {
-      color: #35483A;
+      color: var(--green-dark);
       transform: translateY(-1px);
     }
 
@@ -147,8 +142,8 @@
     ========================= */
 
     nav a.donate-link {
-      color: var(--white);
-      background: var(--card-green);
+      color: #ffffff;
+      background: var(--red);
 
       border: none;
       border-radius: 9px;
@@ -157,8 +152,8 @@
     }
 
     nav a.donate-link:hover {
-      color: var(--white);
-      background: #35483A;
+      color: #ffffff;
+      background: var(--red-dark);
     }
 
 
@@ -191,7 +186,7 @@
     }
 
     .hero-copy h1 {
-      color: var(--white);
+      color: var(--green);
 
       font-size: clamp(2.3rem, 4.2vw, 3.8rem);
       line-height: 1;
@@ -203,7 +198,7 @@
     .hero-copy p {
       margin: 20px auto 0;
 
-      color: rgba(255, 255, 255, 0.8);
+      color: var(--green-light);
 
       font-size: 0.92rem;
       line-height: 1.6;
@@ -236,16 +231,13 @@
 
       padding: 21px 25px;
 
-      background: var(--white);
+      background: var(--background);
 
-      border: 6px solid var(--card-green);
-      border-radius: 32px;
-
-      outline: 1px solid rgba(255, 255, 255, 0.85);
-      outline-offset: -9px;
+      border: 2px solid var(--green);
+      border-radius: 20px;
 
       box-shadow:
-        0 8px 18px rgba(20, 30, 22, 0.12);
+        0 5px 14px rgba(69, 91, 73, 0.07);
 
       transition:
         transform 0.2s ease,
@@ -256,25 +248,25 @@
       transform: translateY(-2px);
 
       box-shadow:
-        0 11px 22px rgba(20, 30, 22, 0.16);
+        0 8px 18px rgba(69, 91, 73, 0.11);
     }
 
     .feature-card h2 {
       margin-bottom: 12px;
 
-      color: var(--black);
+      color: var(--green);
 
       font-size: 1.12rem;
       line-height: 1.15;
 
-      font-weight: 500;
+      font-weight: 600;
       letter-spacing: -0.025em;
 
       text-align: center;
     }
 
     .feature-card p {
-      color: var(--muted);
+      color: var(--green-light);
 
       font-size: 0.77rem;
       line-height: 1.55;
@@ -298,7 +290,7 @@
     }
 
     .extra-links a {
-      color: var(--white);
+      color: var(--green);
 
       background: transparent;
       border: none;
@@ -314,8 +306,12 @@
     }
 
     .extra-links a:hover {
-      color: rgba(255, 255, 255, 0.75);
+      color: var(--green-dark);
       transform: translateY(-1px);
+    }
+
+    .extra-links span {
+      color: var(--green-light) !important;
     }
 
 
@@ -334,11 +330,11 @@
       align-items: center;
       justify-content: space-between;
 
-      background: var(--white);
+      background: transparent;
 
       border-top: 1px solid var(--border);
 
-      color: var(--light);
+      color: var(--green-light);
 
       font-size: 0.72rem;
     }
@@ -390,7 +386,6 @@
       }
 
       .logo a {
-        padding: 8px 10px;
         font-size: 0.76rem;
       }
 
@@ -437,8 +432,8 @@
 
         padding: 19px 21px;
 
-        border-width: 6px;
-        border-radius: 28px;
+        border-width: 2px;
+        border-radius: 18px;
       }
 
       .feature-card h2 {
@@ -561,7 +556,7 @@
         Learn
       </a>
 
-      <span style="color: rgba(255,255,255,0.65);">|</span>
+      <span>|</span>
 
       <a href="https://moendemik.mu">
         Nursery
