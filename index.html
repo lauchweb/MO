@@ -13,15 +13,14 @@
 
   <style>
     :root {
-      --green: #3F5F46;
-      --green-dark: #314B37;
-      --green-light: #687A6B;
+      --green: #294A32;
+      --green-dark: #1F3927;
+      --green-light: #607363;
 
       --red: #B83A3A;
       --red-dark: #9E3030;
 
       --background: #fafafa;
-      --border: #e5e5e2;
     }
 
     * {
@@ -45,6 +44,7 @@
       color: var(--green);
       line-height: 1.6;
 
+      /* One consistent background across the entire site */
       background-color: var(--background);
     }
 
@@ -83,9 +83,6 @@
 
       color: var(--green);
       background: transparent;
-
-      border: none;
-      border-radius: 0;
 
       text-decoration: none;
 
@@ -144,7 +141,6 @@
       color: #ffffff;
       background: var(--red);
 
-      border: none;
       border-radius: 9px;
 
       font-weight: 600;
@@ -174,7 +170,7 @@
       max-width: 1120px;
       margin: 0 auto;
 
-      padding: 28px 6% 55px;
+      padding: 65px 6% 90px;
 
       text-align: center;
     }
@@ -205,116 +201,6 @@
 
 
     /* =========================
-       CARDS
-    ========================= */
-
-    .features-wrapper {
-      max-width: 1180px;
-      margin: 0 auto;
-
-      padding: 0 30px 30px;
-    }
-
-    .features {
-      max-width: 1120px;
-      margin: 0 auto;
-
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-
-      gap: 18px;
-    }
-
-    .feature-card {
-      min-height: 155px;
-
-      padding: 21px 25px;
-
-      background: var(--background);
-
-      border: 2px solid var(--green);
-      border-radius: 20px;
-
-      box-shadow:
-        0 5px 14px rgba(63, 95, 70, 0.07);
-
-      transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-    }
-
-    .feature-card:hover {
-      transform: translateY(-2px);
-
-      box-shadow:
-        0 8px 18px rgba(63, 95, 70, 0.11);
-    }
-
-    .feature-card h2 {
-      margin-bottom: 12px;
-
-      color: var(--green);
-
-      font-size: 1.12rem;
-      line-height: 1.15;
-
-      font-weight: 600;
-      letter-spacing: -0.025em;
-
-      text-align: center;
-    }
-
-    .feature-card p {
-      color: var(--green-light);
-
-      font-size: 0.77rem;
-      line-height: 1.55;
-
-      text-align: left;
-    }
-
-
-    /* =========================
-       LEARN / NURSERY LINKS
-    ========================= */
-
-    .extra-links {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      gap: 18px;
-
-      padding: 35px 6% 70px;
-    }
-
-    .extra-links a {
-      color: var(--green);
-
-      background: transparent;
-      border: none;
-
-      text-decoration: none;
-
-      font-size: 0.92rem;
-      font-weight: 500;
-
-      transition:
-        color 0.2s ease,
-        transform 0.2s ease;
-    }
-
-    .extra-links a:hover {
-      color: var(--green-dark);
-      transform: translateY(-1px);
-    }
-
-    .extra-links span {
-      color: var(--green-light) !important;
-    }
-
-
-    /* =========================
        FOOTER
     ========================= */
 
@@ -330,12 +216,23 @@
       justify-content: space-between;
 
       background: transparent;
-
-      border-top: 1px solid var(--border);
+      border: none;
 
       color: var(--green-light);
 
       font-size: 0.72rem;
+    }
+
+    footer a {
+      color: var(--green-light);
+      text-decoration: none;
+
+      transition: color 0.2s ease;
+    }
+
+    footer a:hover {
+      color: var(--green);
+      text-decoration: underline;
     }
 
 
@@ -350,21 +247,8 @@
       }
 
       .intro {
-        padding-top: 25px;
-        padding-bottom: 50px;
-      }
-
-      .features {
-        grid-template-columns: 1fr;
-        max-width: 620px;
-      }
-
-      .feature-card {
-        min-height: 155px;
-      }
-
-      .extra-links {
-        padding-bottom: 55px;
+        padding-top: 55px;
+        padding-bottom: 75px;
       }
     }
 
@@ -395,7 +279,6 @@
       nav a {
         padding: 6px 9px;
         font-size: 0.72rem;
-        border-radius: 0;
       }
 
       nav a.donate-link {
@@ -403,7 +286,7 @@
       }
 
       .intro {
-        padding: 22px 5% 45px;
+        padding: 45px 5% 65px;
       }
 
       .hero-copy h1 {
@@ -416,42 +299,6 @@
         margin-top: 19px;
 
         font-size: 0.85rem;
-      }
-
-      .features-wrapper {
-        padding: 0 5% 25px;
-      }
-
-      .features {
-        gap: 14px;
-      }
-
-      .feature-card {
-        min-height: 145px;
-
-        padding: 19px 21px;
-
-        border-width: 2px;
-        border-radius: 18px;
-      }
-
-      .feature-card h2 {
-        font-size: 1.05rem;
-      }
-
-      .feature-card p {
-        font-size: 0.76rem;
-        line-height: 1.55;
-      }
-
-      .extra-links {
-        gap: 15px;
-
-        padding: 30px 5% 55px;
-      }
-
-      .extra-links a {
-        font-size: 0.87rem;
       }
 
       footer {
@@ -477,6 +324,7 @@
     <nav>
       <a href="explore.html">Explore</a>
       <a href="about.html">About</a>
+      <a href="nursery.html">Nursery</a>
       <a href="donate.html" class="donate-link">Donate</a>
     </nav>
 
@@ -499,80 +347,18 @@
 
     </section>
 
-
-    <section class="features-wrapper">
-
-      <div class="features">
-
-        <article class="feature-card">
-
-          <h2>Who we are</h2>
-
-          <p>
-            An organisation dedicated to the conservation
-            of native and endemic flora.
-          </p>
-
-        </article>
-
-
-        <article class="feature-card">
-
-          <h2>What we do</h2>
-
-          <p>
-            We support the protection, conservation and
-            appreciation of Mauritius’ native and endemic plants.
-          </p>
-
-        </article>
-
-
-        <article class="feature-card">
-
-          <h2>Why it matters</h2>
-
-          <p>
-            Our plants are part of the island’s natural identity,
-            and protecting them helps keep this heritage alive
-            for future generations.
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         LEARN / NURSERY
-    ========================= -->
-
-    <div class="extra-links">
-
-      <a href="https://instagram.com/nouandemik">
-        Learn
-      </a>
-
-      <span>|</span>
-
-      <a href="https://moendemik.mu">
-        Nursery
-      </a>
-
-    </div>
-
   </main>
 
 
   <footer>
 
-    <span>Conservation & Propagation © Mo Endemik 2025-2026</span>
-
     <span>
-      Mauritius
+      Conservation &amp; Propagation © Mo Endemik 2025-2026
     </span>
+
+    <a href="terms-of-use.html">
+      Terms
+    </a>
 
   </footer>
 
