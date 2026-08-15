@@ -8,18 +8,17 @@
 
   <meta
     name="description"
-    content="Learn about Mo Endemik and our commitment to preserving Mauritius' native botanical heritage."
+    content="Learn about Mo Endemik and our commitment to preserving Mauritius' native and endemic flora."
   >
 
   <style>
     :root {
       --black: #111111;
       --background: #fafafa;
+
       --green: #294A32;
       --green-dark: #1F3927;
       --green-grey: #4F5E52;
-      --red: #B83A3A;
-      --red-dark: #9E3030;
     }
 
     * {
@@ -66,7 +65,7 @@
       max-width: 1000px;
       margin: 0 auto;
 
-      padding: 95px 6% 105px;
+      padding: 90px 6% 105px;
     }
 
     .about-inner {
@@ -76,11 +75,11 @@
 
 
     /* =========================
-       LABEL
+       PAGE LABEL
     ========================= */
 
     .about-label {
-      margin-bottom: 18px;
+      margin-bottom: 20px;
 
       color: var(--green);
 
@@ -94,18 +93,18 @@
 
 
     /* =========================
-       TITLE
+       PAGE TITLE
     ========================= */
 
     .about h1 {
       max-width: 760px;
 
-      margin-bottom: 30px;
+      margin-bottom: 28px;
 
       color: var(--green);
 
-      font-size: clamp(2.6rem, 5vw, 4.2rem);
-      line-height: 1.03;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      line-height: 1.04;
 
       font-weight: 500;
       letter-spacing: -0.045em;
@@ -113,44 +112,39 @@
 
 
     /* =========================
-       INTRO
+       OPENING TEXT
     ========================= */
 
     .about-intro {
-      max-width: 700px;
+      max-width: 720px;
 
-      margin-bottom: 55px;
+      margin-bottom: 65px;
 
       color: var(--black);
 
       font-size: 1.08rem;
-      line-height: 1.8;
+      line-height: 1.85;
     }
 
 
     /* =========================
-       NATURAL CONTENT
-       NO GRID / NO CARDS
+       INFORMATION SECTIONS
     ========================= */
 
-    .about-content {
-      display: block;
-    }
-
     .about-section {
-      margin-bottom: 38px;
+      margin-bottom: 48px;
     }
 
-    .about-section:last-child {
+    .about-section:last-of-type {
       margin-bottom: 0;
     }
 
     .about-section h2 {
-      margin-bottom: 10px;
+      margin-bottom: 13px;
 
       color: var(--green);
 
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       line-height: 1.25;
 
       font-weight: 600;
@@ -158,24 +152,24 @@
     }
 
     .about-section p {
-      max-width: 700px;
+      max-width: 720px;
 
       color: var(--black);
 
-      font-size: 0.96rem;
-      line-height: 1.8;
+      font-size: 0.97rem;
+      line-height: 1.85;
     }
 
 
     /* =========================
-       HOME BUTTON
+       BACK HOME
     ========================= */
 
     .home-link {
       display: inline-flex;
       align-items: center;
 
-      margin-top: 48px;
+      margin-top: 52px;
 
       padding: 11px 22px;
 
@@ -203,7 +197,6 @@
 
     /* =========================
        FOOTER
-       SAME BACKGROUND
     ========================= */
 
     footer {
@@ -268,7 +261,11 @@
       }
 
       .about-intro {
-        margin-bottom: 48px;
+        margin-bottom: 55px;
+      }
+
+      .about-section {
+        margin-bottom: 42px;
       }
     }
 
@@ -284,29 +281,31 @@
       }
 
       .about h1 {
-        font-size: clamp(2.4rem, 11vw, 3.4rem);
+        font-size: clamp(2.35rem, 11vw, 3.35rem);
       }
 
       .about-intro {
-        margin-bottom: 42px;
+        margin-bottom: 48px;
 
         font-size: 0.98rem;
+        line-height: 1.8;
       }
 
       .about-section {
-        margin-bottom: 32px;
+        margin-bottom: 36px;
       }
 
       .about-section h2 {
-        font-size: 1.15rem;
+        font-size: 1.17rem;
       }
 
       .about-section p {
         font-size: 0.92rem;
+        line-height: 1.8;
       }
 
       .home-link {
-        margin-top: 40px;
+        margin-top: 42px;
       }
 
       footer {
@@ -336,56 +335,119 @@
       <div class="about-inner">
 
         <div class="about-label">
-          About us
+          About Mo Endemik
         </div>
 
 
         <h1>
-          Committed to our native heritage.
+          Protecting Mauritius' native and endemic flora.
         </h1>
 
 
         <p class="about-intro">
-          Our work focuses on safeguarding the species that make
-          Mauritius botanically unique and ensuring their place
-          in the landscapes of future generations.
+          Mo Endemik is an organisation dedicated to the conservation
+          and appreciation of Mauritius' native and endemic flora.
+          We believe that protecting these plants means preserving
+          an important part of the island's natural heritage for
+          present and future generations.
         </p>
 
 
-        <div class="about-content">
+        <!-- =========================
+             CONSERVATION
+        ========================= -->
 
-          <section class="about-section">
+        <section class="about-section">
 
-            <h2>
-              Our commitment
-            </h2>
+          <h2>
+            Conservation
+          </h2>
 
-            <p>
-              We are committed to the conservation of the species
-              that are part of Mauritius’ natural heritage, focusing
-              on its indigenous and endemic flora.
-            </p>
+          <p>
+            Mauritius is home to a remarkable diversity of native
+            plants, including species found nowhere else in the world.
+            Many of these plants are closely connected to the island's
+            ecosystems and natural history. Mo Endemik supports the
+            conservation, protection and propagation of native and
+            endemic flora, helping to maintain their presence as part
+            of Mauritius' living botanical heritage.
+          </p>
 
-          </section>
+        </section>
 
 
-          <section class="about-section">
+        <!-- =========================
+             OUR APPROACH
+        ========================= -->
 
-            <h2>
-              Our purpose
-            </h2>
+        <section class="about-section">
 
-            <p>
-              We seek to support the long-term preservation of
-              Mauritius’ botanical heritage and encourage greater
-              appreciation of the plants that form an important
-              part of the island’s natural identity.
-            </p>
+          <h2>
+            Our Approach
+          </h2>
 
-          </section>
+          <p>
+            Our approach brings together conservation, propagation,
+            awareness and appreciation. We seek to make Mauritius'
+            native and endemic plants better known and better valued,
+            while encouraging greater interest in their protection.
+            Through this work, we aim to contribute to a stronger
+            understanding of the importance of indigenous flora and
+            its place within the island's natural environment.
+          </p>
 
-        </div>
+        </section>
 
+
+        <!-- =========================
+             WHY NATIVE FLORA MATTERS
+        ========================= -->
+
+        <section class="about-section">
+
+          <h2>
+            Why Native Flora Matters
+          </h2>
+
+          <p>
+            The plants of Mauritius are an important part of the
+            island's ecological identity. Endemic species are
+            particularly significant because they occur naturally
+            nowhere else on Earth. Once lost, this part of Mauritius'
+            natural heritage cannot simply be replaced. Protecting
+            native flora therefore means protecting biodiversity,
+            ecosystems and a unique botanical legacy.
+          </p>
+
+        </section>
+
+
+        <!-- =========================
+             LOOKING AHEAD
+        ========================= -->
+
+        <section class="about-section">
+
+          <h2>
+            Looking Ahead
+          </h2>
+
+          <p>
+            The conservation of Mauritius' flora is a long-term
+            responsibility. Our aim is to contribute to a future
+            where native and endemic plants are recognised, valued
+            and given the opportunity to thrive. By supporting
+            conservation and encouraging appreciation of these
+            species, we hope to help keep Mauritius' botanical
+            heritage alive for generations to come.
+          </p>
+
+        </section>
+
+
+        <!-- =========================
+             HOME
+        ========================= -->
 
         <a
           class="home-link"
@@ -400,6 +462,10 @@
 
   </main>
 
+
+  <!-- =========================
+       FOOTER
+    ========================= -->
 
   <footer>
 
