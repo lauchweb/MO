@@ -13,9 +13,13 @@
 
   <style>
     :root {
-      --green: #294A32;
-      --green-dark: #1F3927;
-      --green-light: #607363;
+      --black: #171717;
+
+      /* Dark green-grey for the main title */
+      --title-green: #29443A;
+      --title-green-dark: #20362E;
+
+      --muted: #555555;
 
       --red: #B83A3A;
       --red-dark: #9E3030;
@@ -40,20 +44,17 @@
       display: flex;
       flex-direction: column;
 
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--green);
+      font-family:
+        "Trebuchet MS",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      color: var(--black);
       line-height: 1.6;
 
-      /* Warm-white background with a slightly visible natural grain */
+      /* Plain, consistent background */
       background-color: var(--background);
-
-      background-image:
-        radial-gradient(
-          rgba(120, 95, 65, 0.07) 0.7px,
-          transparent 0.9px
-        );
-
-      background-size: 6px 6px;
     }
 
 
@@ -89,7 +90,7 @@
       display: inline-flex;
       align-items: center;
 
-      color: var(--green);
+      color: var(--black);
       background: transparent;
 
       text-decoration: none;
@@ -97,7 +98,7 @@
       font-size: 0.92rem;
       font-weight: 600;
 
-      letter-spacing: 0.07em;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
     }
 
@@ -119,7 +120,7 @@
 
       padding: 7px 13px;
 
-      color: var(--green);
+      color: var(--black);
       background: transparent;
 
       border: none;
@@ -136,7 +137,7 @@
     }
 
     nav a:hover {
-      color: var(--green-dark);
+      color: var(--title-green-dark);
       transform: translateY(-1px);
     }
 
@@ -149,7 +150,7 @@
       color: #ffffff;
       background: var(--red);
 
-      border-radius: 9px;
+      border-radius: 8px;
 
       font-weight: 600;
     }
@@ -189,7 +190,7 @@
     }
 
     .hero-copy h1 {
-      color: var(--green);
+      color: var(--title-green);
 
       font-size: clamp(2.3rem, 4.2vw, 3.8rem);
       line-height: 1;
@@ -201,7 +202,7 @@
     .hero-copy p {
       margin: 20px auto 0;
 
-      color: var(--green-light);
+      color: var(--black);
 
       font-size: 0.92rem;
       line-height: 1.6;
@@ -226,20 +227,20 @@
       background: transparent;
       border: none;
 
-      color: var(--green-light);
+      color: var(--black);
 
       font-size: 0.72rem;
     }
 
     footer a {
-      color: var(--green-light);
+      color: var(--black);
       text-decoration: none;
 
       transition: color 0.2s ease;
     }
 
     footer a:hover {
-      color: var(--green);
+      color: var(--title-green);
       text-decoration: underline;
     }
 
@@ -290,7 +291,7 @@
       }
 
       nav a.donate-link {
-        border-radius: 8px;
+        border-radius: 7px;
       }
 
       .intro {
