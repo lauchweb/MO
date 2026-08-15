@@ -415,6 +415,8 @@
     ========================= */
 
     footer {
+      width: 100%;
+
       padding: 25px 6%;
 
       display: flex;
@@ -428,6 +430,34 @@
       color: var(--light);
 
       font-size: 0.72rem;
+    }
+
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      color: var(--green-light);
+
+      text-decoration: none;
+
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--green);
+      text-decoration: underline;
+    }
+
+    .footer-separator {
+      color: var(--black);
+
+      font-size: 0.85rem;
+      line-height: 1;
+
+      margin: 0 2px;
     }
 
 
@@ -492,7 +522,11 @@
         flex-direction: column;
         align-items: flex-start;
 
-        gap: 7px;
+        gap: 8px;
+      }
+
+      .footer-links {
+        gap: 9px;
       }
     }
   </style>
@@ -741,12 +775,28 @@
   <footer>
 
     <span>
-      © Mo Endemik 2025-2026
+      Conservation &amp; Propagation © Mo Endemik 2025-2026
     </span>
 
-    <span>
-      Conservation &amp; Propagation
-    </span>
+    <div class="footer-links">
+
+      <a href="terms-of-use.html">
+        Terms of Use
+      </a>
+
+      <span class="footer-separator">
+        •
+      </span>
+
+      <a
+        href="https://instagram.com/moendemik"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Follow
+      </a>
+
+    </div>
 
   </footer>
 
