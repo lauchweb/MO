@@ -14,14 +14,12 @@
   <style>
     :root {
       --black: #111111;
-      --muted: #666666;
-      --light: #888888;
-      --white: #ffffff;
-
-      --background-brown: #A8957D;
-      --card-green: #455B49;
-
-      --border: #e5e5e2;
+      --background: #fafafa;
+      --green: #294A32;
+      --green-dark: #1F3927;
+      --green-grey: #4F5E52;
+      --red: #B83A3A;
+      --red-dark: #9E3030;
     }
 
     * {
@@ -35,56 +33,28 @@
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
+      min-height: 100vh;
+
+      display: flex;
+      flex-direction: column;
+
+      font-family: Georgia, "Times New Roman", serif;
       color: var(--black);
-      background: var(--white);
-      line-height: 1.6;
+      background: var(--background);
+
+      line-height: 1.7;
     }
 
 
     /* =========================
-       ABOUT MAIN
+       MAIN
     ========================= */
 
     main {
-      min-height: calc(100vh - 70px);
+      flex: 1;
+      width: 100%;
 
-      background-color: var(--background-brown);
-
-      background-image:
-        radial-gradient(
-          rgba(255, 255, 255, 0.12) 0.7px,
-          transparent 0.8px
-        ),
-
-        radial-gradient(
-          rgba(70, 55, 40, 0.07) 0.7px,
-          transparent 0.8px
-        ),
-
-        radial-gradient(
-          circle at 20% 15%,
-          rgba(255, 255, 255, 0.08),
-          transparent 35%
-        ),
-
-        radial-gradient(
-          circle at 80% 75%,
-          rgba(60, 45, 30, 0.06),
-          transparent 40%
-        );
-
-      background-size:
-        5px 5px,
-        7px 7px,
-        100% 100%,
-        100% 100%;
-
-      background-position:
-        0 0,
-        3px 2px,
-        0 0,
-        0 0;
+      background: var(--background);
     }
 
 
@@ -104,79 +74,96 @@
       margin: 0 auto;
     }
 
+
+    /* =========================
+       LABEL
+    ========================= */
+
     .about-label {
       margin-bottom: 18px;
 
-      color: var(--card-green);
+      color: var(--green);
 
-      font-size: 0.75rem;
-      font-weight: 600;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
 
       letter-spacing: 0.12em;
       text-transform: uppercase;
     }
 
+
+    /* =========================
+       TITLE
+    ========================= */
+
     .about h1 {
+      max-width: 760px;
+
       margin-bottom: 30px;
 
-      color: var(--white);
+      color: var(--green);
 
-      font-size: clamp(2.4rem, 5vw, 4rem);
-      line-height: 1.02;
+      font-size: clamp(2.6rem, 5vw, 4.2rem);
+      line-height: 1.03;
 
       font-weight: 500;
       letter-spacing: -0.045em;
     }
 
+
+    /* =========================
+       INTRO
+    ========================= */
+
     .about-intro {
-      margin-bottom: 45px;
+      max-width: 700px;
 
-      color: var(--white);
+      margin-bottom: 55px;
 
-      font-size: 1.05rem;
-      line-height: 1.7;
+      color: var(--black);
+
+      font-size: 1.08rem;
+      line-height: 1.8;
     }
 
 
     /* =========================
-       ABOUT CARDS
+       NATURAL CONTENT
+       NO GRID / NO CARDS
     ========================= */
 
     .about-content {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-
-      gap: 20px;
+      display: block;
     }
 
-    .about-card {
-      padding: 30px;
-
-      background: var(--white);
-
-      border: 6px solid var(--card-green);
-      border-radius: 32px;
-
-      box-shadow:
-        0 8px 18px rgba(20, 30, 22, 0.12);
+    .about-section {
+      margin-bottom: 38px;
     }
 
-    .about-card h2 {
-      margin-bottom: 14px;
+    .about-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .about-section h2 {
+      margin-bottom: 10px;
+
+      color: var(--green);
+
+      font-size: 1.25rem;
+      line-height: 1.25;
+
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .about-section p {
+      max-width: 700px;
 
       color: var(--black);
 
-      font-size: 1.1rem;
-      line-height: 1.2;
-
-      font-weight: 500;
-    }
-
-    .about-card p {
-      color: var(--muted);
-
-      font-size: 0.84rem;
-      line-height: 1.7;
+      font-size: 0.96rem;
+      line-height: 1.8;
     }
 
 
@@ -188,17 +175,18 @@
       display: inline-flex;
       align-items: center;
 
-      margin-top: 42px;
+      margin-top: 48px;
 
       padding: 11px 22px;
 
-      color: var(--white);
-      background: var(--card-green);
+      color: #ffffff;
+      background: var(--green);
 
       border-radius: 30px;
 
       text-decoration: none;
 
+      font-family: Arial, Helvetica, sans-serif;
       font-size: 0.8rem;
       font-weight: 600;
 
@@ -208,30 +196,63 @@
     }
 
     .home-link:hover {
-      background: #35483a;
+      background: var(--green-dark);
       transform: translateY(-1px);
     }
 
 
     /* =========================
        FOOTER
-       IDENTICAL TO HOME PAGE
+       SAME BACKGROUND
     ========================= */
 
     footer {
-      padding: 24px 6%;
+      width: 100%;
+
+      padding: 25px 6%;
 
       display: flex;
       align-items: center;
       justify-content: space-between;
 
-      background: var(--white);
+      background: var(--background);
 
-      border-top: 1px solid var(--border);
+      border: none;
 
-      color: var(--light);
+      color: var(--black);
 
+      font-family: Arial, Helvetica, sans-serif;
       font-size: 0.72rem;
+    }
+
+    .footer-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-right .separator {
+      width: 4px;
+      height: 4px;
+
+      flex-shrink: 0;
+
+      background: var(--black);
+
+      border-radius: 50%;
+    }
+
+    footer a {
+      color: var(--black);
+
+      text-decoration: none;
+
+      transition: color 0.2s ease;
+    }
+
+    footer a:hover {
+      color: var(--green);
+      text-decoration: underline;
     }
 
 
@@ -246,8 +267,8 @@
         padding-bottom: 85px;
       }
 
-      .about-content {
-        grid-template-columns: 1fr;
+      .about-intro {
+        margin-bottom: 48px;
       }
     }
 
@@ -258,44 +279,47 @@
 
     @media (max-width: 600px) {
 
-      main {
-        min-height: calc(100vh - 90px);
-      }
-
       .about {
         padding: 60px 5% 70px;
       }
 
       .about h1 {
-        font-size: clamp(2.3rem, 11vw, 3.3rem);
+        font-size: clamp(2.4rem, 11vw, 3.4rem);
       }
 
       .about-intro {
-        font-size: 0.95rem;
+        margin-bottom: 42px;
+
+        font-size: 0.98rem;
       }
 
-      .about-content {
-        gap: 14px;
+      .about-section {
+        margin-bottom: 32px;
       }
 
-      .about-card {
-        padding: 25px 22px 27px;
-
-        border-width: 6px;
-        border-radius: 28px;
+      .about-section h2 {
+        font-size: 1.15rem;
       }
 
-      .about-card p {
-        font-size: 0.8rem;
+      .about-section p {
+        font-size: 0.92rem;
+      }
+
+      .home-link {
+        margin-top: 40px;
       }
 
       footer {
-        padding: 20px 5%;
+        padding: 22px 5%;
 
         flex-direction: column;
         align-items: flex-start;
 
-        gap: 7px;
+        gap: 8px;
+      }
+
+      .footer-right {
+        gap: 11px;
       }
     }
   </style>
@@ -315,9 +339,11 @@
           About us
         </div>
 
+
         <h1>
           Committed to our native heritage.
         </h1>
+
 
         <p class="about-intro">
           Our work focuses on safeguarding the species that make
@@ -328,7 +354,7 @@
 
         <div class="about-content">
 
-          <article class="about-card">
+          <section class="about-section">
 
             <h2>
               Our commitment
@@ -336,13 +362,14 @@
 
             <p>
               We are committed to the conservation of the species
-              that are part of Mauritius’ natural heritage, focusing on its indigenous and endemic flora.
+              that are part of Mauritius’ natural heritage, focusing
+              on its indigenous and endemic flora.
             </p>
 
-          </article>
+          </section>
 
 
-          <article class="about-card">
+          <section class="about-section">
 
             <h2>
               Our purpose
@@ -355,12 +382,15 @@
               part of the island’s natural identity.
             </p>
 
-          </article>
+          </section>
 
         </div>
 
 
-        <a class="home-link" href="index.html">
+        <a
+          class="home-link"
+          href="index.html"
+        >
           ← Back to Home
         </a>
 
@@ -371,20 +401,29 @@
   </main>
 
 
-  <!-- =========================
-       FOOTER
-       SAME AS HOME PAGE
-  ========================= -->
-
   <footer>
 
     <span>
-      © Mo Endemik 2025-2026
+      Conservation &amp; Propagation © Mo Endemik 2025-2026
     </span>
 
-    <span>
-      Mauritius · Conservation & Propagation
-    </span>
+    <div class="footer-right">
+
+      <a href="terms-of-use.html">
+        Terms of Use
+      </a>
+
+      <span class="separator"></span>
+
+      <a
+        href="https://instagram.com/moendemik"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Follow
+      </a>
+
+    </div>
 
   </footer>
 
