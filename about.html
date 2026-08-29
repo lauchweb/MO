@@ -1,29 +1,35 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Mo Endemik | About</title>
+  <title>NOU ANDEMIK | About</title>
 
   <meta
     name="description"
-    content="Learn about Mo Endemik and our commitment to preserving Mauritius' native and endemic flora."
+    content="NOU ANDEMIK is dedicated to the protection, propagation and appreciation of Mauritius’ native and endemic flora, with a focus on keeping these plants present in the landscape and in public awareness."
   >
 
   <style>
     :root {
-      --black: #111111;
-      --background: #fafafa;
+      /* =========================
+         NOU ANDEMIK COLOR IDENTITY
+      ========================= */
 
-      --green: #294A32;
-      --green-dark: #1F3927;
-      --green-grey: #4F5E52;
+      --deep-forest: #172B24;
+      --mineral-ivory: #E7E0CF;
+      --burnt-terracotta: #A6533B;
 
-      /* Donate button colours */
-      --red: #B83A3A;
-      --red-dark: #9E3030;
+      --charcoal-earth: #24221D;
+      --sandstone: #C8BDA7;
+      --moss: #65745B;
+
+      --background: var(--deep-forest);
+      --text: var(--mineral-ivory);
     }
+
 
     * {
       box-sizing: border-box;
@@ -31,9 +37,11 @@
       padding: 0;
     }
 
+
     html {
       scroll-behavior: smooth;
     }
+
 
     body {
       min-height: 100vh;
@@ -41,8 +49,13 @@
       display: flex;
       flex-direction: column;
 
-      font-family: Georgia, "Times New Roman", serif;
-      color: var(--black);
+      font-family:
+        "Trebuchet MS",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      color: var(--text);
       background: var(--background);
 
       line-height: 1.7;
@@ -77,25 +90,20 @@
       align-items: center;
     }
 
+
     .logo a {
       display: inline-flex;
       align-items: center;
 
-      color: var(--black);
+      color: var(--mineral-ivory);
       background: transparent;
 
       text-decoration: none;
 
-      font-family:
-        "Trebuchet MS",
-        Arial,
-        Helvetica,
-        sans-serif;
-
       font-size: 0.92rem;
       font-weight: 600;
 
-      letter-spacing: 0.06em;
+      letter-spacing: 0.075em;
       text-transform: uppercase;
     }
 
@@ -110,6 +118,7 @@
       gap: 9px;
     }
 
+
     nav a {
       display: inline-flex;
       align-items: center;
@@ -117,19 +126,13 @@
 
       padding: 7px 13px;
 
-      color: var(--black);
+      color: var(--mineral-ivory);
       background: transparent;
 
       border: none;
       border-radius: 0;
 
       text-decoration: none;
-
-      font-family:
-        "Trebuchet MS",
-        Arial,
-        Helvetica,
-        sans-serif;
 
       font-size: 0.82rem;
       font-weight: 500;
@@ -139,28 +142,30 @@
         transform 0.2s ease;
     }
 
+
     nav a:hover {
-      color: var(--green-dark);
+      color: var(--sandstone);
       transform: translateY(-1px);
     }
 
 
     /* =========================
-       DONATE BUTTON
+       PRIMARY ACTION
     ========================= */
 
     nav a.donate-link {
-      color: #ffffff;
-      background: var(--red);
+      color: var(--mineral-ivory);
+      background: var(--burnt-terracotta);
 
-      border-radius: 8px;
+      border-radius: 7px;
 
       font-weight: 600;
     }
 
+
     nav a.donate-link:hover {
-      color: #ffffff;
-      background: var(--red-dark);
+      color: var(--mineral-ivory);
+      background: #8F4633;
     }
 
 
@@ -184,8 +189,9 @@
       max-width: 1000px;
       margin: 0 auto;
 
-      padding: 90px 6% 105px;
+      padding: 90px 6% 110px;
     }
+
 
     .about-inner {
       max-width: 780px;
@@ -198,15 +204,14 @@
     ========================= */
 
     .about-label {
-      margin-bottom: 20px;
+      margin-bottom: 21px;
 
-      color: var(--green);
+      color: var(--moss);
 
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.72rem;
-      font-weight: 700;
+      font-size: 0.68rem;
+      font-weight: 600;
 
-      letter-spacing: 0.12em;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
     }
 
@@ -218,28 +223,28 @@
     .about h1 {
       max-width: 760px;
 
-      margin-bottom: 28px;
+      margin-bottom: 30px;
 
-      color: var(--green);
+      color: var(--mineral-ivory);
 
       font-size: clamp(2.5rem, 5vw, 4rem);
-      line-height: 1.04;
+      line-height: 1.02;
 
       font-weight: 500;
-      letter-spacing: -0.045em;
+      letter-spacing: -0.05em;
     }
 
 
     /* =========================
-       OPENING TEXT
+       OPENING STATEMENT
     ========================= */
 
     .about-intro {
       max-width: 720px;
 
-      margin-bottom: 65px;
+      margin-bottom: 75px;
 
-      color: var(--black);
+      color: var(--sandstone);
 
       font-size: 1.08rem;
       line-height: 1.85;
@@ -251,17 +256,19 @@
     ========================= */
 
     .about-section {
-      margin-bottom: 48px;
+      margin-bottom: 58px;
     }
+
 
     .about-section:last-of-type {
       margin-bottom: 0;
     }
 
-    .about-section h2 {
-      margin-bottom: 13px;
 
-      color: var(--green);
+    .about-section h2 {
+      margin-bottom: 14px;
+
+      color: var(--mineral-ivory);
 
       font-size: 1.3rem;
       line-height: 1.25;
@@ -270,13 +277,32 @@
       letter-spacing: -0.02em;
     }
 
+
     .about-section p {
       max-width: 720px;
 
-      color: var(--black);
+      color: var(--sandstone);
 
       font-size: 0.97rem;
       line-height: 1.85;
+    }
+
+
+    /* =========================
+       EMPHASIS
+    ========================= */
+
+    .about-section.emphasis {
+      padding: 32px 0 32px 25px;
+
+      border-left: 2px solid var(--burnt-terracotta);
+    }
+
+
+    .about-section.emphasis p {
+      color: var(--mineral-ivory);
+
+      font-size: 1rem;
     }
 
 
@@ -288,18 +314,17 @@
       display: inline-flex;
       align-items: center;
 
-      margin-top: 52px;
+      margin-top: 60px;
 
       padding: 11px 22px;
 
-      color: #ffffff;
-      background: var(--green);
+      color: var(--deep-forest);
+      background: var(--mineral-ivory);
 
       border-radius: 30px;
 
       text-decoration: none;
 
-      font-family: Arial, Helvetica, sans-serif;
       font-size: 0.8rem;
       font-weight: 600;
 
@@ -308,8 +333,9 @@
         transform 0.2s ease;
     }
 
+
     .home-link:hover {
-      background: var(--green-dark);
+      background: var(--sandstone);
       transform: translateY(-1px);
     }
 
@@ -327,15 +353,15 @@
       align-items: center;
       justify-content: space-between;
 
-      background: var(--background);
+      background: transparent;
 
       border: none;
 
-      color: var(--black);
+      color: var(--sandstone);
 
-      font-family: Arial, Helvetica, sans-serif;
       font-size: 0.72rem;
     }
+
 
     .footer-right {
       display: flex;
@@ -343,27 +369,30 @@
       gap: 12px;
     }
 
+
     .footer-right .separator {
       width: 4px;
       height: 4px;
 
       flex-shrink: 0;
 
-      background: var(--black);
+      background: var(--moss);
 
       border-radius: 50%;
     }
 
+
     footer a {
-      color: var(--black);
+      color: var(--sandstone);
 
       text-decoration: none;
 
       transition: color 0.2s ease;
     }
 
+
     footer a:hover {
-      color: var(--green);
+      color: var(--mineral-ivory);
       text-decoration: underline;
     }
 
@@ -380,15 +409,15 @@
 
       .about {
         padding-top: 75px;
-        padding-bottom: 85px;
+        padding-bottom: 90px;
       }
 
       .about-intro {
-        margin-bottom: 55px;
+        margin-bottom: 60px;
       }
 
       .about-section {
-        margin-bottom: 42px;
+        margin-bottom: 48px;
       }
     }
 
@@ -408,13 +437,16 @@
         gap: 10px;
       }
 
+
       .logo a {
         font-size: 0.76rem;
       }
 
+
       nav {
         gap: 5px;
       }
+
 
       nav a {
         padding: 6px 9px;
@@ -422,41 +454,70 @@
         font-size: 0.72rem;
       }
 
+
       nav a.donate-link {
-        border-radius: 7px;
+        border-radius: 6px;
       }
+
 
       .about {
         padding: 60px 5% 70px;
       }
 
-      .about h1 {
-        font-size: clamp(2.35rem, 11vw, 3.35rem);
+
+      .about-label {
+        margin-bottom: 18px;
+
+        font-size: 0.61rem;
+        letter-spacing: 0.14em;
       }
 
+
+      .about h1 {
+        font-size: clamp(2.35rem, 11vw, 3.35rem);
+
+        margin-bottom: 24px;
+      }
+
+
       .about-intro {
-        margin-bottom: 48px;
+        margin-bottom: 50px;
 
         font-size: 0.98rem;
         line-height: 1.8;
       }
 
+
       .about-section {
-        margin-bottom: 36px;
+        margin-bottom: 40px;
       }
+
 
       .about-section h2 {
         font-size: 1.17rem;
       }
+
 
       .about-section p {
         font-size: 0.92rem;
         line-height: 1.8;
       }
 
-      .home-link {
-        margin-top: 42px;
+
+      .about-section.emphasis {
+        padding: 25px 0 25px 18px;
       }
+
+
+      .about-section.emphasis p {
+        font-size: 0.94rem;
+      }
+
+
+      .home-link {
+        margin-top: 45px;
+      }
+
 
       footer {
         padding: 22px 5%;
@@ -466,6 +527,7 @@
 
         gap: 8px;
       }
+
 
       .footer-right {
         gap: 11px;
@@ -482,17 +544,18 @@
 
     <div class="logo">
       <a href="index.html">
-        Mo Endemik
+        NOU ANDEMIK
       </a>
     </div>
+
 
     <nav>
 
       <a
-        href="donate.html"
+        href="support.html"
         class="donate-link"
       >
-        Donate
+        Support
       </a>
 
     </nav>
@@ -506,112 +569,154 @@
 
       <div class="about-inner">
 
+
         <div class="about-label">
-          About Mo Endemik
+          About NOU ANDEMIK
         </div>
-        
-        
+
+
         <h1>
-          Protecting Mauritius' native and endemic flora.
+          Keeping Mauritius’ endemic life present.
         </h1>
 
 
         <p class="about-intro">
-          Mo Endemik is an organisation dedicated to the conservation
-          and appreciation of Mauritius' native and endemic flora.
-          We believe that protecting these plants means preserving
-          an important part of the island's natural heritage for
-          present and future generations.
+          NOU ANDEMIK exists to give Mauritius’ native and endemic
+          flora a stronger presence in the places where people live,
+          learn and encounter the natural world. We work around the
+          simple idea that plants cannot be protected only as names
+          in books or specimens in collections. They need to remain
+          alive, growing and understood.
         </p>
 
 
         <!-- =========================
-             CONSERVATION
+             WHO WE ARE
         ========================= -->
 
         <section class="about-section">
 
           <h2>
-            Conservation
+            Who We Are
           </h2>
 
           <p>
-            Mauritius is home to a remarkable diversity of native
-            plants, including species found nowhere else in the world.
-            Many of these plants are closely connected to the island's
-            ecosystems and natural history. Mo Endemik supports the
-            conservation, protection and propagation of native and
-            endemic flora, helping to maintain their presence as part
-            of Mauritius' living botanical heritage.
+            NOU ANDEMIK is centred on the living plant heritage of
+            Mauritius. Our work focuses on species that are part of
+            the island’s natural identity, particularly plants that
+            occur nowhere else in the world. We bring together
+            propagation, practical conservation and public
+            appreciation to help give these species a continuing
+            place in Mauritius.
           </p>
 
         </section>
 
 
         <!-- =========================
-             OUR APPROACH
+             WHY WE EXIST
         ========================= -->
 
         <section class="about-section">
 
           <h2>
-            Our Approach
+            Why We Exist
           </h2>
 
           <p>
-            Our approach brings together conservation, propagation,
-            awareness and appreciation. We seek to make Mauritius'
-            native and endemic plants better known and better valued,
-            while encouraging greater interest in their protection.
-            Through this work, we aim to contribute to a stronger
-            understanding of the importance of indigenous flora and
-            its place within the island's natural environment.
+            Mauritius has a botanical heritage shaped by millions of
+            years of evolution and by the particular landscapes of
+            an island. Some of its plants are found only here.
+            Their disappearance would therefore mean more than the
+            loss of individual plants: it would remove something that
+            cannot be recreated somewhere else.
+          </p>
+
+          <p style="margin-top: 18px;">
+            We believe that keeping these species present requires
+            more than concern for their survival. It requires living
+            material, people who know these plants, places where they
+            can be grown, and a culture that recognises their value.
           </p>
 
         </section>
 
 
         <!-- =========================
-             WHY NATIVE FLORA MATTERS
+             WHAT WE DO
         ========================= -->
 
         <section class="about-section">
 
           <h2>
-            Why Native Flora Matters
+            What We Do
           </h2>
 
           <p>
-            The plants of Mauritius are an important part of the
-            island's ecological identity. Endemic species are
-            particularly significant because they occur naturally
-            nowhere else on Earth. Once lost, this part of Mauritius'
-            natural heritage cannot simply be replaced. Protecting
-            native flora therefore means protecting biodiversity,
-            ecosystems and a unique botanical legacy.
+            Our nursery is one practical part of this work. Through
+            propagation, plants can be grown beyond the limits of
+            their remaining natural populations and maintained as
+            living material. This creates opportunities for continued
+            cultivation, education and future conservation efforts.
+          </p>
+
+          <p style="margin-top: 18px;">
+            We also work to make endemic flora more visible and
+            familiar. Understanding what grows naturally on the
+            island is an important part of valuing it. By sharing
+            knowledge and making these plants more accessible, we
+            hope to encourage greater care for the landscapes and
+            species that make Mauritius distinct.
           </p>
 
         </section>
 
 
         <!-- =========================
-             LOOKING AHEAD
+             LIVING HERITAGE
+        ========================= -->
+
+        <section class="about-section emphasis">
+
+          <h2>
+            Living Heritage
+          </h2>
+
+          <p>
+            A plant that is still growing can still be known,
+            studied, cultivated and protected. For NOU ANDEMIK,
+            conservation begins with keeping that possibility alive.
+          </p>
+
+        </section>
+
+
+        <!-- =========================
+             OUR DIRECTION
         ========================= -->
 
         <section class="about-section">
 
           <h2>
-            Looking Ahead
+            Our Direction
           </h2>
 
           <p>
-            The conservation of Mauritius' flora is a long-term
-            responsibility. Our aim is to contribute to a future
-            where native and endemic plants are recognised, valued
-            and given the opportunity to thrive. By supporting
-            conservation and encouraging appreciation of these
-            species, we hope to help keep Mauritius' botanical
-            heritage alive for generations to come.
+            Our aim is not to treat endemic flora as something that
+            belongs only to the past. We want these plants to have a
+            future in which they are recognised as part of everyday
+            Mauritius: present in cultivation, understood by the
+            public and considered in the way the island cares for
+            its natural spaces.
+          </p>
+
+          <p style="margin-top: 18px;">
+            The work is necessarily long-term. Populations take time
+            to establish, knowledge takes time to spread, and
+            meaningful conservation depends on continuity. NOU
+            ANDEMIK is built around that continuity — keeping plants
+            growing while helping keep their place in the story of
+            Mauritius.
           </p>
 
         </section>
@@ -628,6 +733,7 @@
           ← Back to Home
         </a>
 
+
       </div>
 
     </section>
@@ -635,15 +741,12 @@
   </main>
 
 
-  <!-- =========================
-       FOOTER
-    ========================= -->
-
   <footer>
 
     <span>
-      Conservation &amp; Propagation © Mo Endemik 2025-2026
+      Endemic Flora &amp; Conservation © NOU ANDEMIK 2025–2026
     </span>
+
 
     <div class="footer-right">
 
@@ -651,10 +754,12 @@
         Privacy Policy
       </a>
 
+
       <span class="separator"></span>
 
+
       <a
-        href="https://instagram.com/moendemik"
+        href="https://instagram.com/nouandemik"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -668,3 +773,4 @@
 
 </body>
 </html>
+```
