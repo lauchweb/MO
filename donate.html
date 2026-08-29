@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,25 +15,27 @@
   <style>
     :root {
       /* =========================
-         NOU ANDEMIK COLOR IDENTITY
+         NOU ANDEMIK IDENTITY
       ========================= */
 
-      --deep-forest: #172B24;
-      --mineral-ivory: #E7E0CF;
-      --burnt-terracotta: #A6533B;
+      --forest: #172B24;
+      --forest-deep: #11221C;
+      --forest-soft: #294238;
 
-      --charcoal-earth: #24221D;
-      --sandstone: #C8BDA7;
-      --moss: #65745B;
+      --ivory: #E7E0CF;
+      --ivory-light: #F1ECE0;
+      --white: #FAF7EF;
 
-      --background: var(--deep-forest);
-      --text: var(--mineral-ivory);
+      --terracotta: #A6533B;
+      --terracotta-dark: #8F4633;
 
-      --panel: #1E352C;
-      --panel-soft: #223A31;
-      --border: #385247;
+      --sand: #C8BDA7;
+      --moss: #71806D;
 
-      --white: #F7F3E9;
+      --ink: #24221D;
+      --muted: #67665E;
+
+      --line: #D7D0C1;
     }
 
 
@@ -60,8 +63,8 @@
         Helvetica,
         sans-serif;
 
-      color: var(--text);
-      background: var(--background);
+      color: var(--ivory);
+      background: var(--forest);
 
       line-height: 1.6;
     }
@@ -85,10 +88,6 @@
     }
 
 
-    /* =========================
-       LOGO
-    ========================= */
-
     .logo {
       display: flex;
       align-items: center;
@@ -99,7 +98,7 @@
       display: inline-flex;
       align-items: center;
 
-      color: var(--mineral-ivory);
+      color: var(--ivory);
 
       text-decoration: none;
 
@@ -129,7 +128,7 @@
 
       padding: 7px 13px;
 
-      color: var(--mineral-ivory);
+      color: var(--ivory);
       background: transparent;
 
       border: none;
@@ -146,18 +145,19 @@
 
 
     nav a:hover {
-      color: var(--sandstone);
+      color: var(--sand);
       transform: translateY(-1px);
     }
 
 
     /* =========================
-       SUPPORT BUTTON
+       SUPPORT NAV BUTTON
     ========================= */
 
     nav a.support-link {
-      color: var(--mineral-ivory);
-      background: var(--burnt-terracotta);
+      color: var(--ivory);
+
+      background: var(--terracotta);
 
       border-radius: 7px;
 
@@ -166,8 +166,9 @@
 
 
     nav a.support-link:hover {
-      color: var(--mineral-ivory);
-      background: #8F4633;
+      color: var(--ivory);
+
+      background: var(--terracotta-dark);
     }
 
 
@@ -182,19 +183,21 @@
 
 
     /* =========================
-       SUPPORT SECTION
+       SUPPORT PAGE
     ========================= */
 
     .support-section {
       max-width: 1080px;
+
       margin: 0 auto;
 
-      padding: 90px 6% 115px;
+      padding: 105px 6% 125px;
     }
 
 
     .support-inner {
       max-width: 900px;
+
       margin: 0 auto;
     }
 
@@ -204,11 +207,11 @@
     ========================= */
 
     .support-label {
-      margin-bottom: 21px;
+      margin-bottom: 23px;
 
       color: var(--moss);
 
-      font-size: 0.68rem;
+      font-size: 0.67rem;
       font-weight: 600;
 
       letter-spacing: 0.18em;
@@ -221,33 +224,53 @@
     ========================= */
 
     .support-title {
-      max-width: 760px;
+      max-width: 720px;
 
-      margin-bottom: 28px;
+      margin-bottom: 31px;
 
-      color: var(--mineral-ivory);
+      color: var(--ivory);
 
-      font-size: clamp(2.5rem, 5vw, 4.2rem);
+      font-size: clamp(2.5rem, 5vw, 4.15rem);
+
       line-height: 1.02;
 
       font-weight: 500;
+
       letter-spacing: -0.05em;
     }
 
 
     /* =========================
-       INTRO
+       INTRODUCTION
     ========================= */
 
     .support-intro {
-      max-width: 680px;
+      max-width: 650px;
 
-      margin-bottom: 70px;
+      margin-bottom: 88px;
 
-      color: var(--sandstone);
+      color: var(--sand);
 
-      font-size: 1.05rem;
-      line-height: 1.85;
+      font-size: 1rem;
+
+      line-height: 1.9;
+    }
+
+
+    /* =========================
+       IVORY DONATION STAGE
+    ========================= */
+
+    .donation-stage {
+      max-width: 900px;
+
+      margin: 0 auto;
+
+      padding: 58px 55px 62px;
+
+      background: var(--ivory);
+
+      border-radius: 24px;
     }
 
 
@@ -255,35 +278,44 @@
        DONATION PANEL
     ========================= */
 
-    .donation-panel {
+    .donation-area {
       max-width: 720px;
 
-      padding: 36px;
+      margin: 0 auto;
 
-      background: var(--panel);
+      padding: 40px;
 
-      border: 1px solid var(--border);
-      border-radius: 18px;
+      background: var(--white);
+
+      border-radius: 16px;
+
+      color: var(--ink);
     }
 
 
-    .donation-panel h2 {
-      margin-bottom: 8px;
+    .donation-area h2 {
+      margin-bottom: 9px;
 
-      color: var(--mineral-ivory);
+      color: var(--forest);
 
-      font-size: 1.3rem;
+      font-size: 1.35rem;
+
       font-weight: 600;
+
+      letter-spacing: -0.02em;
     }
 
 
     .panel-intro {
-      margin-bottom: 28px;
+      max-width: 520px;
 
-      color: var(--sandstone);
+      margin-bottom: 32px;
+
+      color: var(--muted);
 
       font-size: 0.82rem;
-      line-height: 1.6;
+
+      line-height: 1.7;
     }
 
 
@@ -293,28 +325,35 @@
 
     .payment-options {
       display: grid;
+
       grid-template-columns: repeat(3, 1fr);
 
       gap: 9px;
 
-      margin-bottom: 25px;
+      margin-bottom: 28px;
     }
 
 
     .payment-option {
-      padding: 15px 12px;
+      min-height: 48px;
 
-      color: var(--sandstone);
+      padding: 12px 10px;
+
+      color: var(--forest);
+
       background: transparent;
 
-      border: 1px solid var(--border);
+      border: 1px solid var(--line);
+
       border-radius: 9px;
 
       font-family: inherit;
-      font-size: 0.77rem;
+
+      font-size: 0.76rem;
+
       font-weight: 600;
 
-      text-align: center;
+      line-height: 1.3;
 
       cursor: pointer;
 
@@ -326,17 +365,20 @@
 
 
     .payment-option:hover {
-      color: var(--mineral-ivory);
-      border-color: var(--moss);
-      background: var(--panel-soft);
+      color: var(--forest);
+
+      background: #EEE8DC;
+
+      border-color: var(--forest);
     }
 
 
     .payment-option.active {
-      color: var(--deep-forest);
-      background: var(--mineral-ivory);
+      color: var(--ivory-light);
 
-      border-color: var(--mineral-ivory);
+      background: var(--forest);
+
+      border-color: var(--forest);
     }
 
 
@@ -345,16 +387,18 @@
     ========================= */
 
     .payment-content {
-      padding-top: 3px;
+      padding-top: 2px;
     }
 
 
     .payment-method {
       display: none;
 
-      padding: 25px;
+      padding: 29px;
 
-      background: var(--panel-soft);
+      background: #FFFFFF;
+
+      border: 1px solid #E1DDD3;
 
       border-radius: 13px;
     }
@@ -366,58 +410,68 @@
 
 
     .payment-method h3 {
-      margin-bottom: 10px;
+      margin-bottom: 11px;
 
-      color: var(--mineral-ivory);
+      color: var(--forest);
 
       font-size: 1rem;
+
       font-weight: 600;
     }
 
 
     .payment-method p {
-      color: var(--sandstone);
+      max-width: 540px;
+
+      color: var(--muted);
 
       font-size: 0.8rem;
-      line-height: 1.7;
+
+      line-height: 1.75;
     }
 
 
     /* =========================
-       AMOUNT
+       CONTRIBUTION AMOUNT
     ========================= */
 
     .amount-title {
-      margin-bottom: 12px;
+      margin-bottom: 13px;
 
-      color: var(--mineral-ivory);
+      color: var(--forest);
 
       font-size: 0.8rem;
+
       font-weight: 600;
     }
 
 
     .amounts {
       display: grid;
+
       grid-template-columns: repeat(4, 1fr);
 
       gap: 9px;
 
-      margin-bottom: 22px;
+      margin-bottom: 24px;
     }
 
 
     .amount {
-      padding: 12px 8px;
+      padding: 13px 8px;
 
-      color: var(--sandstone);
+      color: var(--ink);
+
       background: transparent;
 
-      border: 1px solid var(--border);
+      border: 1px solid var(--line);
+
       border-radius: 9px;
 
       font-family: inherit;
+
       font-size: 0.78rem;
+
       font-weight: 600;
 
       cursor: pointer;
@@ -430,16 +484,20 @@
 
 
     .amount:hover {
-      color: var(--mineral-ivory);
-      border-color: var(--moss);
+      color: var(--forest);
+
+      background: #F0EBE0;
+
+      border-color: var(--forest);
     }
 
 
     .amount.selected {
-      color: var(--deep-forest);
-      background: var(--mineral-ivory);
+      color: var(--ivory-light);
 
-      border-color: var(--mineral-ivory);
+      background: var(--forest);
+
+      border-color: var(--forest);
     }
 
 
@@ -450,17 +508,20 @@
     .support-button {
       width: 100%;
 
-      padding: 15px 20px;
+      padding: 16px 20px;
+
+      color: var(--ivory-light);
+
+      background: var(--terracotta);
 
       border: 0;
-      border-radius: 25px;
 
-      background: var(--burnt-terracotta);
-      color: var(--mineral-ivory);
+      border-radius: 26px;
 
       font-family: inherit;
 
       font-size: 0.84rem;
+
       font-weight: 700;
 
       cursor: pointer;
@@ -472,62 +533,69 @@
 
 
     .support-button:hover {
-      background: #8F4633;
+      background: var(--terracotta-dark);
+
       transform: translateY(-1px);
     }
 
 
     /* =========================
-       WHY SUPPORT
+       SUPPORT REASONS
     ========================= */
 
     .support-reasons {
       max-width: 820px;
 
-      margin-top: 75px;
+      margin-top: 105px;
     }
 
 
-    .support-reasons-title {
-      margin-bottom: 28px;
+    .support-reasons h2 {
+      margin-bottom: 38px;
 
-      color: var(--mineral-ivory);
+      color: var(--ivory);
 
       font-size: 1.2rem;
+
       font-weight: 600;
+
+      letter-spacing: -0.02em;
     }
 
 
     .support-grid {
       display: grid;
+
       grid-template-columns: repeat(3, 1fr);
 
-      gap: 35px;
+      gap: 42px;
     }
 
 
     .support-item {
-      padding-top: 17px;
+      padding-top: 19px;
 
-      border-top: 1px solid var(--border);
+      border-top: 1px solid var(--forest-soft);
     }
 
 
     .support-item h3 {
-      margin-bottom: 9px;
+      margin-bottom: 10px;
 
-      color: var(--mineral-ivory);
+      color: var(--ivory);
 
-      font-size: 0.88rem;
+      font-size: 0.87rem;
+
       font-weight: 600;
     }
 
 
     .support-item p {
-      color: var(--sandstone);
+      color: var(--sand);
 
-      font-size: 0.78rem;
-      line-height: 1.7;
+      font-size: 0.77rem;
+
+      line-height: 1.75;
     }
 
 
@@ -538,18 +606,20 @@
     .support-closing {
       max-width: 650px;
 
-      margin-top: 75px;
+      margin-top: 90px;
+
       padding-left: 24px;
 
-      border-left: 2px solid var(--burnt-terracotta);
+      border-left: 2px solid var(--terracotta);
     }
 
 
     .support-closing p {
-      color: var(--mineral-ivory);
+      color: var(--ivory);
 
-      font-size: 0.95rem;
-      line-height: 1.8;
+      font-size: 0.96rem;
+
+      line-height: 1.85;
     }
 
 
@@ -559,20 +629,23 @@
 
     .home-link {
       display: inline-flex;
+
       align-items: center;
 
-      margin-top: 55px;
+      margin-top: 60px;
 
       padding: 11px 21px;
 
-      color: var(--deep-forest);
-      background: var(--mineral-ivory);
+      color: var(--forest);
+
+      background: var(--ivory);
 
       border-radius: 25px;
 
       text-decoration: none;
 
       font-size: 0.8rem;
+
       font-weight: 600;
 
       transition:
@@ -582,7 +655,8 @@
 
 
     .home-link:hover {
-      background: var(--sandstone);
+      background: var(--sand);
+
       transform: translateY(-1px);
     }
 
@@ -597,10 +671,12 @@
       padding: 25px 6%;
 
       display: flex;
+
       align-items: center;
+
       justify-content: space-between;
 
-      color: var(--sandstone);
+      color: var(--sand);
 
       font-size: 0.72rem;
     }
@@ -608,13 +684,15 @@
 
     .footer-links {
       display: flex;
+
       align-items: center;
+
       gap: 10px;
     }
 
 
     .footer-links a {
-      color: var(--sandstone);
+      color: var(--sand);
 
       text-decoration: none;
 
@@ -623,7 +701,8 @@
 
 
     .footer-links a:hover {
-      color: var(--mineral-ivory);
+      color: var(--ivory);
+
       text-decoration: underline;
     }
 
@@ -632,6 +711,7 @@
       color: var(--moss);
 
       font-size: 0.85rem;
+
       line-height: 1;
     }
 
@@ -642,36 +722,39 @@
 
     @media (max-width: 800px) {
 
-      header {
-        height: 76px;
-      }
-
-
       .support-section {
-        padding-top: 75px;
-        padding-bottom: 90px;
+        padding-top: 85px;
+
+        padding-bottom: 100px;
       }
 
 
       .support-intro {
-        margin-bottom: 60px;
+        margin-bottom: 70px;
+      }
+
+
+      .donation-stage {
+        padding: 45px 35px 50px;
+
+        border-radius: 21px;
       }
 
 
       .support-grid {
         grid-template-columns: 1fr;
 
-        gap: 28px;
+        gap: 30px;
       }
 
 
       .support-reasons {
-        margin-top: 65px;
+        margin-top: 80px;
       }
 
 
       .support-closing {
-        margin-top: 65px;
+        margin-top: 72px;
       }
     }
 
@@ -684,6 +767,7 @@
 
       header {
         height: auto;
+
         min-height: 72px;
 
         padding: 14px 5%;
@@ -715,37 +799,61 @@
 
 
       .support-section {
-        padding: 60px 5% 70px;
+        padding: 64px 5% 75px;
       }
 
 
       .support-label {
-        margin-bottom: 18px;
+        margin-bottom: 19px;
 
-        font-size: 0.61rem;
+        font-size: 0.6rem;
+
         letter-spacing: 0.14em;
       }
 
 
       .support-title {
-        font-size: clamp(2.35rem, 11vw, 3.35rem);
+        margin-bottom: 25px;
 
-        margin-bottom: 24px;
+        font-size: clamp(2.35rem, 11vw, 3.35rem);
       }
 
 
       .support-intro {
-        margin-bottom: 50px;
+        margin-bottom: 58px;
 
-        font-size: 0.95rem;
-        line-height: 1.8;
+        font-size: 0.92rem;
+
+        line-height: 1.85;
       }
 
 
-      .donation-panel {
-        padding: 25px 20px;
+      /* =========================
+         KEEP THE IVORY FIELD
+         GENEROUS ON MOBILE
+      ========================= */
 
-        border-radius: 15px;
+      .donation-stage {
+        padding: 30px 17px 35px;
+
+        border-radius: 18px;
+      }
+
+
+      .donation-area {
+        padding: 27px 20px;
+
+        border-radius: 14px;
+      }
+
+
+      .donation-area h2 {
+        font-size: 1.2rem;
+      }
+
+
+      .panel-intro {
+        margin-bottom: 27px;
       }
 
 
@@ -753,38 +861,54 @@
         grid-template-columns: 1fr;
 
         gap: 7px;
+
+        margin-bottom: 22px;
+      }
+
+
+      .payment-option {
+        min-height: 45px;
       }
 
 
       .payment-method {
-        padding: 20px;
+        padding: 21px 17px;
       }
 
 
       .amounts {
         grid-template-columns: repeat(2, 1fr);
+
+        gap: 8px;
+
+        margin-bottom: 22px;
       }
 
 
       .support-reasons {
-        margin-top: 60px;
+        margin-top: 68px;
+      }
+
+
+      .support-reasons h2 {
+        margin-bottom: 29px;
       }
 
 
       .support-grid {
-        gap: 25px;
+        gap: 28px;
       }
 
 
       .support-closing {
-        margin-top: 55px;
+        margin-top: 60px;
 
         padding-left: 18px;
       }
 
 
       .home-link {
-        margin-top: 45px;
+        margin-top: 47px;
       }
 
 
@@ -792,6 +916,7 @@
         padding: 22px 5%;
 
         flex-direction: column;
+
         align-items: flex-start;
 
         gap: 8px;
@@ -812,9 +937,11 @@
   <header>
 
     <div class="logo">
+
       <a href="index.html">
         NOU ANDEMIK
       </a>
+
     </div>
 
 
@@ -824,7 +951,11 @@
         Home
       </a>
 
-      <a href="support.html" class="support-link">
+
+      <a
+        href="support.html"
+        class="support-link"
+      >
         Support
       </a>
 
@@ -851,165 +982,179 @@
 
 
         <p class="support-intro">
-          Mauritius has plants that exist nowhere else on Earth.
-          Supporting NOU ANDEMIK helps us keep these species growing,
-          make them better known and create the conditions for their
-          continued presence beyond the places where they survive today.
+          Mauritius is home to plants that exist nowhere else on Earth.
+          Supporting NOU ANDEMIK helps keep these species growing,
+          understood and present beyond the places where they remain today.
         </p>
 
 
         <!-- =========================
-             CONTRIBUTION PANEL
+             IVORY DONATION STAGE
         ========================= -->
 
-        <div class="donation-panel">
-
-          <h2>
-            Make a contribution
-          </h2>
+        <div class="donation-stage">
 
 
-          <p class="panel-intro">
-            Choose the method that is most convenient for you.
-          </p>
+          <div class="donation-area">
+
+            <h2>
+              Make a contribution
+            </h2>
 
 
-          <!-- PAYMENT OPTIONS -->
-
-          <div class="payment-options">
-
-            <button
-              class="payment-option active"
-              type="button"
-              data-method="card"
-            >
-              Debit / Credit Card
-            </button>
+            <p class="panel-intro">
+              Choose how you would like to support the work.
+            </p>
 
 
-            <button
-              class="payment-option"
-              type="button"
-              data-method="bank"
-            >
-              Bank Transfer
-            </button>
+            <!-- PAYMENT OPTIONS -->
 
-
-            <button
-              class="payment-option"
-              type="button"
-              data-method="mobile"
-            >
-              Mobile Payment
-            </button>
-
-          </div>
-
-
-          <div class="payment-content">
-
-
-            <!-- CARD -->
-
-            <div
-              class="payment-method active"
-              id="card"
-            >
-
-              <div class="amount-title">
-                Contribution amount
-              </div>
-
-
-              <div class="amounts">
-
-                <button class="amount" type="button">
-                  Rs 500
-                </button>
-
-
-                <button class="amount" type="button">
-                  Rs 1,000
-                </button>
-
-
-                <button class="amount" type="button">
-                  Rs 2,500
-                </button>
-
-
-                <button class="amount" type="button">
-                  Other
-                </button>
-
-              </div>
-
-
-              <!-- Connect to the real payment provider -->
+            <div class="payment-options">
 
               <button
-                class="support-button"
+                class="payment-option active"
                 type="button"
-                onclick="alert('Online payment will be connected here.')"
+                data-method="card"
               >
-                Continue to Support
+                Debit / Credit Card
+              </button>
+
+
+              <button
+                class="payment-option"
+                type="button"
+                data-method="bank"
+              >
+                Bank Transfer
+              </button>
+
+
+              <button
+                class="payment-option"
+                type="button"
+                data-method="mobile"
+              >
+                Mobile Payment
               </button>
 
             </div>
 
 
-            <!-- BANK TRANSFER -->
-
-            <div
-              class="payment-method"
-              id="bank"
-            >
-
-              <h3>
-                Bank Transfer
-              </h3>
+            <div class="payment-content">
 
 
-              <p>
-                Official bank transfer information will be provided
-                here once the organisation’s designated support
-                account is confirmed.
-              </p>
+              <!-- CARD -->
 
-            </div>
+              <div
+                class="payment-method active"
+                id="card"
+              >
 
-
-            <!-- MOBILE PAYMENT -->
-
-            <div
-              class="payment-method"
-              id="mobile"
-            >
-
-              <h3>
-                Mobile Payment
-              </h3>
+                <div class="amount-title">
+                  Contribution amount
+                </div>
 
 
-              <p>
-                An official MauCAS payment option will be displayed
-                here once the organisation’s merchant registration
-                is complete.
-              </p>
+                <div class="amounts">
+
+                  <button
+                    class="amount"
+                    type="button"
+                  >
+                    Rs 500
+                  </button>
 
 
-              <!--
-                Add the official QR code here:
+                  <button
+                    class="amount"
+                    type="button"
+                  >
+                    Rs 1,000
+                  </button>
 
-                <img
-                  src="images/maucas-qr.png"
-                  alt="NOU ANDEMIK mobile payment QR code"
+
+                  <button
+                    class="amount"
+                    type="button"
+                  >
+                    Rs 2,500
+                  </button>
+
+
+                  <button
+                    class="amount"
+                    type="button"
+                  >
+                    Other
+                  </button>
+
+                </div>
+
+
+                <!-- Connect to the real payment provider -->
+
+                <button
+                  class="support-button"
+                  type="button"
+                  onclick="alert('Online payment will be connected here.')"
                 >
-              -->
+                  Continue to Support
+                </button>
+
+              </div>
+
+
+              <!-- BANK TRANSFER -->
+
+              <div
+                class="payment-method"
+                id="bank"
+              >
+
+                <h3>
+                  Bank Transfer
+                </h3>
+
+
+                <p>
+                  Official bank transfer information will appear here
+                  once the designated support account has been confirmed.
+                </p>
+
+              </div>
+
+
+              <!-- MOBILE PAYMENT -->
+
+              <div
+                class="payment-method"
+                id="mobile"
+              >
+
+                <h3>
+                  Mobile Payment
+                </h3>
+
+
+                <p>
+                  An official MauCAS payment option will appear here
+                  once the organisation’s merchant registration is complete.
+                </p>
+
+
+                <!--
+                  Add the official QR code here:
+
+                  <img
+                    src="images/maucas-qr.png"
+                    alt="NOU ANDEMIK mobile payment QR code"
+                  >
+                -->
+
+              </div>
+
 
             </div>
-
 
           </div>
 
@@ -1017,12 +1162,12 @@
 
 
         <!-- =========================
-             WHY SUPPORT
+             WHAT SUPPORT ENABLES
         ========================= -->
 
         <div class="support-reasons">
 
-          <h2 class="support-reasons-title">
+          <h2>
             What your support makes possible
           </h2>
 
@@ -1033,13 +1178,13 @@
             <div class="support-item">
 
               <h3>
-                Living collections
+                Living plants
               </h3>
 
               <p>
-                Propagating plants creates living populations that
-                can be maintained, studied and grown beyond their
-                original locations.
+                Contributions help sustain the practical work of
+                propagating and maintaining native and endemic plants
+                as living populations.
               </p>
 
             </div>
@@ -1048,13 +1193,13 @@
             <div class="support-item">
 
               <h3>
-                Knowledge
+                Greater awareness
               </h3>
 
               <p>
-                Better awareness helps people recognise the plants
-                around them and understand why Mauritius’ endemic
-                species are worth keeping.
+                Making these species better known gives more people
+                a reason to recognise their value and care about
+                their continued presence.
               </p>
 
             </div>
@@ -1063,17 +1208,16 @@
             <div class="support-item">
 
               <h3>
-                Continuity
+                Long-term work
               </h3>
 
               <p>
-                Long-term work requires time, care and consistency.
-                Contributions help sustain the practical work behind
-                that continuity.
+                Plant conservation is measured over years, not moments.
+                Reliable support allows this work to continue with
+                care and consistency.
               </p>
 
             </div>
-
 
           </div>
 
@@ -1087,9 +1231,9 @@
         <div class="support-closing">
 
           <p>
-            The value of an endemic plant is not only that it is rare.
-            It is that it belongs to this place. Keeping it alive means
-            keeping a part of Mauritius alive with it.
+            An endemic plant belongs to this place in a way no other
+            plant does. Keeping it alive is a way of keeping a part
+            of Mauritius alive with it.
           </p>
 
         </div>
@@ -1133,9 +1277,21 @@
       </span>
 
 
-      <a href="https://instagram.com/nouandemik"
-         target="_blank"
-         rel="noopener noreferrer">
+      <a href="donation-policy.html">
+        Support Policy
+      </a>
+
+
+      <span class="footer-separator">
+        •
+      </span>
+
+
+      <a
+        href="https://instagram.com/nouandemik"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Follow
       </a>
 
@@ -1153,6 +1309,7 @@
     const paymentOptions =
       document.querySelectorAll(".payment-option");
 
+
     const paymentMethods =
       document.querySelectorAll(".payment-method");
 
@@ -1166,12 +1323,16 @@
 
 
         paymentOptions.forEach(item => {
+
           item.classList.remove("active");
+
         });
 
 
         paymentMethods.forEach(item => {
+
           item.classList.remove("active");
+
         });
 
 
@@ -1183,7 +1344,9 @@
 
 
         if (selectedMethod) {
+
           selectedMethod.classList.add("active");
+
         }
 
       });
@@ -1204,7 +1367,9 @@
       button.addEventListener("click", () => {
 
         amountButtons.forEach(item => {
+
           item.classList.remove("selected");
+
         });
 
 
@@ -1219,3 +1384,4 @@
 
 </body>
 </html>
+```
