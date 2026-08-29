@@ -4,26 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Mo Endemik | Conservation of Mauritius Flora</title>
+  <title>NOU ANDEMIK | Mauritius Endemic Flora</title>
 
   <meta
     name="description"
-    content="Mo Endemik is dedicated to the conservation of native and endemic flora and the preservation of Mauritius’ botanical heritage."
+    content="NOU ANDEMIK protects, propagates, and preserves the endemic flora of Mauritius — keeping what is uniquely ours rooted for generations to come."
   >
 
   <style>
     :root {
-      --black: #171717;
+      /* =========================
+         NOU ANDEMIK COLOR IDENTITY
+      ========================= */
 
-      /* Dark green-grey for the main title */
-      --title-green: #29443A;
-      --title-green-dark: #20362E;
+      --deep-forest: #172B24;
+      --mineral-ivory: #E7E0CF;
+      --burnt-terracotta: #A6533B;
 
-      --red: #B83A3A;
-      --red-dark: #9E3030;
+      --charcoal-earth: #24221D;
+      --sandstone: #C8BDA7;
+      --moss: #65745B;
 
-      --background: #fafafa;
+      --background: var(--deep-forest);
+      --text: var(--mineral-ivory);
     }
+
 
     * {
       box-sizing: border-box;
@@ -31,10 +36,12 @@
       padding: 0;
     }
 
+
     html,
     body {
       min-height: 100%;
     }
+
 
     body {
       min-height: 100vh;
@@ -48,7 +55,7 @@
         Helvetica,
         sans-serif;
 
-      color: var(--black);
+      color: var(--text);
       line-height: 1.6;
 
       background-color: var(--background);
@@ -83,11 +90,12 @@
       align-items: center;
     }
 
+
     .logo a {
       display: inline-flex;
       align-items: center;
 
-      color: var(--black);
+      color: var(--mineral-ivory);
       background: transparent;
 
       text-decoration: none;
@@ -95,7 +103,7 @@
       font-size: 0.92rem;
       font-weight: 600;
 
-      letter-spacing: 0.06em;
+      letter-spacing: 0.075em;
       text-transform: uppercase;
     }
 
@@ -110,6 +118,7 @@
       gap: 9px;
     }
 
+
     nav a {
       display: inline-flex;
       align-items: center;
@@ -117,7 +126,7 @@
 
       padding: 7px 13px;
 
-      color: var(--black);
+      color: var(--mineral-ivory);
       background: transparent;
 
       border: none;
@@ -133,28 +142,30 @@
         transform 0.2s ease;
     }
 
+
     nav a:hover {
-      color: var(--title-green-dark);
+      color: var(--sandstone);
       transform: translateY(-1px);
     }
 
 
     /* =========================
-       DONATE BUTTON
+       PRIMARY ACTION
     ========================= */
 
     nav a.donate-link {
-      color: #ffffff;
-      background: var(--red);
+      color: var(--mineral-ivory);
+      background: var(--burnt-terracotta);
 
-      border-radius: 8px;
+      border-radius: 7px;
 
       font-weight: 600;
     }
 
+
     nav a.donate-link:hover {
-      color: #ffffff;
-      background: var(--red-dark);
+      color: var(--mineral-ivory);
+      background: #8F4633;
     }
 
 
@@ -176,33 +187,55 @@
       max-width: 1120px;
       margin: 0 auto;
 
-      padding: 65px 6% 90px;
+      padding: 95px 6% 115px;
 
       text-align: center;
     }
+
 
     .hero-copy {
       margin: 0 auto;
       text-align: center;
     }
 
-    .hero-copy h1 {
-      color: var(--title-green);
 
-      font-size: clamp(2.3rem, 4.2vw, 3.8rem);
+    .hero-copy h1 {
+      color: var(--mineral-ivory);
+
+      font-size: clamp(2.5rem, 5vw, 4.4rem);
       line-height: 1;
 
       font-weight: 500;
-      letter-spacing: -0.045em;
+      letter-spacing: -0.05em;
     }
 
+
     .hero-copy p {
-      margin: 20px auto 0;
+      max-width: 570px;
 
-      color: var(--black);
+      margin: 24px auto 0;
 
-      font-size: 0.92rem;
-      line-height: 1.6;
+      color: var(--sandstone);
+
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+
+    /* =========================
+       SMALL IDENTITY LINE
+    ========================= */
+
+    .identity-line {
+      margin-bottom: 22px;
+
+      color: var(--moss);
+
+      font-size: 0.68rem;
+      font-weight: 600;
+
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
     }
 
 
@@ -224,10 +257,11 @@
       background: transparent;
       border: none;
 
-      color: var(--black);
+      color: var(--sandstone);
 
       font-size: 0.72rem;
     }
+
 
     .footer-links {
       display: flex;
@@ -235,20 +269,23 @@
       gap: 11px;
     }
 
+
     .footer-links a {
-      color: var(--black);
+      color: var(--sandstone);
       text-decoration: none;
 
       transition: color 0.2s ease;
     }
 
+
     .footer-links a:hover {
-      color: var(--title-green);
+      color: var(--mineral-ivory);
       text-decoration: underline;
     }
 
+
     .footer-separator {
-      color: var(--black);
+      color: var(--moss);
       font-size: 0.9rem;
       line-height: 1;
     }
@@ -265,8 +302,8 @@
       }
 
       .intro {
-        padding-top: 55px;
-        padding-bottom: 75px;
+        padding-top: 75px;
+        padding-bottom: 90px;
       }
     }
 
@@ -286,38 +323,54 @@
         gap: 10px;
       }
 
+
       .logo a {
         font-size: 0.76rem;
       }
 
+
       nav {
         gap: 5px;
       }
+
 
       nav a {
         padding: 6px 9px;
         font-size: 0.72rem;
       }
 
+
       nav a.donate-link {
-        border-radius: 7px;
+        border-radius: 6px;
       }
+
 
       .intro {
-        padding: 45px 5% 65px;
+        padding: 60px 5% 70px;
       }
 
-      .hero-copy h1 {
-        font-size: clamp(2.2rem, 10vw, 3.2rem);
+
+      .identity-line {
+        margin-bottom: 18px;
+
+        font-size: 0.61rem;
+        letter-spacing: 0.14em;
       }
+
+
+      .hero-copy h1 {
+        font-size: clamp(2.3rem, 10vw, 3.4rem);
+      }
+
 
       .hero-copy p {
         max-width: 340px;
 
-        margin-top: 19px;
+        margin-top: 20px;
 
         font-size: 0.85rem;
       }
+
 
       footer {
         padding: 22px 5%;
@@ -327,6 +380,7 @@
 
         gap: 10px;
       }
+
 
       .footer-links {
         gap: 10px;
@@ -340,13 +394,13 @@
   <header>
 
     <div class="logo">
-      <a href="index.html">Mo Endemik</a>
+      <a href="index.html">NOU ANDEMIK</a>
     </div>
 
     <nav>
       <a href="about.html">About</a>
       <a href="https://moendemik.mu">Nursery</a>
-      <a href="donate.html" class="donate-link">Donate</a>
+      <a href="donate.html" class="donate-link">Support</a>
     </nav>
 
   </header>
@@ -358,10 +412,16 @@
 
       <div class="hero-copy">
 
-        <h1>Mauritius Unique Flora</h1>
+        <div class="identity-line">
+          Endemic to Mauritius
+        </div>
+
+        <h1>What is ours,<br>kept alive.</h1>
 
         <p>
-          Preserving botanical heritage for future generations.
+          Protecting and propagating the endemic flora of Mauritius,
+          so what belongs uniquely to this island can remain rooted
+          for generations to come.
         </p>
 
       </div>
@@ -374,7 +434,7 @@
   <footer>
 
     <span>
-      Conservation &amp; Propagation © Mo Endemik 2025-2026
+      Endemic Flora &amp; Conservation © NOU ANDEMIK 2025–2026
     </span>
 
     <div class="footer-links">
