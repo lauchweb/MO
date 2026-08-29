@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>NOU ANDEMIK NURSERY | Endemic Flora of Mauritius</title>
+
+  <meta
+    name="description"
+    content="NOU ANDEMIK NURSERY propagates Mauritius’ native and endemic plants, helping keep the island’s unique botanical heritage alive and rooted for future generations."
+  >
+
+  <style>
+    :root {
+      /* =========================
+         NOU ANDEMIK COLOR IDENTITY
+      ========================= */
+
+      --deep-forest: #172B24;
+      --mineral-ivory: #E7E0CF;
+      --burnt-terracotta: #A6533B;
+
+      --charcoal-earth: #24221D;
+      --sandstone: #C8BDA7;
+      --moss: #65745B;
+
+      --background: var(--deep-forest);
+      --text: var(--mineral-ivory);
+    }
+
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    html,
+    body {
+      min-height: 100%;
+    }
+
+
+    body {
+      min-height: 100vh;
+
+      display: flex;
+      flex-direction: column;
+
+      font-family:
+        "Trebuchet MS",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      color: var(--text);
+      line-height: 1.6;
+
+      background-color: var(--background);
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      height: 82px;
+      padding: 0 6%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      background: transparent;
+      border: none;
+
+      flex-shrink: 0;
+    }
+
+
+    /* =========================
+       WEBSITE TITLE
+    ========================= */
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+
+    .logo a {
+      display: inline-flex;
+      align-items: center;
+
+      color: var(--mineral-ivory);
+      background: transparent;
+
+      text-decoration: none;
+
+      font-size: 0.92rem;
+      font-weight: 600;
+
+      letter-spacing: 0.075em;
+      text-transform: uppercase;
+    }
+
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+
+    nav a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 7px 13px;
+
+      color: var(--mineral-ivory);
+      background: transparent;
+
+      border: none;
+      border-radius: 0;
+
+      text-decoration: none;
+
+      font-size: 0.82rem;
+      font-weight: 500;
+
+      transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+
+    nav a:hover {
+      color: var(--sandstone);
+      transform: translateY(-1px);
+    }
+
+
+    /* =========================
+       PRIMARY ACTION
+    ========================= */
+
+    nav a.donate-link {
+      color: var(--mineral-ivory);
+      background: var(--burnt-terracotta);
+
+      border-radius: 7px;
+
+      font-weight: 600;
+    }
+
+
+    nav a.donate-link:hover {
+      color: var(--mineral-ivory);
+      background: #8F4633;
+    }
+
+
+    /* =========================
+       MAIN
+    ========================= */
+
+    main {
+      flex: 1;
+      width: 100%;
+    }
+
+
+    /* =========================
+       NURSERY
+    ========================= */
+
+    .nursery {
+      max-width: 1100px;
+      margin: 0 auto;
+
+      padding: 80px 6% 110px;
+
+      text-align: center;
+    }
+
+
+    .nursery-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+
+    /* =========================
+       IDENTITY LINE
+    ========================= */
+
+    .identity-line {
+      margin-bottom: 22px;
+
+      color: var(--moss);
+
+      font-size: 0.68rem;
+      font-weight: 600;
+
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+
+    /* =========================
+       TITLE
+    ========================= */
+
+    .nursery h1 {
+      margin-bottom: 22px;
+
+      color: var(--mineral-ivory);
+
+      font-size: clamp(2.4rem, 4.6vw, 4rem);
+      line-height: 1;
+
+      font-weight: 500;
+      letter-spacing: -0.05em;
+    }
+
+
+    .nursery-intro {
+      max-width: 610px;
+
+      margin: 0 auto 75px;
+
+      color: var(--sandstone);
+
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+
+    /* =========================
+       PHOTOGRAPH
+    ========================= */
+
+    .nursery-image {
+      display: block;
+
+      width: 100%;
+      max-width: 820px;
+
+      height: auto;
+
+      margin: 0 auto;
+
+      border-radius: 3px;
+    }
+
+
+    /* =========================
+       LOWER TEXT
+    ========================= */
+
+    .nursery-caption {
+      max-width: 600px;
+
+      margin: 75px auto 0;
+
+      color: var(--mineral-ivory);
+
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      width: 100%;
+
+      flex-shrink: 0;
+
+      padding: 25px 6%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      background: transparent;
+
+      color: var(--sandstone);
+
+      font-size: 0.72rem;
+    }
+
+
+    .footer-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+
+    footer a {
+      color: var(--sandstone);
+
+      text-decoration: none;
+
+      transition: color 0.2s ease;
+    }
+
+
+    footer a:hover {
+      color: var(--mineral-ivory);
+      text-decoration: underline;
+    }
+
+
+    .footer-separator {
+      color: var(--moss);
+
+      font-size: 0.9rem;
+      line-height: 1;
+    }
+
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 850px) {
+
+      header {
+        height: 76px;
+      }
+
+      .nursery {
+        padding-top: 65px;
+        padding-bottom: 90px;
+      }
+
+      .nursery-intro {
+        margin-bottom: 65px;
+      }
+
+      .nursery-caption {
+        margin-top: 65px;
+      }
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 600px) {
+
+      header {
+        height: auto;
+        min-height: 72px;
+
+        padding: 14px 5%;
+
+        gap: 10px;
+      }
+
+
+      .logo a {
+        font-size: 0.76rem;
+      }
+
+
+      nav {
+        gap: 5px;
+      }
+
+
+      nav a {
+        padding: 6px 9px;
+
+        font-size: 0.72rem;
+      }
+
+
+      nav a.donate-link {
+        border-radius: 6px;
+      }
+
+
+      .nursery {
+        padding: 55px 5% 70px;
+      }
+
+
+      .identity-line {
+        margin-bottom: 18px;
+
+        font-size: 0.61rem;
+        letter-spacing: 0.14em;
+      }
+
+
+      .nursery h1 {
+        font-size: clamp(2.3rem, 10vw, 3.4rem);
+
+        margin-bottom: 18px;
+      }
+
+
+      .nursery-intro {
+        max-width: 340px;
+
+        margin-bottom: 55px;
+
+        font-size: 0.85rem;
+        line-height: 1.6;
+      }
+
+
+      .nursery-image {
+        width: 100%;
+
+        border-radius: 3px;
+      }
+
+
+      .nursery-caption {
+        max-width: 340px;
+
+        margin-top: 55px;
+
+        font-size: 0.85rem;
+        line-height: 1.6;
+      }
+
+
+      footer {
+        padding: 22px 5%;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 10px;
+      }
+
+
+      .footer-right {
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <div class="logo">
+      <a href="https://nouandemik.mu">
+        NOU ANDEMIK
+      </a>
+    </div>
+
+
+    <nav>
+
+      <a href="https://nouandemik.org/about.html">
+        About
+      </a>
+
+      <a href="https://nouandemik.mu/our-plants.html">
+        Our Plants
+      </a>
+
+      <a href="https://nouandemik.org/donate.html" class="donate-link">
+        Support
+      </a>
+
+    </nav>
+
+  </header>
+
+
+  <main>
+
+    <section class="nursery">
+
+      <div class="nursery-inner">
+
+        <div class="identity-line">
+          Propagation · Presence · Continuity
+        </div>
+
+
+        <h1>
+          Keeping what is ours alive.
+        </h1>
+
+
+        <p class="nursery-intro">
+          Our nursery propagates Mauritius’ native and endemic
+          plants, helping keep the island’s unique botanical
+          heritage present, protected and growing.
+        </p>
+
+
+        <img
+          class="nursery-image"
+          src="nursery.jpeg"
+          alt="Plants growing in the NOU ANDEMIK nursery"
+        >
+
+
+        <p class="nursery-caption">
+          Propagation is part of conservation. By growing
+          endemic plants, we help maintain living populations
+          of the flora that belongs uniquely to Mauritius.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <span>
+      Endemic Flora &amp; Conservation © NOU ANDEMIK 2025–2026
+    </span>
+
+
+    <div class="footer-right">
+
+      <a href="https://nouandemik.org/privacy-policy">
+        Privacy Policy
+      </a>
+
+
+      <span class="footer-separator">
+        •
+      </span>
+
+
+      <a
+        href="https://instagram.com/nouandemik"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Follow
+      </a>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
